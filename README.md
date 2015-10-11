@@ -1,2 +1,2 @@
 # Ahoy
-Ahoy tempory solution
+Ahoy temporary solution
