@@ -10,4 +10,6 @@
 
 @interface AHYRootViewControllerManager : NSObject
 
+- (UIViewController *)rootViewController;
+
 @end
