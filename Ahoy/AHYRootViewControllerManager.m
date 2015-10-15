@@ -39,6 +39,11 @@
     tabVC4.view.backgroundColor = [UIColor brownColor];
     
     self.tabBarController.viewControllers = @[tabVC1, tabVC2, tabVC3, tabVC4];
+    //remove title and make image center
+    for (UITabBarItem *tabBarItem in self.tabBarController.tabBar.items) {
+        tabBarItem.title = @"";
+        tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+    }
     return self.tabBarController;
 }
 
