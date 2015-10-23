@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5081BD939FA0085017B /* AHYRecommendView.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5131BDA00530085017B /* AVStarsView.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5161BDA03900085017B /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
 		7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7E1375221BCA6EB100AB3CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
@@ -23,6 +26,14 @@
 		4ECBC58C68D93CAB339BD5D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6FAAC5071BD939FA0085017B /* AHYRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRecommendView.h; sourceTree = "<group>"; };
 		6FAAC5081BD939FA0085017B /* AHYRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRecommendView.m; sourceTree = "<group>"; };
+		6FAAC50B1BD9E1190085017B /* AHYAdvisorListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisorListCell.h; sourceTree = "<group>"; };
+		6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYAdvisorListCell.m; sourceTree = "<group>"; };
+		6FAAC5121BDA00530085017B /* AVStarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVStarsView.h; sourceTree = "<group>"; };
+		6FAAC5131BDA00530085017B /* AVStarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVStarsView.m; sourceTree = "<group>"; };
+		6FAAC5151BDA03900085017B /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		6FAAC5161BDA03900085017B /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		6FAAC51A1BDA0EF90085017B /* AHYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYColor.h; sourceTree = "<group>"; };
+		6FAAC51B1BDA12710085017B /* AHYFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYFont.h; sourceTree = "<group>"; };
 		7E0B65A31BCD53AA004BAA76 /* AHYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDiscoverViewController.h; sourceTree = "<group>"; };
 		7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDiscoverViewController.m; sourceTree = "<group>"; };
 		7E0B65A61BCD53D5004BAA76 /* AHYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSearchViewController.h; sourceTree = "<group>"; };
@@ -69,13 +80,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6FAAC50A1BD9DEE50085017B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6FAAC5071BD939FA0085017B /* AHYRecommendView.h */,
+				6FAAC5081BD939FA0085017B /* AHYRecommendView.m */,
+				6FAAC50B1BD9E1190085017B /* AHYAdvisorListCell.h */,
+				6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6FAAC5111BDA00530085017B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6FAAC5181BDA039E0085017B /* Views */,
+				6FAAC5151BDA03900085017B /* UIColor+Hex.h */,
+				6FAAC5161BDA03900085017B /* UIColor+Hex.m */,
+			);
+			name = Utility;
+			path = Ahoy/Utility;
+			sourceTree = "<group>";
+		};
+		6FAAC5181BDA039E0085017B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6FAAC5121BDA00530085017B /* AVStarsView.h */,
+				6FAAC5131BDA00530085017B /* AVStarsView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6FAAC5191BDA0EA50085017B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				6FAAC51A1BDA0EF90085017B /* AHYColor.h */,
+				6FAAC51B1BDA12710085017B /* AHYFont.h */,
+			);
+			name = Constant;
+			path = Ahoy/Constant;
+			sourceTree = "<group>";
+		};
 		7E0B65A91BCD54A6004BAA76 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
 				7E0B65A31BCD53AA004BAA76 /* AHYDiscoverViewController.h */,
 				7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */,
-				6FAAC5071BD939FA0085017B /* AHYRecommendView.h */,
-				6FAAC5081BD939FA0085017B /* AHYRecommendView.m */,
+				6FAAC50A1BD9DEE50085017B /* Views */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -93,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				7E13751F1BCA6EB100AB3CA9 /* Ahoy */,
+				6FAAC5191BDA0EA50085017B /* Constant */,
+				6FAAC5111BDA00530085017B /* Utility */,
 				7E13751E1BCA6EB100AB3CA9 /* Products */,
 				155C17EA8F325DD5C9B3F927 /* Pods */,
 				6299A34A76006285610475DE /* Frameworks */,
@@ -258,9 +311,12 @@
 				6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */,
 				7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */,
 				7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */,
+				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
+				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E1375221BCA6EB100AB3CA9 /* main.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
+				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
