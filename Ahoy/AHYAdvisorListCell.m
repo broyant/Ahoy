@@ -46,6 +46,7 @@
     [self addStarsView];
     [self addExperienceLabel];
     [self addDescriptionLabel];
+    [self addSeparateLine];
 }
 
 - (void)addPortraitImageView {
@@ -100,7 +101,7 @@
 
 - (void)addExperienceLabel {
     _experienceLabel = [[UILabel alloc] init];
-    _experienceLabel.font = AvenirNextRegular14;
+    _experienceLabel.font = AvenirNextRegular(14);
     _experienceLabel.textColor = AHYGrey56;
     [self.contentView addSubview:_experienceLabel];
     [_experienceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -112,7 +113,7 @@
 
 - (void)addDescriptionLabel {
     _descriptionLabel = [[UILabel alloc] init];
-    _descriptionLabel.font = AvenirNextRegular16;
+    _descriptionLabel.font = AvenirNextRegular(16);
     _descriptionLabel.textColor = AHYBlack100;
     _descriptionLabel.numberOfLines = 2;
     [self.contentView addSubview:_descriptionLabel];
@@ -120,6 +121,18 @@
         make.leading.equalTo(_nameLabel.mas_leading);
         make.top.equalTo(_experienceLabel.mas_bottom).offset(4);
         make.trailing.offset(-14);
+    }];
+}
+
+- (void)addSeparateLine {
+    UIView *separateLine = [[UIView alloc] init];
+    separateLine.backgroundColor = AHYGrey10;
+    [self.contentView addSubview:separateLine];
+    [separateLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(_portraitImageView.mas_leading);
+        make.trailing.offset(0);
+        make.height.mas_equalTo(0.5);
+        make.top.equalTo(_descriptionLabel.mas_bottom).offset(13);
     }];
 }
 

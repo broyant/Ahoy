@@ -53,7 +53,7 @@
 
 - (void)addTopicNameLabel {
     _topicNameLabel = [[UILabel alloc] init];
-    _topicNameLabel.font = TradeGothicLTBoldTwo20;
+    _topicNameLabel.font = TradeGothicLTBoldTwo(20);
     _topicNameLabel.textColor = AHYWhite;
     [self addSubview:_topicNameLabel];
     [_topicNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -65,8 +65,8 @@
 
 - (void)addDescriptionLabel {
     _descriptionLabel = [[UILabel alloc] init];
-    _descriptionLabel.font = AvenirNextRegular12;
-    _descriptionLabel.textColor = [UIColor whiteColor];
+    _descriptionLabel.font = AvenirNextRegular(12);
+    _descriptionLabel.textColor = AHYWhite;
     [self addSubview:_descriptionLabel];
     [_descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.offset(15);
