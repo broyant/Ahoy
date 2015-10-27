@@ -14,7 +14,8 @@
 		6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC5291BDA8C080085017B /* AHYHorizontalTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5281BDA8C080085017B /* AHYHorizontalTopicCell.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5331BDB3F910085017B /* AHYRecommendTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5321BDB3F910085017B /* AHYRecommendTopic.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5361BDF54DA0085017B /* AHYTopic.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */; settings = {ASSET_TAGS = (); }; };
 		7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7E1375221BCA6EB100AB3CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
@@ -44,8 +45,11 @@
 		6FAAC5281BDA8C080085017B /* AHYHorizontalTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYHorizontalTopicCell.m; sourceTree = "<group>"; };
 		6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTEHorizontalTableView.h; sourceTree = "<group>"; };
 		6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTEHorizontalTableView.m; sourceTree = "<group>"; };
-		6FAAC5311BDB3F910085017B /* AHYRecommendTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRecommendTopic.h; sourceTree = "<group>"; };
-		6FAAC5321BDB3F910085017B /* AHYRecommendTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRecommendTopic.m; sourceTree = "<group>"; };
+		6FAAC5351BDF54DA0085017B /* AHYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopic.h; sourceTree = "<group>"; };
+		6FAAC5361BDF54DA0085017B /* AHYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopic.m; sourceTree = "<group>"; };
+		6FAAC53B1BDF563C0085017B /* AHYTopicCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYTopicCategory.h; sourceTree = "<group>"; };
+		6FAAC53C1BDF5B640085017B /* AHYAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisor.h; sourceTree = "<group>"; };
+		6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYAdvisor.m; sourceTree = "<group>"; };
 		7E0B65A31BCD53AA004BAA76 /* AHYDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDiscoverViewController.h; sourceTree = "<group>"; };
 		7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDiscoverViewController.m; sourceTree = "<group>"; };
 		7E0B65A61BCD53D5004BAA76 /* AHYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSearchViewController.h; sourceTree = "<group>"; };
@@ -142,8 +146,11 @@
 		6FAAC5301BDB3F640085017B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6FAAC5311BDB3F910085017B /* AHYRecommendTopic.h */,
-				6FAAC5321BDB3F910085017B /* AHYRecommendTopic.m */,
+				6FAAC53B1BDF563C0085017B /* AHYTopicCategory.h */,
+				6FAAC53C1BDF5B640085017B /* AHYAdvisor.h */,
+				6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */,
+				6FAAC5351BDF54DA0085017B /* AHYTopic.h */,
+				6FAAC5361BDF54DA0085017B /* AHYTopic.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -343,11 +350,12 @@
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
-				6FAAC5331BDB3F910085017B /* AHYRecommendTopic.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E1375221BCA6EB100AB3CA9 /* main.m in Sources */,
 				6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
+				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
+				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

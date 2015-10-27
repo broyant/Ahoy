@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AHYAdvisor;
 
 @interface AHYAdvisorListCell : UITableViewCell
+
+- (void)configure: (AHYAdvisor *)advisor;
 
 @end

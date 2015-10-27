@@ -6,7 +6,7 @@
 //  Copyright © 2015年 Ahoy. All rights reserved.
 //
 
-static NSString * const topicCellIdentifier = @"singleCell";
+static NSString * const kTopicCellIdentifier = @"singleCell";
 
 #import "AHYHorizontalTopicCell.h"
 #import "AHYSingleTopicCell.h"
@@ -44,10 +44,9 @@ static NSString * const topicCellIdentifier = @"singleCell";
 
 - (UITableViewCell *)tableView:(PTEHorizontalTableView *)horizontalTableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AHYSingleTopicCell *topicCell = (AHYSingleTopicCell *)[horizontalTableView.tableView dequeueReusableCellWithIdentifier:topicCellIdentifier];
+    AHYSingleTopicCell *topicCell = (AHYSingleTopicCell *)[horizontalTableView.tableView dequeueReusableCellWithIdentifier:kTopicCellIdentifier];
    //TODO
-//    topicCell.topicImageView = nil;
-//    topicCell.topicLabel.text = nil;
+    
     return topicCell;
 }
 
@@ -85,7 +84,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _horizontalScrollView = [[PTEHorizontalTableView alloc] init];
     _horizontalScrollView.tableView = [[UITableView alloc] init];
     _horizontalScrollView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_horizontalScrollView.tableView registerClass:[AHYSingleTopicCell class] forCellReuseIdentifier:topicCellIdentifier];
+    [_horizontalScrollView.tableView registerClass:[AHYSingleTopicCell class] forCellReuseIdentifier:kTopicCellIdentifier];
     
     [self.contentView addSubview:_horizontalScrollView];
     [_horizontalScrollView mas_makeConstraints:^(MASConstraintMaker *make) {

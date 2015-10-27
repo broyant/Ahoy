@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AHYTopic;
 
 @interface AHYSingleTopicCell : UITableViewCell
 
-@property (nonatomic, strong) UIImageView *topicImageView;
-@property (nonatomic, strong) UILabel *topicLabel;
+- (void)configure:(AHYTopic *)topic;
 
 @end

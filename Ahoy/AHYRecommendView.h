@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AHYRecommendTopic.h"
+#import "AHYTopic.h"
 
 @interface AHYRecommendView : UIView
 
-- (void)configure: (AHYRecommendTopic *)topic;
+- (void)configure: (AHYTopic *)topic;
 
 @end

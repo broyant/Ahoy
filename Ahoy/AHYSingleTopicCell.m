@@ -7,7 +7,16 @@
 //
 
 #import "AHYSingleTopicCell.h"
+#import "UIImageView+WebCache.h"
 #import "Masonry.h"
+#import "AHYTopic.h"
+
+@interface AHYSingleTopicCell ()
+
+@property (nonatomic, strong) UIImageView *topicImageView;
+@property (nonatomic, strong) UILabel *topicLabel;
+
+@end
 
 @implementation AHYSingleTopicCell
 
@@ -21,6 +30,15 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
+
+#pragma mark -configure
+
+- (void)configure:(AHYTopic *)topic {
+    [_topicImageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
+                       placeholderImage:nil
+                                options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    _topicLabel.text = topic.name;
 }
 
 #pragma mark -subviews

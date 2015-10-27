@@ -36,6 +36,18 @@
     return  self;
 }
 
+#pragma mark -configure
+
+- (void)configure:(AHYTopic *)topic {
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
+                  placeholderImage:nil
+                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    _topicNameLabel.text = topic.name;
+    //TODO separate number with ","
+    _descriptionLabel.text = [NSString stringWithFormat:@"%@Advisors|%@Sessions", @(topic.totalAdvisors), @(topic.totalSessions)];
+    
+}
+
 #pragma mark -subviews
 
 - (void)setupSubviews {
@@ -74,18 +86,6 @@
         make.top.equalTo(_topicNameLabel.mas_bottom).offset(5);
         make.height.mas_equalTo(16);
     }];
-}
-
-#pragma mark -configure
-
-- (void)configure:(AHYRecommendTopic *)topic {
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
-                  placeholderImage:nil
-                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
-    _topicNameLabel.text = topic.name;
-    //TODO separate number with ","
-    _descriptionLabel.text = [NSString stringWithFormat:@"%@Advisors|%@Sessions", @(topic.advisors), @(topic.sessions)];
-    
 }
 
 @end

@@ -10,14 +10,16 @@
 #import "Masonry.h"
 #import "UIColor+Hex.h"
 #import "AVStarsView.h"
+#import "AHYAdvisor.h"
+#import "UIImageView+WebCache.h"
 
 @interface AHYAdvisorListCell ()
 
 @property (nonatomic, strong) UIImageView *portraitImageView;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) AVStarsView *starsView;
+@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *experienceLabel;
-@property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UILabel *priceLabel;
 
 @end
@@ -37,6 +39,19 @@
 
 }
 
+#pragma mark -configure
+
+- (void)configure:(AHYAdvisor *)advisor {
+   [_portraitImageView sd_setImageWithURL:[NSURL URLWithString:advisor.portraitUrl]
+                         placeholderImage:nil
+                                  options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload];
+    _nameLabel.text = advisor.name;
+    _titleLabel.text = advisor.title;
+    _experienceLabel.text = advisor.experience;
+    _starsView.rating = advisor.rate;
+    _priceLabel.text = [NSString stringWithFormat:@"$%@HR", @(advisor.price)];
+}
+
 #pragma mark -subviews
 
 - (void)setupSubviews {
@@ -44,8 +59,8 @@
     [self addNameLabel];
     [self addPriceLabel];
     [self addStarsView];
+    [self addTitleLabel];
     [self addExperienceLabel];
-    [self addDescriptionLabel];
     [self addSeparateLine];
 }
 
@@ -61,7 +76,7 @@
 
 - (void)addNameLabel {
     _nameLabel = [[UILabel alloc] init];
-    _nameLabel.font = TradeGothicLT18;
+    _nameLabel.font = TradeGothicLT(18);
     _nameLabel.textColor = AHYBlack100;
     [self.contentView addSubview:_nameLabel];
     [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,7 +88,7 @@
 
 - (void)addPriceLabel {
     _priceLabel = [[UILabel alloc] init];
-    _priceLabel.font = TradeGothicLT14;
+    _priceLabel.font = TradeGothicLT(14);
     _priceLabel.backgroundColor = AHYGrey28;
     _priceLabel.textColor = AHYWhite;
     _priceLabel.textAlignment = NSTextAlignmentCenter;
@@ -99,27 +114,27 @@
     }];
 }
 
-- (void)addExperienceLabel {
-    _experienceLabel = [[UILabel alloc] init];
-    _experienceLabel.font = AvenirNextRegular(14);
-    _experienceLabel.textColor = AHYGrey56;
-    [self.contentView addSubview:_experienceLabel];
-    [_experienceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)addTitleLabel {
+    _titleLabel = [[UILabel alloc] init];
+    _titleLabel.font = AvenirNextRegular(14);
+    _titleLabel.textColor = AHYGrey56;
+    [self.contentView addSubview:_titleLabel];
+    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(_nameLabel.mas_leading);
         make.top.equalTo(_starsView.mas_bottom).offset(4);
         make.height.mas_equalTo(19);
     }];
 }
 
-- (void)addDescriptionLabel {
-    _descriptionLabel = [[UILabel alloc] init];
-    _descriptionLabel.font = AvenirNextRegular(16);
-    _descriptionLabel.textColor = AHYBlack100;
-    _descriptionLabel.numberOfLines = 2;
-    [self.contentView addSubview:_descriptionLabel];
-    [_descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)addExperienceLabel {
+    _experienceLabel = [[UILabel alloc] init];
+    _experienceLabel.font = AvenirNextRegular(16);
+    _experienceLabel.textColor = AHYBlack100;
+    _experienceLabel.numberOfLines = 2;
+    [self.contentView addSubview:_experienceLabel];
+    [_experienceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(_nameLabel.mas_leading);
-        make.top.equalTo(_experienceLabel.mas_bottom).offset(4);
+        make.top.equalTo(_titleLabel.mas_bottom).offset(4);
         make.trailing.offset(-14);
     }];
 }
@@ -132,7 +147,7 @@
         make.leading.equalTo(_portraitImageView.mas_leading);
         make.trailing.offset(0);
         make.height.mas_equalTo(0.5);
-        make.top.equalTo(_descriptionLabel.mas_bottom).offset(13);
+        make.top.equalTo(_experienceLabel.mas_bottom).offset(13);
     }];
 }
 

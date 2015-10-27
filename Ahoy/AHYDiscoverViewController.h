@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AHYDiscoverViewController : UIViewController
+@interface AHYDiscoverViewController : UITableViewController
 
 @end
