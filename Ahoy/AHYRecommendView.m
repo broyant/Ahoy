@@ -7,6 +7,7 @@
 //
 
 #import "AHYRecommendView.h"
+#import "UIImageView+WebCache.h"
 #import "Masonry.h"
 
 @interface AHYRecommendView ()
@@ -73,6 +74,18 @@
         make.top.equalTo(_topicNameLabel.mas_bottom).offset(5);
         make.height.mas_equalTo(16);
     }];
+}
+
+#pragma mark -configure
+
+- (void)configure:(AHYRecommendTopic *)topic {
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
+                  placeholderImage:nil
+                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    _topicNameLabel.text = topic.name;
+    //TODO separate number with ","
+    _descriptionLabel.text = [NSString stringWithFormat:@"%@Advisors|%@Sessions", @(topic.advisors), @(topic.sessions)];
+    
 }
 
 @end

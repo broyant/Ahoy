@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHYRecommendTopic.h"
 
 @interface AHYRecommendView : UIView
 
-@property (nonatomic, strong) NSString *imgUrl;
-@property (nonatomic, strong) NSString *topicName;
-@property (nonatomic, assign) NSInteger advisors;
-@property (nonatomic, assign) NSInteger sessions;
+- (void)configure: (AHYRecommendTopic *)topic;
 
 @end
