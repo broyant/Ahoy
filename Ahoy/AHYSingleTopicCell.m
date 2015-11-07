@@ -20,24 +20,21 @@
 
 @implementation AHYSingleTopicCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (self) {
         [self setupSubviews];
     }
-    return  self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+    return self;
 }
 
 #pragma mark -configure
 
 - (void)configure:(AHYTopic *)topic {
-    [_topicImageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
-                       placeholderImage:nil
-                                options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+//    [_topicImageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
+//                       placeholderImage:nil
+//                                options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    _topicImageView.image = [UIImage imageNamed:topic.imgUrl];
     _topicLabel.text = topic.name;
 }
 
@@ -53,11 +50,9 @@
     _topicImageView.layer.cornerRadius = 1.f;
     [self.contentView addSubview:_topicImageView];
     [_topicImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.offset(15);
+        make.leading.top.trailing.offset(0);
         make.size.mas_equalTo(CGSizeMake(90, 90));
-        make.top.offset(0);
     }];
-    
 }
 
 - (void)addTopicLabel {

@@ -6,24 +6,89 @@
 //  Copyright © 2015 Ahoy. All rights reserved.
 //
 
+static CGFloat const kHeaderViewHeight = 166.f;
+static CGFloat const kCategoryViewHeight = 192.f;
+static CGFloat const kAdvisorListHeaderHeight = 19.f;
 static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
-static NSString * const kHorizontalTopicCellIdentifier = @"horizontalTopicCell";
+static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 
 #import "AHYDiscoverViewController.h"
 #import "AHYAdvisorListCell.h"
-#import "AHYHorizontalTopicCell.h"
+#import "AHYCategoryView.h"
 #import "AHYRecommendView.h"
+#import "AHYAdvisor.h"
+#import "AHYTopic.h"
 
 @interface AHYDiscoverViewController ()
+
+@property(nonatomic, strong) NSArray *recommendTopics;
+@property(nonatomic, strong) NSArray *topicCategorys;
+@property(nonatomic, strong) NSArray *recommendAdvisors;
 
 @end
 
 @implementation AHYDiscoverViewController
 
+- (NSArray *)recommendTopics {
+    if (!_recommendTopics) {
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 1; i <= 3; i++) {
+            AHYTopic *topic = [[AHYTopic alloc] init];
+            topic.imgUrl = [NSString stringWithFormat:@"c1Topic%dThumbnail",i];
+            topic.name = @"Tellus Amet";
+            topic.totalAdvisors = 107 + i * 21;
+            topic.totalSessions = 2345 + i * 32;
+            topic.category = i + 1;
+            topic.isRecommended = YES;
+            [array addObject:topic];
+        }
+        _recommendTopics = [array copy];
+    }
+    return _recommendTopics;
+}
+
+- (NSArray *)topicCategorys {
+    if (!_topicCategorys) {
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 1; i <= 5; i++) {
+            AHYTopic *topic = [[AHYTopic alloc] init];
+            topic.imgUrl = [NSString stringWithFormat:@"c2Topic%dThumbnail",i % 3 + 1];
+            topic.name = @"Tellus Amet";
+            topic.totalAdvisors = 107 + i * 21;
+            topic.totalSessions = 2345 + i * 32;
+            topic.isRecommended = NO;
+            [array addObject:topic];
+        }
+        _topicCategorys = @[@{@"Programming": array}, @{@"Design": array}, @{@"Management": array}];
+    }
+    return _topicCategorys;
+}
+
+- (NSArray *)recommendAdvisors {
+    if (!_recommendAdvisors) {
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 1; i <= 10; i++) {
+            AHYAdvisor *advisor = [[AHYAdvisor alloc] init];
+            advisor.portraitUrl = [NSString stringWithFormat:@"c1Topic%dThumbnail",i % 3+1];
+            advisor.name = @"Howard Wolowitz";
+            advisor.title = @"User Experience Designer, Storehouse";
+            advisor.experience = @"Nullam quis risus eget urna mollis slie ornare vel eu leo. Vestibulum idlse Nullam quis risus eget urna mollis slie ornare vel eu leo. Vestibulum idlse ";
+            advisor.price = 32 + i * 4;
+            advisor.rate = 5;
+            [array addObject:advisor];
+        }
+        _recommendAdvisors = [array copy];
+    }
+    return _recommendAdvisors;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Discover";
     [self.tableView registerClass:[AHYAdvisorListCell class] forCellReuseIdentifier:kAdvisorListCellIdentifier];
-    [self.tableView registerClass:[AHYHorizontalTopicCell class] forCellReuseIdentifier:kHorizontalTopicCellIdentifier];
+    self.tableView.tableHeaderView = [self headerView];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.edgesForExtendedLayout = UIRectEdgeBottom;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,34 +96,66 @@ static NSString * const kHorizontalTopicCellIdentifier = @"horizontalTopicCell";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark --UITableView datasource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //sections: topic category & most populor advisors
-    return 2;
+- (UIView *)headerView {
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    UIView *headerView = [[UIView alloc] init];
+    //recommend topic view
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, kHeaderViewHeight)];
+    scrollView.pagingEnabled = YES;
+    scrollView.contentSize = CGSizeMake(screenSize.width * self.recommendTopics.count, kHeaderViewHeight);
+    scrollView.showsHorizontalScrollIndicator = NO;
+    CGRect frame = scrollView.bounds;
+    for (AHYTopic *recommendTopic in self.recommendTopics) {
+        AHYRecommendView *view = [[AHYRecommendView alloc] initWithFrame:frame];
+        [view configure:recommendTopic];
+        [scrollView addSubview:view];
+        frame.origin.x += screenSize.width;
+    }
+    [headerView addSubview:scrollView];
+    //category view
+    CGFloat ty = CGRectGetMaxY(scrollView.frame);
+    for (NSDictionary *category in self.topicCategorys) {
+        NSString *title = category.allKeys[0];
+        NSArray *topics = category.allValues[0];
+        AHYCategoryView *categoryView = [[AHYCategoryView alloc] initWithFrame:CGRectMake(0, ty, screenSize.width, kCategoryViewHeight) title:title topics:topics];
+        ty += kCategoryViewHeight;
+        [headerView addSubview:categoryView];
+    }
+    //most popular advisor
+    ty += 18.f;
+    UILabel *advisorHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, ty, screenSize.width, kAdvisorListHeaderHeight)];
+    advisorHeader.text = kAdvisorListTitle;
+    advisorHeader.font = TradeGothicLTBoldTwo(14);
+    advisorHeader.textColor = AHYGrey40;
+    [headerView addSubview:advisorHeader];
+    ty += kAdvisorListHeaderHeight;
+    //adjust header view frame
+    headerView.frame = CGRectMake(0, 0, screenSize.width, ty);
+    return headerView;
 }
 
+#pragma mark --UITableView datasource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 3;
-    } else {
-        return 10;
-    }
+    return self.recommendAdvisors.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    AHYAdvisorListCell *advisorCell = (AHYAdvisorListCell *)[tableView dequeueReusableCellWithIdentifier:kAdvisorListCellIdentifier];
+    AHYAdvisor *advisor = self.recommendAdvisors[indexPath.row];
+    [advisorCell configure:advisor];
+    return advisorCell;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    //title for most populor advisors
-    return nil;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 138.f;
 }
 
 #pragma mark --UITableView delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    //select item;
+    NSLog(@"%s:%@",__func__,self);
 }
 
 @end

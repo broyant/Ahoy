@@ -39,9 +39,10 @@
 #pragma mark -configure
 
 - (void)configure:(AHYTopic *)topic {
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
-                  placeholderImage:nil
-                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+//    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
+//                  placeholderImage:nil
+//                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    _imageView.image = [UIImage imageNamed:topic.imgUrl];
     _topicNameLabel.text = topic.name;
     //TODO separate number with ","
     _descriptionLabel.text = [NSString stringWithFormat:@"%@Advisors|%@Sessions", @(topic.totalAdvisors), @(topic.totalSessions)];
@@ -71,7 +72,7 @@
     [self addSubview:_topicNameLabel];
     [_topicNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.offset(15);
-        make.top.offset(175);
+        make.top.offset(111);
         make.height.mas_equalTo(25);
     }];
 }

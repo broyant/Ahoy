@@ -12,7 +12,7 @@
 		6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5131BDA00530085017B /* AVStarsView.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5161BDA03900085017B /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5291BDA8C080085017B /* AHYHorizontalTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5281BDA8C080085017B /* AHYHorizontalTopicCell.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5281BDA8C080085017B /* AHYCategoryView.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5361BDF54DA0085017B /* AHYTopic.m */; settings = {ASSET_TAGS = (); }; };
 		6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */; settings = {ASSET_TAGS = (); }; };
@@ -41,8 +41,8 @@
 		6FAAC51B1BDA12710085017B /* AHYFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYFont.h; sourceTree = "<group>"; };
 		6FAAC5211BDA75860085017B /* AHYSingleTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSingleTopicCell.h; sourceTree = "<group>"; };
 		6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSingleTopicCell.m; sourceTree = "<group>"; };
-		6FAAC5271BDA8C080085017B /* AHYHorizontalTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYHorizontalTopicCell.h; sourceTree = "<group>"; };
-		6FAAC5281BDA8C080085017B /* AHYHorizontalTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYHorizontalTopicCell.m; sourceTree = "<group>"; };
+		6FAAC5271BDA8C080085017B /* AHYCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYCategoryView.h; sourceTree = "<group>"; };
+		6FAAC5281BDA8C080085017B /* AHYCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYCategoryView.m; sourceTree = "<group>"; };
 		6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTEHorizontalTableView.h; sourceTree = "<group>"; };
 		6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTEHorizontalTableView.m; sourceTree = "<group>"; };
 		6FAAC5351BDF54DA0085017B /* AHYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopic.h; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 				6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */,
 				6FAAC5211BDA75860085017B /* AHYSingleTopicCell.h */,
 				6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */,
-				6FAAC5271BDA8C080085017B /* AHYHorizontalTopicCell.h */,
-				6FAAC5281BDA8C080085017B /* AHYHorizontalTopicCell.m */,
+				6FAAC5271BDA8C080085017B /* AHYCategoryView.h */,
+				6FAAC5281BDA8C080085017B /* AHYCategoryView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 			files = (
 				6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */,
 				7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */,
-				6FAAC5291BDA8C080085017B /* AHYHorizontalTopicCell.m in Sources */,
+				6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */,
 				7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */,
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,

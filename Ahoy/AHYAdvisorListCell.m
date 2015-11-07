@@ -42,9 +42,10 @@
 #pragma mark -configure
 
 - (void)configure:(AHYAdvisor *)advisor {
-   [_portraitImageView sd_setImageWithURL:[NSURL URLWithString:advisor.portraitUrl]
-                         placeholderImage:nil
-                                  options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload];
+//   [_portraitImageView sd_setImageWithURL:[NSURL URLWithString:advisor.portraitUrl]
+//                         placeholderImage:nil
+//                                  options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload];
+    _portraitImageView.image = [UIImage imageNamed:advisor.portraitUrl];
     _nameLabel.text = advisor.name;
     _titleLabel.text = advisor.title;
     _experienceLabel.text = advisor.experience;
@@ -147,7 +148,7 @@
         make.leading.equalTo(_portraitImageView.mas_leading);
         make.trailing.offset(0);
         make.height.mas_equalTo(0.5);
-        make.top.equalTo(_experienceLabel.mas_bottom).offset(13);
+        make.top.equalTo(_experienceLabel.mas_bottom).offset(10);
     }];
 }
 

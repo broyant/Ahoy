@@ -19,7 +19,12 @@
 @implementation AHYRootViewControllerManager
 
 - (UIViewController *)rootViewController {
-    UIViewController *tabVC1 = [[AHYDiscoverViewController alloc] init];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    AHYDiscoverViewController *discoverVC = [[AHYDiscoverViewController alloc] init];
+    UINavigationController *tabVC1 = [[UINavigationController alloc] initWithRootViewController:discoverVC];
+    tabVC1.navigationBar.barTintColor = AHYBlue;
+    [tabVC1.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
     tabVC1.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Discover"] selectedImage:[UIImage imageNamed:@"Discover"]];
     
     UIViewController *tabVC2 = [[AHYSearchViewController alloc] init];
@@ -32,11 +37,6 @@
     UIViewController *tabVC4 = [[UIViewController alloc] init];
     tabVC4.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Profile"] selectedImage:[UIImage imageNamed:@"Profile"]];
     
-    //for test
-    tabVC1.view.backgroundColor = [UIColor redColor];
-    tabVC2.view.backgroundColor = [UIColor yellowColor];
-    tabVC3.view.backgroundColor = [UIColor blueColor];
-    tabVC4.view.backgroundColor = [UIColor brownColor];
     
     self.tabBarController.viewControllers = @[tabVC1, tabVC2, tabVC3, tabVC4];
     //remove title and make image center

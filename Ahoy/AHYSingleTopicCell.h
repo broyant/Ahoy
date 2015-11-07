@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class AHYTopic;
 
-@interface AHYSingleTopicCell : UITableViewCell
+@interface AHYSingleTopicCell : UICollectionViewCell
 
 - (void)configure:(AHYTopic *)topic;
 
