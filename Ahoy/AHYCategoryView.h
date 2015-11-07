@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AHYTopic;
+
+@protocol AHYCategoryViewDelegate <NSObject>
+
+- (void)topicDidSelected:(AHYTopic *)topic;
+
+@end
 
 @interface AHYCategoryView : UIView
+
+@property (nonatomic, weak) id<AHYCategoryViewDelegate>delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame
                         title:(NSString *)category

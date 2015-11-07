@@ -19,6 +19,7 @@
 @property (nonatomic, assign) NSUInteger totalSessions;
 @property (nonatomic, assign) TopicCategory category;
 @property (nonatomic, assign) BOOL isRecommended;
+@property (nonatomic, strong) NSArray *advisors;
 
 @end
 

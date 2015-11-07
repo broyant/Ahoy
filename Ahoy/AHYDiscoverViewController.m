@@ -13,13 +13,14 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 
 #import "AHYDiscoverViewController.h"
+#import "AHYTopicViewController.h"
 #import "AHYAdvisorListCell.h"
 #import "AHYCategoryView.h"
 #import "AHYRecommendView.h"
 #import "AHYAdvisor.h"
 #import "AHYTopic.h"
 
-@interface AHYDiscoverViewController ()
+@interface AHYDiscoverViewController ()<AHYCategoryViewDelegate>
 
 @property(nonatomic, strong) NSArray *recommendTopics;
 @property(nonatomic, strong) NSArray *topicCategorys;
@@ -57,6 +58,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
             topic.totalAdvisors = 107 + i * 21;
             topic.totalSessions = 2345 + i * 32;
             topic.isRecommended = NO;
+            topic.advisors = self.recommendAdvisors;
             [array addObject:topic];
         }
         _topicCategorys = @[@{@"Programming": array}, @{@"Design": array}, @{@"Management": array}];
@@ -91,10 +93,39 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark --UITableView datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.recommendAdvisors.count;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AHYAdvisorListCell *advisorCell = (AHYAdvisorListCell *)[tableView dequeueReusableCellWithIdentifier:kAdvisorListCellIdentifier];
+    AHYAdvisor *advisor = self.recommendAdvisors[indexPath.row];
+    [advisorCell configure:advisor];
+    return advisorCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 138.f;
+}
+
+#pragma mark --UITableView delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+   //select item;
+    NSLog(@"%s:%@",__func__,self);
+}
+
+#pragma mark --AHYCategoryViewDelegate
+
+- (void)topicDidSelected:(AHYTopic *)topic {
+    AHYTopicViewController *topicVC = [[AHYTopicViewController alloc] initWithTopic:topic];
+    topicVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:topicVC animated:YES];
+}
+
+#pragma mark --headerView
 
 - (UIView *)headerView {
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
@@ -118,6 +149,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
         NSString *title = category.allKeys[0];
         NSArray *topics = category.allValues[0];
         AHYCategoryView *categoryView = [[AHYCategoryView alloc] initWithFrame:CGRectMake(0, ty, screenSize.width, kCategoryViewHeight) title:title topics:topics];
+        categoryView.delegate = self;
         ty += kCategoryViewHeight;
         [headerView addSubview:categoryView];
     }
@@ -132,30 +164,6 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
     //adjust header view frame
     headerView.frame = CGRectMake(0, 0, screenSize.width, ty);
     return headerView;
-}
-
-#pragma mark --UITableView datasource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.recommendAdvisors.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AHYAdvisorListCell *advisorCell = (AHYAdvisorListCell *)[tableView dequeueReusableCellWithIdentifier:kAdvisorListCellIdentifier];
-    AHYAdvisor *advisor = self.recommendAdvisors[indexPath.row];
-    [advisorCell configure:advisor];
-    return advisorCell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 138.f;
-}
-
-#pragma mark --UITableView delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   //select item;
-    NSLog(@"%s:%@",__func__,self);
 }
 
 @end

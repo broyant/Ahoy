@@ -18,9 +18,7 @@
 
 @implementation AHYRootViewControllerManager
 
-- (UIViewController *)rootViewController {
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    
+- (UIViewController *)rootViewController {    
     AHYDiscoverViewController *discoverVC = [[AHYDiscoverViewController alloc] init];
     UINavigationController *tabVC1 = [[UINavigationController alloc] initWithRootViewController:discoverVC];
     tabVC1.navigationBar.barTintColor = AHYBlue;

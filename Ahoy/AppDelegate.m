@@ -20,6 +20,7 @@
     [self.window makeKeyAndVisible];
     AHYRootViewControllerManager *rootVCManager = [[AHYRootViewControllerManager alloc] init];
     self.window.rootViewController = [rootVCManager rootViewController];
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 

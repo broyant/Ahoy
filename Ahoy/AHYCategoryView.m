@@ -47,9 +47,14 @@ static NSString *const kTopicCellIdentifier = @"topicCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AHYSingleTopicCell *cell = (AHYSingleTopicCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kTopicCellIdentifier forIndexPath:indexPath];
     [cell configure:_topics[indexPath.item]];
-    cell.layer.borderWidth = 1;
-    cell.layer.borderColor = [UIColor yellowColor].CGColor;
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicDidSelected:)]) {
+        [self.delegate topicDidSelected:_topics[indexPath.item]];
+    }
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark -subviews
