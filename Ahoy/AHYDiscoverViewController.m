@@ -20,7 +20,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 #import "AHYAdvisor.h"
 #import "AHYTopic.h"
 
-@interface AHYDiscoverViewController ()<AHYCategoryViewDelegate>
+@interface AHYDiscoverViewController ()<AHYCategoryViewDelegate, AHYRecommendViewDelegate>
 
 @property(nonatomic, strong) NSArray *recommendTopics;
 @property(nonatomic, strong) NSArray *topicCategorys;
@@ -41,6 +41,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
             topic.totalSessions = 2345 + i * 32;
             topic.category = i + 1;
             topic.isRecommended = YES;
+            topic.advisors = self.recommendAdvisors;
             [array addObject:topic];
         }
         _recommendTopics = [array copy];
@@ -125,6 +126,12 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
     [self.navigationController pushViewController:topicVC animated:YES];
 }
 
+#pragma mark --AHYRecommendViewDelegate
+
+- (void)recommendTopicDidSelected:(AHYTopic *)topic {
+    [self topicDidSelected:topic];
+}
+
 #pragma mark --headerView
 
 - (UIView *)headerView {
@@ -138,6 +145,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
     CGRect frame = scrollView.bounds;
     for (AHYTopic *recommendTopic in self.recommendTopics) {
         AHYRecommendView *view = [[AHYRecommendView alloc] initWithFrame:frame];
+        view.delegate = self;
         [view configure:recommendTopic];
         [scrollView addSubview:view];
         frame.origin.x += screenSize.width;

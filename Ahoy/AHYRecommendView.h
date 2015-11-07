@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "AHYTopic.h"
 
+@protocol AHYRecommendViewDelegate <NSObject>
+
+- (void)recommendTopicDidSelected: (AHYTopic *)topic;
+
+@end
+
 @interface AHYRecommendView : UIView
+
+@property (nonatomic, weak) id<AHYRecommendViewDelegate>delegate;
 
 - (void)configure: (AHYTopic *)topic;
 

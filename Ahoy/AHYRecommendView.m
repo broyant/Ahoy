@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *topicNameLabel;
 @property (nonatomic, strong) UILabel *descriptionLabel;
+@property (nonatomic, strong) AHYTopic *topic;
 
 @end
 
@@ -36,12 +37,19 @@
     return  self;
 }
 
+- (void)topicDidSelected {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(recommendTopicDidSelected:)]) {
+        [self.delegate recommendTopicDidSelected:_topic];
+    }
+}
+
 #pragma mark -configure
 
 - (void)configure:(AHYTopic *)topic {
 //    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
 //                  placeholderImage:nil
 //                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    _topic = topic;
     _imageView.image = [UIImage imageNamed:topic.imgUrl];
     _topicNameLabel.text = topic.name;
     //TODO separate number with ","
@@ -55,6 +63,7 @@
     [self addImageView];
     [self addTopicNameLabel];
     [self addDescriptionLabel];
+    [self addTapGesture];
 }
 
 - (void)addImageView {
@@ -87,6 +96,11 @@
         make.top.equalTo(_topicNameLabel.mas_bottom).offset(5);
         make.height.mas_equalTo(16);
     }];
+}
+
+- (void)addTapGesture {
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topicDidSelected)];
+    [self addGestureRecognizer:tapGesture];
 }
 
 @end
