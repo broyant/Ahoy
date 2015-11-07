@@ -102,7 +102,7 @@
 }
 
 - (void)addStarsView {
-    _starsView = [[AVStarsView alloc] init];
+    _starsView = [[AVStarsView alloc] initWithFrame:CGRectMake(0, 0, 80, 10)];
     _starsView.count = 5;
     _starsView.rating = 5;
     _starsView.onColor = AHYYellow;
