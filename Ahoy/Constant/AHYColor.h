@@ -29,4 +29,8 @@
 #define AHYGreen     [UIColor colorWithHex:0x59bc7b]
 #define AHYRed       [UIColor colorWithHex:0xed4e4e]
 
+
+#define RGBCOLORA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+
 #endif /* AHYColor_h */

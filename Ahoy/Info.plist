@@ -44,6 +44,30 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Trade Gothic LT.ttf</string>
+		<string>Trade Gothic LT Oblique.ttf</string>
+		<string>Trade Gothic LT Bold No. 2.ttf</string>
+		<string>Trade Gothic LT Bold No. 2 Oblique.ttf</string>
+		<string>Trade Gothic LT Light.ttf</string>
+		<string>Trade Gothic LT Light Oblique.ttf</string>
+		<string>Trade Gothic LT Extended.ttf</string>
+		<string>Trade Gothic LT Bold Extended.ttf</string>
+		<string>Trade Gothic LT Bold Oblique.ttf</string>
+		<string>Trade Gothic LT Condensed Bold.ttf</string>
+		<string>Trade Gothic LT Condensed No. 18 Oblique.ttf</string>
+		<string>Trade Gothic LT Condensed No. 18.ttf</string>
+		<string>Trade Gothic LT Bold Condensed No. 20.ttf</string>
+		<string>Trade Gothic LT Bold Condensed No. 20 Oblique.ttf</string>
+		<string>Trade Gothic LT Extended.ttf</string>
+		<string>avenirnextbold.otf</string>
+		<string>avenirnextdemibold.otf</string>
+		<string>avenirnextdemibolditalic.otf</string>
+		<string>avenirnextmedium.otf</string>
+		<string>avenirnextregular.otf</string>
+		<string>avenirnextregularitalic.otf</string>
+	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

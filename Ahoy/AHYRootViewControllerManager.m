@@ -9,6 +9,7 @@
 #import "AHYRootViewControllerManager.h"
 #import "AHYDiscoverViewController.h"
 #import "AHYSearchViewController.h"
+#import "AHYProfileViewController.h"
 
 @interface AHYRootViewControllerManager()
 
@@ -32,7 +33,7 @@
     UIViewController *tabVC3 = [[UIViewController alloc] init];
     tabVC3.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Chat"] selectedImage:[UIImage imageNamed:@"Chat"]];
     
-    UIViewController *tabVC4 = [[UIViewController alloc] init];
+    AHYProfileViewController *tabVC4 = [AHYProfileViewController getInstance];
     tabVC4.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Profile"] selectedImage:[UIImage imageNamed:@"Profile"]];
     
     
