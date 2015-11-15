@@ -175,6 +175,20 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
     }
 }
 
+- (void)setOnColor:(UIColor *)onColor {
+    _onColor = onColor;
+    for (AVStarView *starView in self.stars) {
+        starView.onColor = onColor;
+    }
+}
+
+- (void)setOffColor:(UIColor *)offColor {
+    _offColor = offColor;
+    for (AVStarView *starView in self.stars) {
+        starView.offColor = offColor;
+    }
+}
+
 @end
 
 // --------------------------------------------

@@ -185,7 +185,7 @@
     [super layoutSubviews];
     
     CGFloat viewWidth     = CGRectGetWidth(self.frame);
-    CGFloat viewHeight    = CGRectGetHeight(self.frame);
+//    CGFloat viewHeight    = CGRectGetHeight(self.frame);
     __block CGFloat initX = 0;
     CGFloat initY         = 0;
     
@@ -195,7 +195,7 @@
     CGFloat leftRightMargin = self.leftRightMargin?:kLeftRightMargin;
     
     //configure bgView
-    self.bgView.frame = CGRectMake(leftRightMargin, (viewHeight - self.itemHeight?:kItemHeight)/2, viewWidth - 2*kLeftRightMargin, self.itemHeight?:kItemHeight);
+    self.bgView.frame = CGRectMake(leftRightMargin, 0, viewWidth - 2*kLeftRightMargin, self.itemHeight?:kItemHeight);
     
     //configure items
     [self.items enumerateObjectsUsingBlock:^(RFSegmentItem * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {

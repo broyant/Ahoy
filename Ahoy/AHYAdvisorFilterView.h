@@ -23,4 +23,7 @@
 
 + (instancetype)filterView;
 
+- (void)show;
+
+
 @end

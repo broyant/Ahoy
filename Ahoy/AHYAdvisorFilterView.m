@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet NMRangeSlider *slider;
 @property (weak, nonatomic) IBOutlet AVStarsView *starsView;
 @property (weak, nonatomic) IBOutlet UILabel *starsLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeight;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *filterTypeLabels;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
@@ -34,12 +35,21 @@
 
 - (void)awakeFromNib {
     [self configureSubviews];
+    self.frame = [[UIScreen mainScreen] bounds];
+    _contentViewHeight.constant = CGRectGetHeight(self.frame) * 0.6;
 }
 
 + (instancetype)filterView {
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil][0];
 }
 
+- (void)show {
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    [UIView animateWithDuration:0.2 animations:^{
+        [keyWindow addSubview:self];
+    }];
+    
+}
 - (void)hidden {
    [UIView animateWithDuration:0.2 animations:^{
        [self removeFromSuperview];
@@ -88,11 +98,7 @@
     _slider.lowerValue = 0;
     _slider.upperValue = 500;
     UIImage* image = nil;
-    
-    image = [UIImage imageWithColor:AHYGrey28];
-    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 5.0)];
-    _slider.trackBackgroundImage = image;
-    
+        
     image = [UIImage imageWithColor:AHYYellow];
     image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 7.0, 0.0, 7.0)];
     _slider.trackImage = image;

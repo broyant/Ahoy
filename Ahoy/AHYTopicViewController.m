@@ -51,9 +51,7 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 }
 
 - (void)filterAdvisor {
-    AHYAdvisorFilterView *filterView = [AHYAdvisorFilterView filterView];
-    filterView.frame = self.view.frame;
-    [self.view.window addSubview:filterView];
+    [[AHYAdvisorFilterView filterView] show];
 }
 
 #pragma mark - Table view data source

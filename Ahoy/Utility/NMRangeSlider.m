@@ -251,8 +251,8 @@ NSUInteger DeviceSystemMajorVersion() {
         }
         else
         {
-            UIImage *image = [self imageFromBundle:@"slider-default7-trackBackground"];
-            image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 2.0, 0.0, 2.0)];
+            UIImage *image = [UIImage imageNamed:@"sliderTrackBackground"];
+            image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 10, 10)];
             _trackBackgroundImage = image;
         }
     }
