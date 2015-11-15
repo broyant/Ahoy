@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5081BD939FA0085017B /* AHYRecommendView.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5131BDA00530085017B /* AVStarsView.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5161BDA03900085017B /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5281BDA8C080085017B /* AHYCategoryView.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5361BDF54DA0085017B /* AHYTopic.m */; settings = {ASSET_TAGS = (); }; };
-		6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */; settings = {ASSET_TAGS = (); }; };
-		7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5081BD939FA0085017B /* AHYRecommendView.m */; };
+		6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */; };
+		6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5131BDA00530085017B /* AVStarsView.m */; };
+		6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5161BDA03900085017B /* UIColor+Hex.m */; };
+		6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */; };
+		6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5281BDA8C080085017B /* AHYCategoryView.m */; };
+		6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5361BDF54DA0085017B /* AHYTopic.m */; };
+		6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */; };
+		7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */; };
+		7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */; };
 		7E1375221BCA6EB100AB3CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
 		7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */; };
 		7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */; };
 		7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1375311BCA6EB100AB3CA9 /* LaunchScreen.storyboard */; };
-		7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E36292A1BEE3F160000711F /* AHYTopicViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; settings = {ASSET_TAGS = (); }; };
+		7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E36292A1BEE3F160000711F /* AHYTopicViewController.m */; };
+		7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */; };
+		7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */; };
+		7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */; };
+		7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */; };
+		7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */; };
+		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
 		B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC70946D6FBBBF66DB552EFC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +48,6 @@
 		6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSingleTopicCell.m; sourceTree = "<group>"; };
 		6FAAC5271BDA8C080085017B /* AHYCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYCategoryView.h; sourceTree = "<group>"; };
 		6FAAC5281BDA8C080085017B /* AHYCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYCategoryView.m; sourceTree = "<group>"; };
-		6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTEHorizontalTableView.h; sourceTree = "<group>"; };
-		6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTEHorizontalTableView.m; sourceTree = "<group>"; };
 		6FAAC5351BDF54DA0085017B /* AHYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopic.h; sourceTree = "<group>"; };
 		6FAAC5361BDF54DA0085017B /* AHYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopic.m; sourceTree = "<group>"; };
 		6FAAC53B1BDF563C0085017B /* AHYTopicCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYTopicCategory.h; sourceTree = "<group>"; };
@@ -64,6 +66,15 @@
 		7E1375341BCA6EB100AB3CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E3629291BEE3F160000711F /* AHYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopicViewController.h; sourceTree = "<group>"; };
 		7E36292A1BEE3F160000711F /* AHYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicViewController.m; sourceTree = "<group>"; };
+		7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisorFilterView.h; sourceTree = "<group>"; };
+		7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYAdvisorFilterView.m; sourceTree = "<group>"; };
+		7E3C066A1BF2457300E8F5D7 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMRangeSlider.m; sourceTree = "<group>"; };
+		7E3C066E1BF2459600E8F5D7 /* NMRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMRangeSlider.h; sourceTree = "<group>"; };
+		7E3C06701BF2466A00E8F5D7 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
+		7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegmentView.m; sourceTree = "<group>"; };
+		7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYAdvisorFilterView.xib; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
@@ -110,6 +121,9 @@
 				6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */,
 				6FAAC5271BDA8C080085017B /* AHYCategoryView.h */,
 				6FAAC5281BDA8C080085017B /* AHYCategoryView.m */,
+				7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */,
+				7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */,
+				7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -120,6 +134,8 @@
 				6FAAC5181BDA039E0085017B /* Views */,
 				6FAAC5151BDA03900085017B /* UIColor+Hex.h */,
 				6FAAC5161BDA03900085017B /* UIColor+Hex.m */,
+				7E3C066A1BF2457300E8F5D7 /* UIImage+Color.h */,
+				7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */,
 			);
 			name = Utility;
 			path = Ahoy/Utility;
@@ -128,8 +144,10 @@
 		6FAAC5181BDA039E0085017B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */,
-				6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */,
+				7E3C06701BF2466A00E8F5D7 /* RFSegmentView.h */,
+				7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */,
+				7E3C066E1BF2459600E8F5D7 /* NMRangeSlider.h */,
+				7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */,
 				6FAAC5121BDA00530085017B /* AVStarsView.h */,
 				6FAAC5131BDA00530085017B /* AVStarsView.m */,
 			);
@@ -183,6 +201,7 @@
 		7E1375141BCA6EB000AB3CA9 = {
 			isa = PBXGroup;
 			children = (
+				7E3C062F1BEF6B4B00E8F5D7 /* Resources */,
 				7E13751F1BCA6EB100AB3CA9 /* Ahoy */,
 				6FAAC5191BDA0EA50085017B /* Constant */,
 				6FAAC5111BDA00530085017B /* Utility */,
@@ -224,6 +243,22 @@
 				7E1375211BCA6EB100AB3CA9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E3C062F1BEF6B4B00E8F5D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E3C06301BEF6B4B00E8F5D7 /* Fonts */,
+			);
+			name = Resources;
+			path = Ahoy/Resources;
+			sourceTree = "<group>";
+		};
+		7E3C06301BEF6B4B00E8F5D7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +325,7 @@
 			files = (
 				7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */,
 				7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */,
+				7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,12 +389,15 @@
 				6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */,
 				7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */,
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
+				7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */,
+				7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */,
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
+				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
+				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
 				7E1375221BCA6EB100AB3CA9 /* main.m in Sources */,
-				6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
 				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,

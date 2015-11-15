@@ -19,12 +19,13 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
 // --------------------------------------------
 //              AVStarsView
 // --------------------------------------------
-@interface AVStarsView()
+@interface AVStarsView()<UIGestureRecognizerDelegate>
 {
     NSInteger _animationIndex;
 }
 
 @property(nonatomic, strong) NSMutableArray *stars;
+@property(nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -34,18 +35,41 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
-        self.count = kDefaultStarsCount;
-        self.rating = kDefaultStarsRating;
-        self.stars = [NSMutableArray arrayWithCapacity:self.count];
-        _onColor = kStarDefaultOnColor;
-        _offColor = kStarDefaultOffColor;
-        _animationDuration = self.count * kStarDefaultAnimationDuration;
-        
-        // Create stars
-        [self _create];
+        [self setup];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+-(void)setupTapGesture {
+    _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(starViewPressed:)];
+    [self addGestureRecognizer:_tapGesture];
+}
+
+-(void)starViewPressed:(UITapGestureRecognizer *)gesture {
+    CGPoint tapLocation = [gesture locationInView:self];
+    for (AVStarView *starView in self.stars) {
+        if (CGRectContainsPoint(starView.frame, tapLocation)) {
+            if (starView.isOn) {
+                //if you touch a on starview,toggle it,then rate minus 1.You must set half off
+                self.rating --;
+            } else {
+                //if you touch a off starview,toggle it,then rate plus 1.You must set half off
+                self.rating ++;
+            }
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(starsViewRatingChanged:)]) {
+                [self.delegate starsViewRatingChanged:self];
+            }
+        }
+    }
 }
 
 -(void)_create
@@ -80,6 +104,19 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
     }
 }
 
+- (void)setup {
+    // Initialization code
+    self.count = kDefaultStarsCount;
+    self.rating = kDefaultStarsRating;
+    self.stars = [NSMutableArray arrayWithCapacity:self.count];
+    _onColor = kStarDefaultOnColor;
+    _offColor = kStarDefaultOffColor;
+    _animationDuration = self.count * kStarDefaultAnimationDuration;
+    [self setupTapGesture];
+    // Create stars
+    [self _create];
+}
+
 -(void)setCount:(NSInteger)count
 {
     _count = count;
@@ -111,7 +148,6 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
 
 -(void)setOn:(BOOL)state
 {
-    // Disable all
     for (AVStarView *star in self.stars) {
         [star setOn:state];
     }
@@ -135,7 +171,7 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
             _animationIndex++;
             [self _animate];
         }];
-
+        
     }
 }
 
@@ -150,7 +186,7 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
 @property(nonatomic, strong) CAShapeLayer *offStarLayer;
 
 @property(nonatomic, readwrite) BOOL isOn;
-@property (nonatomic, copy) void (^complete)(void);
+@property(nonatomic, copy) void (^complete)(void);
 
 @end
 
@@ -225,7 +261,7 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
         CGRect f = maskLayer.frame;
         
         [self.onStarLayer setHidden:!state];
-
+        
         // Animate
         CABasicAnimation *animation = [CABasicAnimation animation];
         [animation setValue:@"pathAnimation" forKey:@"id"];
@@ -240,7 +276,7 @@ CGFloat const kStarDefaultAnimationDuration =       0.3f;
         animation.delegate = self;
         [maskLayer addAnimation:animation forKey:@"path"];
     }
-
+    
     self.isOn = state;
 }
 

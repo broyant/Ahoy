@@ -118,7 +118,7 @@
 - (void)addTitleLabel {
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.font = AvenirNextRegular(14);
-    _titleLabel.textColor = AHYGrey56;
+    _titleLabel.textColor = AHYSteelGrey;
     [self.contentView addSubview:_titleLabel];
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(_nameLabel.mas_leading);
