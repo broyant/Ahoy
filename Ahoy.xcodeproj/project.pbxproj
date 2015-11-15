@@ -326,7 +326,6 @@
 		7E1375141BCA6EB000AB3CA9 = {
 			isa = PBXGroup;
 			children = (
-				7E3C062F1BEF6B4B00E8F5D7 /* Resources */,
 				7E13751F1BCA6EB100AB3CA9 /* Ahoy */,
 				6FAAC5191BDA0EA50085017B /* Constant */,
 				6FAAC5111BDA00530085017B /* Utility */,
@@ -370,22 +369,6 @@
 				7E1375211BCA6EB100AB3CA9 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7E3C062F1BEF6B4B00E8F5D7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7E3C06301BEF6B4B00E8F5D7 /* Fonts */,
-			);
-			name = Resources;
-			path = Ahoy/Resources;
-			sourceTree = "<group>";
-		};
-		7E3C06301BEF6B4B00E8F5D7 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
