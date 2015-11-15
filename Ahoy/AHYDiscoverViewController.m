@@ -165,7 +165,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
     ty += 18.f;
     UILabel *advisorHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, ty, screenSize.width, kAdvisorListHeaderHeight)];
     advisorHeader.text = kAdvisorListTitle;
-    advisorHeader.font = TradeGothicLTBoldTwo(14);
+    advisorHeader.font = TradeGothicLTBold(14);
     advisorHeader.textColor = AHYGrey40;
     [headerView addSubview:advisorHeader];
     ty += kAdvisorListHeaderHeight;

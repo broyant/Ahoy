@@ -15,5 +15,6 @@
 #import <Foundation/Foundation.h>
 #import "AHYColor.h"
 #import "AHYFont.h"
+#import "AhYFrame.h"
 
 #endif /* Ahoy_Prefix_pch */

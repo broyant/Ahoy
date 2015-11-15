@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8101BF0A24F00EE1457 /* AHYProfileViewController.m */; };
+		1892F8221BF0BA1600EE1457 /* avenirnextbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F81C1BF0BA1600EE1457 /* avenirnextbold.otf */; };
+		1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F81D1BF0BA1600EE1457 /* avenirnextdemibold.otf */; };
+		1892F8241BF0BA1600EE1457 /* avenirnextdemibolditalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F81E1BF0BA1600EE1457 /* avenirnextdemibolditalic.otf */; };
+		1892F8251BF0BA1600EE1457 /* avenirnextmedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F81F1BF0BA1600EE1457 /* avenirnextmedium.otf */; };
+		1892F8261BF0BA1600EE1457 /* avenirnextregular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8201BF0BA1600EE1457 /* avenirnextregular.otf */; };
+		1892F8271BF0BA1600EE1457 /* avenirnextregularitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8211BF0BA1600EE1457 /* avenirnextregularitalic.otf */; };
+		1892F8361BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8281BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf */; };
+		1892F8371BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8291BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf */; };
+		1892F8381BF0BA2000EE1457 /* Trade Gothic LT Bold Extended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F82A1BF0BA2000EE1457 /* Trade Gothic LT Bold Extended.ttf */; };
+		1892F8391BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F82B1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf */; };
+		1892F83A1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F82C1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf */; };
+		1892F83B1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F82D1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf */; };
+		1892F83C1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F82E1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf */; };
+		1892F83D1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18 Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F82F1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18 Oblique.ttf */; };
+		1892F83E1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8301BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf */; };
+		1892F83F1BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8311BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf */; };
+		1892F8401BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8321BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf */; };
+		1892F8411BF0BA2000EE1457 /* Trade Gothic LT Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8331BF0BA2000EE1457 /* Trade Gothic LT Light.ttf */; };
+		1892F8421BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8341BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf */; };
+		1892F8431BF0BA2000EE1457 /* Trade Gothic LT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F8351BF0BA2000EE1457 /* Trade Gothic LT.ttf */; };
+		1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8481BF3083D00EE1457 /* UIProfileHeaderView.m */; };
+		1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F84E1BF3131A00EE1457 /* UIUserIntroductionView.m */; };
+		1892F8521BF3193600EE1457 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8511BF3193600EE1457 /* CustomTableViewCell.m */; };
+		1892F8551BF32CBD00EE1457 /* UIUserScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8541BF32CBD00EE1457 /* UIUserScoreView.m */; };
 		6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5081BD939FA0085017B /* AHYRecommendView.m */; };
 		6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */; };
 		6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5131BDA00530085017B /* AVStarsView.m */; };
@@ -17,7 +42,7 @@
 		6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */; };
 		7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */; };
 		7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */; };
-		7E1375221BCA6EB100AB3CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
+		7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
 		7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */; };
 		7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */; };
 		7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1375311BCA6EB100AB3CA9 /* LaunchScreen.storyboard */; };
@@ -32,6 +57,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1892F80F1BF0A24F00EE1457 /* AHYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYProfileViewController.h; sourceTree = "<group>"; };
+		1892F8101BF0A24F00EE1457 /* AHYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYProfileViewController.m; sourceTree = "<group>"; };
+		1892F8121BF0A7F000EE1457 /* AHYFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYFrame.h; sourceTree = "<group>"; };
+		1892F81C1BF0BA1600EE1457 /* avenirnextbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = avenirnextbold.otf; path = "Font/Avenir Next/avenirnextbold.otf"; sourceTree = "<group>"; };
+		1892F81D1BF0BA1600EE1457 /* avenirnextdemibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = avenirnextdemibold.otf; path = "Font/Avenir Next/avenirnextdemibold.otf"; sourceTree = "<group>"; };
+		1892F81E1BF0BA1600EE1457 /* avenirnextdemibolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = avenirnextdemibolditalic.otf; path = "Font/Avenir Next/avenirnextdemibolditalic.otf"; sourceTree = "<group>"; };
+		1892F81F1BF0BA1600EE1457 /* avenirnextmedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = avenirnextmedium.otf; path = "Font/Avenir Next/avenirnextmedium.otf"; sourceTree = "<group>"; };
+		1892F8201BF0BA1600EE1457 /* avenirnextregular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = avenirnextregular.otf; path = "Font/Avenir Next/avenirnextregular.otf"; sourceTree = "<group>"; };
+		1892F8211BF0BA1600EE1457 /* avenirnextregularitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = avenirnextregularitalic.otf; path = "Font/Avenir Next/avenirnextregularitalic.otf"; sourceTree = "<group>"; };
+		1892F8281BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Bold Condensed No. 20 Oblique.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Bold Condensed No. 20 Oblique.ttf"; sourceTree = "<group>"; };
+		1892F8291BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Bold Condensed No. 20.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Bold Condensed No. 20.ttf"; sourceTree = "<group>"; };
+		1892F82A1BF0BA2000EE1457 /* Trade Gothic LT Bold Extended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Bold Extended.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Bold Extended.ttf"; sourceTree = "<group>"; };
+		1892F82B1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Bold No. 2 Oblique.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Bold No. 2 Oblique.ttf"; sourceTree = "<group>"; };
+		1892F82C1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Bold No. 2.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Bold No. 2.ttf"; sourceTree = "<group>"; };
+		1892F82D1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Bold Oblique.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Bold Oblique.ttf"; sourceTree = "<group>"; };
+		1892F82E1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Condensed Bold.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Condensed Bold.ttf"; sourceTree = "<group>"; };
+		1892F82F1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18 Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Condensed No. 18 Oblique.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Condensed No. 18 Oblique.ttf"; sourceTree = "<group>"; };
+		1892F8301BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Condensed No. 18.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Condensed No. 18.ttf"; sourceTree = "<group>"; };
+		1892F8311BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Extended.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Extended.ttf"; sourceTree = "<group>"; };
+		1892F8321BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Light Oblique.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Light Oblique.ttf"; sourceTree = "<group>"; };
+		1892F8331BF0BA2000EE1457 /* Trade Gothic LT Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Light.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Light.ttf"; sourceTree = "<group>"; };
+		1892F8341BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT Oblique.ttf"; path = "Font/Trade Gothic/Trade Gothic LT Oblique.ttf"; sourceTree = "<group>"; };
+		1892F8351BF0BA2000EE1457 /* Trade Gothic LT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trade Gothic LT.ttf"; path = "Font/Trade Gothic/Trade Gothic LT.ttf"; sourceTree = "<group>"; };
+		1892F8471BF3083D00EE1457 /* UIProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIProfileHeaderView.h; path = User/UIProfileHeaderView.h; sourceTree = "<group>"; };
+		1892F8481BF3083D00EE1457 /* UIProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIProfileHeaderView.m; path = User/UIProfileHeaderView.m; sourceTree = "<group>"; };
+		1892F84D1BF3131A00EE1457 /* UIUserIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUserIntroductionView.h; path = User/UIUserIntroductionView.h; sourceTree = "<group>"; };
+		1892F84E1BF3131A00EE1457 /* UIUserIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserIntroductionView.m; path = User/UIUserIntroductionView.m; sourceTree = "<group>"; };
+		1892F8501BF3193600EE1457 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		1892F8511BF3193600EE1457 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		1892F8531BF32CBD00EE1457 /* UIUserScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUserScoreView.h; path = User/UIUserScoreView.h; sourceTree = "<group>"; };
+		1892F8541BF32CBD00EE1457 /* UIUserScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserScoreView.m; path = User/UIUserScoreView.m; sourceTree = "<group>"; };
 		3DB311C714AD658DD166EDD3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4ECBC58C68D93CAB339BD5D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6FAAC5071BD939FA0085017B /* AHYRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRecommendView.h; sourceTree = "<group>"; };
@@ -102,6 +158,72 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1892F80E1BF0A21900EE1457 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1892F8461BF307C400EE1457 /* Model */,
+				1892F8451BF307BB00EE1457 /* View */,
+				1892F8441BF307B000EE1457 /* ViewController */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		1892F8131BF0AE5800EE1457 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1892F8281BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf */,
+				1892F8291BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf */,
+				1892F82A1BF0BA2000EE1457 /* Trade Gothic LT Bold Extended.ttf */,
+				1892F82B1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf */,
+				1892F82C1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf */,
+				1892F82D1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf */,
+				1892F82E1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf */,
+				1892F82F1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18 Oblique.ttf */,
+				1892F8301BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf */,
+				1892F8311BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf */,
+				1892F8321BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf */,
+				1892F8331BF0BA2000EE1457 /* Trade Gothic LT Light.ttf */,
+				1892F8341BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf */,
+				1892F8351BF0BA2000EE1457 /* Trade Gothic LT.ttf */,
+				1892F81C1BF0BA1600EE1457 /* avenirnextbold.otf */,
+				1892F81D1BF0BA1600EE1457 /* avenirnextdemibold.otf */,
+				1892F81E1BF0BA1600EE1457 /* avenirnextdemibolditalic.otf */,
+				1892F81F1BF0BA1600EE1457 /* avenirnextmedium.otf */,
+				1892F8201BF0BA1600EE1457 /* avenirnextregular.otf */,
+				1892F8211BF0BA1600EE1457 /* avenirnextregularitalic.otf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		1892F8441BF307B000EE1457 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1892F80F1BF0A24F00EE1457 /* AHYProfileViewController.h */,
+				1892F8101BF0A24F00EE1457 /* AHYProfileViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		1892F8451BF307BB00EE1457 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1892F8471BF3083D00EE1457 /* UIProfileHeaderView.h */,
+				1892F8481BF3083D00EE1457 /* UIProfileHeaderView.m */,
+				1892F84D1BF3131A00EE1457 /* UIUserIntroductionView.h */,
+				1892F84E1BF3131A00EE1457 /* UIUserIntroductionView.m */,
+				1892F8531BF32CBD00EE1457 /* UIUserScoreView.h */,
+				1892F8541BF32CBD00EE1457 /* UIUserScoreView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1892F8461BF307C400EE1457 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6299A34A76006285610475DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +272,8 @@
 				7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */,
 				6FAAC5121BDA00530085017B /* AVStarsView.h */,
 				6FAAC5131BDA00530085017B /* AVStarsView.m */,
+				1892F8501BF3193600EE1457 /* CustomTableViewCell.h */,
+				1892F8511BF3193600EE1457 /* CustomTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -159,6 +283,7 @@
 			children = (
 				6FAAC51A1BDA0EF90085017B /* AHYColor.h */,
 				6FAAC51B1BDA12710085017B /* AHYFont.h */,
+				1892F8121BF0A7F000EE1457 /* AHYFrame.h */,
 			);
 			name = Constant;
 			path = Ahoy/Constant;
@@ -229,6 +354,7 @@
 				7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */,
 				7E0B65A91BCD54A6004BAA76 /* Discover */,
 				7E0B65AA1BCD54B3004BAA76 /* Search */,
+				1892F80E1BF0A21900EE1457 /* User */,
 				7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */,
 				7E1375311BCA6EB100AB3CA9 /* LaunchScreen.storyboard */,
 				7E1375341BCA6EB100AB3CA9 /* Info.plist */,
@@ -240,6 +366,7 @@
 		7E1375201BCA6EB100AB3CA9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1892F8131BF0AE5800EE1457 /* Font */,
 				7E1375211BCA6EB100AB3CA9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -291,7 +418,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AHY;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Ahoy;
 				TargetAttributes = {
 					7E13751C1BCA6EB100AB3CA9 = {
@@ -323,9 +450,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1892F8371BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf in Resources */,
+				1892F8261BF0BA1600EE1457 /* avenirnextregular.otf in Resources */,
+				1892F8251BF0BA1600EE1457 /* avenirnextmedium.otf in Resources */,
+				1892F8421BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf in Resources */,
 				7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */,
+				1892F8431BF0BA2000EE1457 /* Trade Gothic LT.ttf in Resources */,
+				1892F83B1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf in Resources */,
+				1892F8361BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf in Resources */,
+				1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */,
+				1892F83C1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf in Resources */,
 				7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */,
 				7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */,
+				1892F8391BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf in Resources */,
+				1892F83A1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf in Resources */,
+				1892F83F1BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf in Resources */,
+				1892F8401BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf in Resources */,
+				1892F83E1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf in Resources */,
+				1892F8241BF0BA1600EE1457 /* avenirnextdemibolditalic.otf in Resources */,
+				1892F8271BF0BA1600EE1457 /* avenirnextregularitalic.otf in Resources */,
+				1892F8381BF0BA2000EE1457 /* Trade Gothic LT Bold Extended.ttf in Resources */,
+				1892F83D1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18 Oblique.ttf in Resources */,
+				1892F8221BF0BA1600EE1457 /* avenirnextbold.otf in Resources */,
+				1892F8411BF0BA2000EE1457 /* Trade Gothic LT Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,13 +538,18 @@
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
 				7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */,
 				7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */,
+				1892F8521BF3193600EE1457 /* CustomTableViewCell.m in Sources */,
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
+				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
+				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
 				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
-				7E1375221BCA6EB100AB3CA9 /* main.m in Sources */,
+				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
+				1892F8551BF32CBD00EE1457 /* UIUserScoreView.m in Sources */,
+				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
 				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
@@ -455,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -492,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
