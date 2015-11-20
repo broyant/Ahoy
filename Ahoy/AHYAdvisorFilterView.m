@@ -36,7 +36,6 @@
 - (void)awakeFromNib {
     [self configureSubviews];
     self.frame = [[UIScreen mainScreen] bounds];
-    _contentViewHeight.constant = CGRectGetHeight(self.frame) * 0.6;
 }
 
 + (instancetype)filterView {
@@ -98,7 +97,11 @@
     _slider.lowerValue = 0;
     _slider.upperValue = 500;
     UIImage* image = nil;
-        
+    
+    image = [UIImage imageWithColor:AHYGrey28];
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 5.0)];
+    _slider.trackBackgroundImage = image;
+    
     image = [UIImage imageWithColor:AHYYellow];
     image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 7.0, 0.0, 7.0)];
     _slider.trackImage = image;
@@ -144,15 +147,13 @@
 
 - (IBAction)sliderValueChanged:(NMRangeSlider *)sender {
     // we get get the center point of the slider handles and use this to arrange other subviews
-    CGPoint lowerCenter;
+    CGPoint lowerCenter = _lowerPriceLabel.center;
     lowerCenter.x = (_slider.lowerCenter.x + _slider.frame.origin.x);
-    lowerCenter.y = (_slider.center.y - 30.0f);
     _lowerPriceLabel.center = lowerCenter;
     _lowerPriceLabel.text = [NSString stringWithFormat:@"$%d", (int)_slider.lowerValue];
     
-    CGPoint upperCenter;
+    CGPoint upperCenter = _upperPriceLabel.center;
     upperCenter.x = (_slider.upperCenter.x + _slider.frame.origin.x);
-    upperCenter.y = (_slider.center.y - 30.0f);
     _upperPriceLabel.center = upperCenter;
     _upperPriceLabel.text = [NSString stringWithFormat:@"$%d+", (int)_slider.upperValue];
 }

@@ -52,6 +52,8 @@
 		7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */; };
 		7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */; };
 		7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */; };
+		7E4DA13B1BFCC85700978C5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4DA13A1BFCC85700978C5A /* Reveal.framework */; };
+		7E4DA13D1BFCC9FE00978C5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */; };
 		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
 		B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC70946D6FBBBF66DB552EFC /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,8 @@
 		7E3C06701BF2466A00E8F5D7 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
 		7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegmentView.m; sourceTree = "<group>"; };
 		7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYAdvisorFilterView.xib; sourceTree = "<group>"; };
+		7E4DA13A1BFCC85700978C5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
@@ -142,7 +146,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4DA13D1BFCC9FE00978C5A /* libz.1.dylib in Frameworks */,
 				B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */,
+				7E4DA13B1BFCC85700978C5A /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +233,8 @@
 		6299A34A76006285610475DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */,
+				7E4DA13A1BFCC85700978C5A /* Reveal.framework */,
 				FC70946D6FBBBF66DB552EFC /* libPods.a */,
 			);
 			name = Frameworks;
@@ -640,11 +648,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
 				INFOPLIST_FILE = Ahoy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahoy-Tech.Ahoy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -657,11 +693,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
 				INFOPLIST_FILE = Ahoy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahoy-Tech.Ahoy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
