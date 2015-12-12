@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AVStarsView.h"
 
 typedef enum {
     EmptyCell,
+    ReviewCell,
 } TableViewCellStyle;
 
 @interface CustomTableViewCell : UITableViewCell
@@ -19,8 +21,13 @@ typedef enum {
 @property (nonatomic, strong) UILabel   *descLabel;
 @property (nonatomic, strong) UIView   *dividerView;
 
+@property (nonatomic, strong) AVStarsView   *starsView;
+@property (nonatomic, strong) UIImageView   *cellImage;
+@property (nonatomic, strong) UILabel   *otherLabel;
+
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier tableViewCellStyle:(TableViewCellStyle)cellStyle;
+- (void)initWithReviewCell;
 
 @end

@@ -12,6 +12,7 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 #import "AHYAdvisor.h"
 #import "AHYAdvisorListCell.h"
 #import "AHYTopic.h"
+#import "AHYAdVisorProfileVC.h"
 
 @interface AHYTopicViewController ()<UIGestureRecognizerDelegate>
 
@@ -74,6 +75,11 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%s:%@",__func__,self);
+    
+    AHYAdVisorProfileVC *vc = [[AHYAdVisorProfileVC alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

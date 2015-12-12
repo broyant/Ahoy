@@ -185,5 +185,10 @@
     _tableView.tableHeaderView = view;
 }
 
+- (void)setTableViewFooter:(UIView *)view
+{
+    _tableView.tableFooterView = view;
+}
+
 
 @end

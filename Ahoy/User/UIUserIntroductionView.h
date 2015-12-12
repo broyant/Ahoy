@@ -13,5 +13,6 @@
 
 - (id)initWithFrame:(CGRect)frame;
 - (void)setTableViewHeader:(UIView *)view;
+- (void)setTableViewFooter:(UIView *)view;
 
 @end

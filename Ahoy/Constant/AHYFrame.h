@@ -14,6 +14,7 @@
 
 
 #define kStatusBarHeight 20
+#define kNavBarHeight    44
 #define kTabBarHeight    51
 
 
