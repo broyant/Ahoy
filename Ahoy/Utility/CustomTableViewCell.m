@@ -71,7 +71,7 @@
     // 日期
     self.otherLabel = [[UILabel alloc] init];
     self.otherLabel.font = TradeGothicLT(12);
-    self.otherLabel.textColor = AHYGrey56;
+    self.otherLabel.textColor = AHYSteelGrey;
     self.otherLabel.numberOfLines = 1;
     self.otherLabel.backgroundColor = [UIColor clearColor];
     [self addSubview:self.otherLabel];
@@ -83,7 +83,7 @@
     
     self.subTitleLabel = [[UILabel alloc] init];
     self.subTitleLabel.font = AvenirNextRegular(14);
-    self.subTitleLabel.textColor = AHYGrey56;
+    self.subTitleLabel.textColor = AHYSteelGrey;
     self.subTitleLabel.numberOfLines = 1;
     self.subTitleLabel.backgroundColor = [UIColor clearColor];
     [self addSubview:self.subTitleLabel];

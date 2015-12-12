@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AVStarsView;
+
+@protocol AVStarsViewDelegate <NSObject>
+
+- (void)starsViewRatingChanged:(AVStarsView *)starsView;
+
+@end
 
 @interface AVStarsView : UIView
 
+@property(nonatomic ,weak) id<AVStarsViewDelegate>delegate;
 @property(nonatomic) NSInteger count;
 @property(nonatomic) CGFloat rating;
 

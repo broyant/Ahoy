@@ -38,16 +38,22 @@
 		6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5161BDA03900085017B /* UIColor+Hex.m */; };
 		6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */; };
 		6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5281BDA8C080085017B /* AHYCategoryView.m */; };
-		6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */; };
 		6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5361BDF54DA0085017B /* AHYTopic.m */; };
 		6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */; };
 		7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A41BCD53AA004BAA76 /* AHYDiscoverViewController.m */; };
 		7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */; };
-		7E1375221BCA6EB100AB3CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
+		7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375211BCA6EB100AB3CA9 /* main.m */; };
 		7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */; };
 		7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */; };
 		7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1375311BCA6EB100AB3CA9 /* LaunchScreen.storyboard */; };
 		7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E36292A1BEE3F160000711F /* AHYTopicViewController.m */; };
+		7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */; };
+		7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */; };
+		7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */; };
+		7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */; };
+		7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */; };
+		7E4DA13B1BFCC85700978C5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4DA13A1BFCC85700978C5A /* Reveal.framework */; };
+		7E4DA13D1BFCC9FE00978C5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */; };
 		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
 		B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC70946D6FBBBF66DB552EFC /* libPods.a */; };
 		FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */; };
@@ -108,8 +114,6 @@
 		6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSingleTopicCell.m; sourceTree = "<group>"; };
 		6FAAC5271BDA8C080085017B /* AHYCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYCategoryView.h; sourceTree = "<group>"; };
 		6FAAC5281BDA8C080085017B /* AHYCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYCategoryView.m; sourceTree = "<group>"; };
-		6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTEHorizontalTableView.h; sourceTree = "<group>"; };
-		6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTEHorizontalTableView.m; sourceTree = "<group>"; };
 		6FAAC5351BDF54DA0085017B /* AHYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopic.h; sourceTree = "<group>"; };
 		6FAAC5361BDF54DA0085017B /* AHYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopic.m; sourceTree = "<group>"; };
 		6FAAC53B1BDF563C0085017B /* AHYTopicCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYTopicCategory.h; sourceTree = "<group>"; };
@@ -128,6 +132,17 @@
 		7E1375341BCA6EB100AB3CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E3629291BEE3F160000711F /* AHYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopicViewController.h; sourceTree = "<group>"; };
 		7E36292A1BEE3F160000711F /* AHYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicViewController.m; sourceTree = "<group>"; };
+		7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisorFilterView.h; sourceTree = "<group>"; };
+		7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYAdvisorFilterView.m; sourceTree = "<group>"; };
+		7E3C066A1BF2457300E8F5D7 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMRangeSlider.m; sourceTree = "<group>"; };
+		7E3C066E1BF2459600E8F5D7 /* NMRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMRangeSlider.h; sourceTree = "<group>"; };
+		7E3C06701BF2466A00E8F5D7 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
+		7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegmentView.m; sourceTree = "<group>"; };
+		7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYAdvisorFilterView.xib; sourceTree = "<group>"; };
+		7E4DA13A1BFCC85700978C5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
@@ -155,7 +170,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4DA13D1BFCC9FE00978C5A /* libz.1.dylib in Frameworks */,
 				B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */,
+				7E4DA13B1BFCC85700978C5A /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +271,8 @@
 		6299A34A76006285610475DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */,
+				7E4DA13A1BFCC85700978C5A /* Reveal.framework */,
 				FC70946D6FBBBF66DB552EFC /* libPods.a */,
 			);
 			name = Frameworks;
@@ -270,6 +289,9 @@
 				6FAAC5221BDA75870085017B /* AHYSingleTopicCell.m */,
 				6FAAC5271BDA8C080085017B /* AHYCategoryView.h */,
 				6FAAC5281BDA8C080085017B /* AHYCategoryView.m */,
+				7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */,
+				7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */,
+				7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -280,6 +302,8 @@
 				6FAAC5181BDA039E0085017B /* Views */,
 				6FAAC5151BDA03900085017B /* UIColor+Hex.h */,
 				6FAAC5161BDA03900085017B /* UIColor+Hex.m */,
+				7E3C066A1BF2457300E8F5D7 /* UIImage+Color.h */,
+				7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */,
 			);
 			name = Utility;
 			path = Ahoy/Utility;
@@ -291,6 +315,10 @@
 				FC5535B11C084364002A05BE /* Tag */,
 				6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */,
 				6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */,
+				7E3C06701BF2466A00E8F5D7 /* RFSegmentView.h */,
+				7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */,
+				7E3C066E1BF2459600E8F5D7 /* NMRangeSlider.h */,
+				7E3C066D1BF2459600E8F5D7 /* NMRangeSlider.m */,
 				6FAAC5121BDA00530085017B /* AVStarsView.h */,
 				6FAAC5131BDA00530085017B /* AVStarsView.m */,
 				1892F8501BF3193600EE1457 /* CustomTableViewCell.h */,
@@ -431,7 +459,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AHY;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Ahoy;
 				TargetAttributes = {
 					7E13751C1BCA6EB100AB3CA9 = {
@@ -474,6 +502,7 @@
 				1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */,
 				1892F83C1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf in Resources */,
 				7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */,
+				7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */,
 				1892F8391BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf in Resources */,
 				1892F83A1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf in Resources */,
 				1892F83F1BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf in Resources */,
@@ -550,6 +579,8 @@
 				6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */,
 				7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */,
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
+				7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */,
+				7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */,
 				1892F8521BF3193600EE1457 /* CustomTableViewCell.m in Sources */,
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */,
@@ -564,6 +595,10 @@
 				7E1375221BCA6EB100AB3CA9 /* main.m in Sources */,
 				FC5535A91C080F35002A05BE /* UIUserReviewsView.m in Sources */,
 				6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */,
+				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
+				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
+				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
+				1892F8551BF32CBD00EE1457 /* UIUserScoreView.m in Sources */,
 				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
 				FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */,
@@ -624,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -661,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -674,11 +709,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
 				INFOPLIST_FILE = Ahoy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahoy-Tech.Ahoy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -691,11 +754,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
 				INFOPLIST_FILE = Ahoy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahoy-Tech.Ahoy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";

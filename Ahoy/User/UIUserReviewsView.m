@@ -178,7 +178,7 @@
     // 日期
     UILabel *otherLabel = [[UILabel alloc] init];
     otherLabel.font = TradeGothicLT(12);
-    otherLabel.textColor = AHYGrey56;
+    otherLabel.textColor = AHYSteelGrey;
     otherLabel.numberOfLines = 1;
     otherLabel.backgroundColor = [UIColor clearColor];
     [_reviewCell addSubview:otherLabel];
@@ -190,7 +190,7 @@
     
     UILabel *subTitleLabel = [[UILabel alloc] init];
     subTitleLabel.font = AvenirNextRegular(14);
-    subTitleLabel.textColor = AHYGrey56;
+    subTitleLabel.textColor = AHYSteelGrey;
     subTitleLabel.numberOfLines = 1;
     subTitleLabel.backgroundColor = [UIColor clearColor];
     [_reviewCell addSubview:subTitleLabel];

@@ -133,7 +133,7 @@
             cell.descLabel.numberOfLines = 1;
             cell.descLabel.backgroundColor = [UIColor whiteColor];
             cell.descLabel.font = TradeGothicLT(12);
-            cell.descLabel.textColor = AHYGrey56;
+            cell.descLabel.textColor = AHYSteelGrey;
             [cell addSubview:cell.descLabel];
         }
         

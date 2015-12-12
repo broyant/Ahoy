@@ -13,8 +13,10 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 #import "AHYAdvisorListCell.h"
 #import "AHYTopic.h"
 #import "AHYAdVisorProfileVC.h"
+#import "AHYAdvisorFilterView.h"
+#import "Masonry.h"
 
-@interface AHYTopicViewController ()<UIGestureRecognizerDelegate>
+@interface AHYTopicViewController ()<UIGestureRecognizerDelegate, AHYAdvisorFilterViewDelegate>
 
 @property (nonatomic, strong) AHYTopic *topic;
 
@@ -43,14 +45,14 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
-#pragma mark --actions
+#pragma mark - actions
 
 - (void)popBack {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)filterAdvisor {
-    
+    [[AHYAdvisorFilterView filterView] show];
 }
 
 #pragma mark - Table view data source
@@ -83,7 +85,7 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark -- Custom Navigation Bar Item
+#pragma mark - Custom Navigation Bar Item
 
 - (void)customNavigationBarItem {
     UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(popBack)];
@@ -91,6 +93,18 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filterButton"] style:UIBarButtonItemStylePlain target:self action:@selector(filterAdvisor)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+}
+
+#pragma mark - AHYAdvisorFilterViewDelegate
+
+- (void)cancelButtonDidPressed:(AHYAdvisorFilterView *)filterView {
+    NSLog(@"%s:%@",__func__,self);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)applyButtonDidPressed:(AHYAdvisorFilterView *)filterView {
+    NSLog(@"%s:%@",__func__,self);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
