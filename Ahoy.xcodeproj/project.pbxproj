@@ -438,6 +438,8 @@
 				FC5535AB1C08195F002A05BE /* CustomTagView.m */,
 			);
 			name = Tag;
+            sourceTree = "<group>";
+        };
 		7E6C21CA1C1B228500BC407E /* Network */ = {
 			isa = PBXGroup;
 			children = (
