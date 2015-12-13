@@ -2,7 +2,7 @@
 //  UIUserScoreView.m
 //  Ahoy
 //
-//  Created by chunlian on 15/11/11.
+//  Created by chunlian on 15/12/13.
 //  Copyright © 2015年 Ahoy. All rights reserved.
 //
 
@@ -27,7 +27,6 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
         _hourLabel = [[UILabel alloc] init];
         _hourLabel.numberOfLines = 1;
         _hourLabel.backgroundColor = [UIColor whiteColor];

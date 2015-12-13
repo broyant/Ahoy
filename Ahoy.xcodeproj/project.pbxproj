@@ -31,7 +31,6 @@
 		1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8481BF3083D00EE1457 /* UIProfileHeaderView.m */; };
 		1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F84E1BF3131A00EE1457 /* UIUserIntroductionView.m */; };
 		1892F8521BF3193600EE1457 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8511BF3193600EE1457 /* CustomTableViewCell.m */; };
-		1892F8551BF32CBD00EE1457 /* UIUserScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8541BF32CBD00EE1457 /* UIUserScoreView.m */; };
 		6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5081BD939FA0085017B /* AHYRecommendView.m */; };
 		6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC50C1BD9E1190085017B /* AHYAdvisorListCell.m */; };
 		6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC5131BDA00530085017B /* AVStarsView.m */; };
@@ -63,6 +62,7 @@
 		FC5535AC1C08195F002A05BE /* CustomTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5535AB1C08195F002A05BE /* CustomTagView.m */; };
 		FC5535B71C085901002A05BE /* AHYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5535B61C085901002A05BE /* AHYUser.m */; };
 		FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5535B91C085EC2002A05BE /* AHYReviewTag.m */; };
+		FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */; };
 		FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF0E71E1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -96,8 +96,6 @@
 		1892F84E1BF3131A00EE1457 /* UIUserIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserIntroductionView.m; path = User/UIUserIntroductionView.m; sourceTree = "<group>"; };
 		1892F8501BF3193600EE1457 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		1892F8511BF3193600EE1457 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
-		1892F8531BF32CBD00EE1457 /* UIUserScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUserScoreView.h; path = User/UIUserScoreView.h; sourceTree = "<group>"; };
-		1892F8541BF32CBD00EE1457 /* UIUserScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserScoreView.m; path = User/UIUserScoreView.m; sourceTree = "<group>"; };
 		3DB311C714AD658DD166EDD3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4ECBC58C68D93CAB339BD5D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6FAAC5071BD939FA0085017B /* AHYRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRecommendView.h; sourceTree = "<group>"; };
@@ -161,6 +159,8 @@
 		FC5535B81C085EC2002A05BE /* AHYReviewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReviewTag.h; path = User/AHYReviewTag.h; sourceTree = "<group>"; };
 		FC5535B91C085EC2002A05BE /* AHYReviewTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYReviewTag.m; path = User/AHYReviewTag.m; sourceTree = "<group>"; };
 		FC70946D6FBBBF66DB552EFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC784C381C1D3FA6007FCD7F /* UIUserScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUserScoreView.h; path = User/UIUserScoreView.h; sourceTree = "<group>"; };
+		FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserScoreView.m; path = User/UIUserScoreView.m; sourceTree = "<group>"; };
 		FCF0E71D1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAdvisePageScrollView.h; path = User/UIAdvisePageScrollView.h; sourceTree = "<group>"; };
 		FCF0E71E1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAdvisePageScrollView.m; path = User/UIAdvisePageScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,8 +243,6 @@
 				1892F8481BF3083D00EE1457 /* UIProfileHeaderView.m */,
 				1892F84D1BF3131A00EE1457 /* UIUserIntroductionView.h */,
 				1892F84E1BF3131A00EE1457 /* UIUserIntroductionView.m */,
-				1892F8531BF32CBD00EE1457 /* UIUserScoreView.h */,
-				1892F8541BF32CBD00EE1457 /* UIUserScoreView.m */,
 				FCF0E71D1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.h */,
 				FCF0E71E1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m */,
 				FC5535A71C080F35002A05BE /* UIUserReviewsView.h */,
@@ -253,6 +251,8 @@
 				FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */,
 				FC4B2CD91C1987E900F58103 /* UIAdvisorNormalCollectionCell.h */,
 				FC4B2CDA1C1987E900F58103 /* UIAdvisorNormalCollectionCell.m */,
+				FC784C381C1D3FA6007FCD7F /* UIUserScoreView.h */,
+				FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,8 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				FC5535B11C084364002A05BE /* Tag */,
-				6FAAC52A1BDA956A0085017B /* PTEHorizontalTableView.h */,
-				6FAAC52B1BDA956A0085017B /* PTEHorizontalTableView.m */,
 				7E3C06701BF2466A00E8F5D7 /* RFSegmentView.h */,
 				7E3C06711BF2466A00E8F5D7 /* RFSegmentView.m */,
 				7E3C066E1BF2459600E8F5D7 /* NMRangeSlider.h */,
@@ -591,18 +589,15 @@
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
 				FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */,
 				FC5535AC1C08195F002A05BE /* CustomTagView.m in Sources */,
-				1892F8551BF32CBD00EE1457 /* UIUserScoreView.m in Sources */,
-				7E1375221BCA6EB100AB3CA9 /* main.m in Sources */,
 				FC5535A91C080F35002A05BE /* UIUserReviewsView.m in Sources */,
-				6FAAC52C1BDA956A0085017B /* PTEHorizontalTableView.m in Sources */,
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
 				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
 				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
-				1892F8551BF32CBD00EE1457 /* UIUserScoreView.m in Sources */,
 				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
 				FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */,
 				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
+				FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */,
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				FC5535B71C085901002A05BE /* AHYUser.m in Sources */,
 				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,

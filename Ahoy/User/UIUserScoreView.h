@@ -2,7 +2,7 @@
 //  UIUserScoreView.h
 //  Ahoy
 //
-//  Created by chunlian on 15/11/11.
+//  Created by chunlian on 15/12/13.
 //  Copyright © 2015年 Ahoy. All rights reserved.
 //
 
