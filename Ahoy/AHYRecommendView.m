@@ -51,7 +51,7 @@
 //                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
     _topic = topic;
     _imageView.image = [UIImage imageNamed:topic.imgUrl];
-    _topicNameLabel.text = topic.name;
+    _topicNameLabel.attributedText = topic.name;
     //TODO separate number with ","
     _descriptionLabel.text = [NSString stringWithFormat:@"%@Advisors|%@Sessions", @(topic.totalAdvisors), @(topic.totalSessions)];
     

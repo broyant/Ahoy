@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSString *imgUrl;
 //@property (nonatomic, strong) NSString *advisorListUrl; //get advisors when push into advisor list
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSAttributedString *name;
 @property (nonatomic, assign) NSUInteger totalAdvisors;
 @property (nonatomic, assign) NSUInteger totalSessions;
 @property (nonatomic, assign) TopicCategory category;

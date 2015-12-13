@@ -53,6 +53,9 @@
 		7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */; };
 		7E4DA13B1BFCC85700978C5A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4DA13A1BFCC85700978C5A /* Reveal.framework */; };
 		7E4DA13D1BFCC9FE00978C5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */; };
+		7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21C81C0F494400BC407E /* AHYSearchResultsViewController.m */; };
+		7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */; };
+		7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */; };
 		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
 		B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC70946D6FBBBF66DB552EFC /* libPods.a */; };
 		FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */; };
@@ -141,6 +144,13 @@
 		7E3C06761BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYAdvisorFilterView.xib; sourceTree = "<group>"; };
 		7E4DA13A1BFCC85700978C5A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		7E6C21C71C0F494400BC407E /* AHYSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSearchResultsViewController.h; sourceTree = "<group>"; };
+		7E6C21C81C0F494400BC407E /* AHYSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSearchResultsViewController.m; sourceTree = "<group>"; };
+		7E6C21CB1C1B231C00BC407E /* AHYNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYNetworkEngine.h; sourceTree = "<group>"; };
+		7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYNetworkEngine.m; sourceTree = "<group>"; };
+		7E6C21CE1C1B23A900BC407E /* AHYNetworkType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYNetworkType.h; sourceTree = "<group>"; };
+		7E6C21CF1C1B243E00BC407E /* AHYNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYNetworkResponse.h; sourceTree = "<group>"; };
+		7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYNetworkResponse.m; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
@@ -299,6 +309,7 @@
 		6FAAC5111BDA00530085017B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7E6C21CA1C1B228500BC407E /* Network */,
 				6FAAC5181BDA039E0085017B /* Views */,
 				6FAAC5151BDA03900085017B /* UIColor+Hex.h */,
 				6FAAC5161BDA03900085017B /* UIColor+Hex.m */,
@@ -366,6 +377,8 @@
 			children = (
 				7E0B65A61BCD53D5004BAA76 /* AHYSearchViewController.h */,
 				7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */,
+				7E6C21C71C0F494400BC407E /* AHYSearchResultsViewController.h */,
+				7E6C21C81C0F494400BC407E /* AHYSearchResultsViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -425,6 +438,16 @@
 				FC5535AB1C08195F002A05BE /* CustomTagView.m */,
 			);
 			name = Tag;
+		7E6C21CA1C1B228500BC407E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7E6C21CE1C1B23A900BC407E /* AHYNetworkType.h */,
+				7E6C21CF1C1B243E00BC407E /* AHYNetworkResponse.h */,
+				7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */,
+				7E6C21CB1C1B231C00BC407E /* AHYNetworkEngine.h */,
+				7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +606,7 @@
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
+				7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */,
 				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
@@ -592,6 +616,7 @@
 				FC5535A91C080F35002A05BE /* UIUserReviewsView.m in Sources */,
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
 				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
+				7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */,
 				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
 				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
@@ -601,6 +626,7 @@
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				FC5535B71C085901002A05BE /* AHYUser.m in Sources */,
 				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,
+				7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

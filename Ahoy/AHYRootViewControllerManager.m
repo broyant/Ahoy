@@ -26,7 +26,9 @@
     [tabVC1.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
     tabVC1.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Discover"] selectedImage:[UIImage imageNamed:@"Discover"]];
     
-    UIViewController *tabVC2 = [[AHYSearchViewController alloc] init];
+    AHYSearchViewController *searchVC = [[AHYSearchViewController alloc] init];
+    UINavigationController *tabVC2 = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    tabVC2.navigationBar.barTintColor = AHYBlue;
     tabVC2.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Search"] selectedImage:[UIImage imageNamed:@"Search"]];
     
     //TODO replace with real instance

@@ -11,6 +11,8 @@
 
 @interface AHYAdvisorListCell : UITableViewCell
 
-- (void)configure: (AHYAdvisor *)advisor;
+- (void)configure:(AHYAdvisor *)advisor;
+
+- (void)highlightWords:(NSString *)keyWords withColor:(UIColor *)highlightedColor;
 
 @end

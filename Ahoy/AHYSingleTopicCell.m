@@ -35,7 +35,7 @@
 //                       placeholderImage:nil
 //                                options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
     _topicImageView.image = [UIImage imageNamed:topic.imgUrl];
-    _topicLabel.text = topic.name;
+    _topicLabel.attributedText = topic.name;
 }
 
 #pragma mark -subviews

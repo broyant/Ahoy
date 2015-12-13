@@ -36,7 +36,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
         for (int i = 1; i <= 3; i++) {
             AHYTopic *topic = [[AHYTopic alloc] init];
             topic.imgUrl = [NSString stringWithFormat:@"c1Topic%dThumbnail",i];
-            topic.name = @"Tellus Amet";
+            topic.name = [[NSAttributedString alloc] initWithString:@"Tellus Amet"];
             topic.totalAdvisors = 107 + i * 21;
             topic.totalSessions = 2345 + i * 32;
             topic.category = i + 1;
@@ -55,7 +55,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
         for (int i = 1; i <= 5; i++) {
             AHYTopic *topic = [[AHYTopic alloc] init];
             topic.imgUrl = [NSString stringWithFormat:@"c2Topic%dThumbnail",i % 3 + 1];
-            topic.name = @"Tellus Amet";
+            topic.name = [[NSAttributedString alloc] initWithString:@"Tellus Amet"];
             topic.totalAdvisors = 107 + i * 21;
             topic.totalSessions = 2345 + i * 32;
             topic.isRecommended = NO;

@@ -39,6 +39,11 @@
 
 }
 
+- (void)highlightWords:(NSString *)keyWords withColor:(UIColor *)highlightedColor {
+    //set all labels' text with attributeString, highlight the keywords with highlightedColor
+    //todo
+}
+
 #pragma mark -configure
 
 - (void)configure:(AHYAdvisor *)advisor {

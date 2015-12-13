@@ -36,7 +36,7 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
     [super viewDidLoad];
     [self.tableView registerClass:[AHYAdvisorListCell class] forCellReuseIdentifier:kAdvisorListCellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.navigationItem.title = _topic.name;
+    self.navigationItem.title = _topic.name.string;
     [self customNavigationBarItem];
 }
 
