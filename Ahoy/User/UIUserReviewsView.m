@@ -39,7 +39,7 @@
     if (self = [super initWithFrame:frame]) {
         
         _totalHeight = 0;
-        UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, _totalHeight, DeviceScreenWidth-2*leftOffset, 0.5)];
+        UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, _totalHeight, DeviceScreenWidth-leftOffset, 0.5)];
         dividerView.backgroundColor = AHYGrey10;
         [self addSubview:dividerView];
         _totalHeight += topOffset;

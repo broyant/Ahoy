@@ -10,10 +10,12 @@
 #import "Masonry.h"
 #import "UIAdvisorPageCollectionCell.h"
 #import "UIAdvisorNormalCollectionCell.h"
+#import "UITopicSelectCollectionCell.h"
 
 #define collectionCellWidth      105
 #define collectionNormalCellHeight     141
-#define collectionPageCellHeight     126
+#define collectionPageCellHeight       126
+#define collectionSelectCellHeight     122
 
 #define defaultCount    10
 
@@ -40,7 +42,7 @@
         
         _collectionType = type;
         
-        UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, 0, DeviceScreenWidth-2*leftOffset, 0.5)];
+        UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, 0, DeviceScreenWidth-leftOffset, 0.5)];
         dividerView.backgroundColor = AHYGrey10;
         [self addSubview:dividerView];
         
@@ -66,11 +68,14 @@
         [_collectionView setBackgroundColor:[UIColor whiteColor]];
         [self addSubview:_collectionView];
         
+        _pageNumber = defaultCount;
+        _pageIndex = 0;
+        
         if (_collectionType == CollectionPageScroll) {
             _titleLabel.text = @"TOPICS THAT PAUL CAN ADVISE";
             
             _collectionView.frame = CGRectMake(0, 55, DeviceScreenWidth, collectionPageCellHeight);
-            [_collectionView registerClass:[UIAdvisorPageCollectionCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+            [_collectionView registerClass:[UIAdvisorPageCollectionCell class] forCellWithReuseIdentifier:@"CollectionPageViewCell"];
             
             UIView *coverView = [[UIView alloc] initWithFrame:_collectionView.frame];
             coverView.backgroundColor = [UIColor clearColor];
@@ -104,15 +109,22 @@
 
             [_collectionView registerClass:[UIAdvisorNormalCollectionCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
             _collectionView.showsHorizontalScrollIndicator = NO;
+        } else if (_collectionType == CollectionSelectScroll) {
+            _titleLabel.textColor = AHYGrey40;
+            _titleLabel.text = @"TOPICS THAT YOU WANT TO TALK ABOUT";
+            
+            _collectionView.frame = CGRectMake(0, 55, DeviceScreenWidth, collectionSelectCellHeight);
+            [_collectionView registerClass:[UITopicSelectCollectionCell class] forCellWithReuseIdentifier:@"CollectionSelectViewCell"];
+            _collectionView.showsHorizontalScrollIndicator = NO;
+            
+            _pageIndex = -1;
         }
-        
-        _pageNumber = defaultCount;
-        _pageIndex = 0;
         
         return self;
     }
     return nil;
 }
+
 
 - (NSInteger)indexForRowAtPoint:(CGPoint)point
 {
@@ -196,9 +208,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * CellIdentifier = @"UICollectionViewCell";
     
     if (_collectionType == CollectionPageScroll) {
+        static NSString * CellIdentifier = @"CollectionPageViewCell";
+
         UIAdvisorPageCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
         cell.cellImage.image = [UIImage imageNamed:@"c2Topic1Thumbnail"];
         cell.titleLabel.text = @"Tellus Amet";
@@ -208,14 +221,36 @@
         }
         return cell;
     } else if (_collectionType == CollectionNomalScroll) {
+        static NSString * CellIdentifier = @"UICollectionViewCell";
+
         UIAdvisorNormalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
         
         if (indexPath.row%2) {
             cell.titleLabel.text = @"Peter Johnson";
+            cell.cellImage.image = [UIImage imageNamed:@"c2Topic1Thumbnail"];
         } else {
             cell.titleLabel.text = @"Sharon";
+            cell.cellImage.image = [UIImage imageNamed:@"c2Topic2Thumbnail"];
         }
-        cell.cellImage.image = [UIImage imageNamed:@"c2Topic1Thumbnail"];
+        return cell;
+    } else if (_collectionType == CollectionSelectScroll) {
+        static NSString * CellIdentifier = @"CollectionSelectViewCell";
+        
+        UITopicSelectCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+        if (indexPath.row%2) {
+            cell.titleLabel.text = @"Tellus Amet";
+            cell.cellImage.image = [UIImage imageNamed:@"c2Topic1Thumbnail"];
+        } else {
+            cell.titleLabel.text = @"Condit";
+            cell.cellImage.image = [UIImage imageNamed:@"c2Topic2Thumbnail"];
+        }
+        
+        if (indexPath.row == _pageIndex) {
+            cell.isSelected = YES;
+        } else {
+            cell.isSelected = NO;
+        }
+        
         return cell;
     }
     
@@ -229,6 +264,8 @@
 {
     if (_collectionType == CollectionPageScroll) {
         return CGSizeMake(collectionCellWidth, collectionPageCellHeight);
+    } else if (_collectionType == CollectionSelectScroll) {
+        return CGSizeMake(collectionCellWidth, collectionSelectCellHeight);
     }
     return CGSizeMake(collectionCellWidth, collectionNormalCellHeight);
 }
@@ -245,9 +282,25 @@
 //UICollectionView被选中时调用的方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    _pageIndex = indexPath.row;
-//    UIAdvisorPageCollectionCell * cell = (UIAdvisorPageCollectionCell *)[_collectionView cellForItemAtIndexPath:indexPath];
-//    [cell setHighlighted:NO];
+    if (_collectionType == CollectionSelectScroll) {
+        if (_pageIndex != indexPath.row && _pageIndex >= 0) {
+            UITopicSelectCollectionCell *cell = (UITopicSelectCollectionCell *)[_collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_pageIndex inSection:0]];
+            cell.isSelected = NO;
+        }
+        
+        UITopicSelectCollectionCell *newCell = (UITopicSelectCollectionCell *)[_collectionView cellForItemAtIndexPath:indexPath];
+        newCell.isSelected = !newCell.isSelected;
+        
+        if (newCell.isSelected) {
+            _pageIndex = indexPath.row;
+        } else {
+            _pageIndex = -1;
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(didSelectedItem:)]) {
+            [self.delegate didSelectedItem:_pageIndex];
+        }
+    }
     
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
@@ -257,5 +310,6 @@
 {
     return YES;
 }
+
 
 @end

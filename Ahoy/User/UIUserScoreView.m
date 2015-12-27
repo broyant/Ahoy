@@ -56,6 +56,15 @@
             make.size.mas_equalTo(CGSizeMake(48, 21));
         }];
         
+        UIImageView *forwadImage = [[UIImageView alloc] init];
+        [forwadImage setImage:[UIImage imageNamed:@"forwardArrow"]];
+        [self addSubview:forwadImage];
+        [forwadImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_hourUnit.mas_trailing).offset(3);
+            make.top.equalTo(_hourUnit.mas_top).offset(5);
+            make.size.mas_equalTo(CGSizeMake(7, 12));
+        }];
+        
         _pointLabel = [[UILabel alloc] init];
         _pointLabel.numberOfLines = 1;
         _pointLabel.backgroundColor = [UIColor whiteColor];
@@ -84,6 +93,15 @@
             make.trailing.equalTo(_pointLabel.mas_trailing).offset(3);
             make.top.equalTo(_pointLabel.mas_top).offset(39);
             make.size.mas_equalTo(CGSizeMake(63, 22));
+        }];
+        
+        UIImageView *forwad = [[UIImageView alloc] init];
+        [forwad setImage:[UIImage imageNamed:@"forwardArrow"]];
+        [self addSubview:forwad];
+        [forwad mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_pointUnit.mas_trailing).offset(3);
+            make.top.equalTo(_pointUnit.mas_top).offset(5);
+            make.size.mas_equalTo(CGSizeMake(7, 12));
         }];
         
         return self;

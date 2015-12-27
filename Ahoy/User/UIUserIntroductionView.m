@@ -68,7 +68,7 @@
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, 50)];
     header.backgroundColor = [UIColor whiteColor];
     
-    UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, 0, DeviceScreenWidth-2*leftOffset, 0.5)];
+    UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, 0, DeviceScreenWidth-leftOffset, 0.5)];
     dividerView.backgroundColor = AHYGrey10;
     [header addSubview:dividerView];
     

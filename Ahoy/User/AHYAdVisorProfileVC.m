@@ -12,6 +12,7 @@
 #import "UIUserScoreView.h"
 #import "UIAdvisePageScrollView.h"
 #import "UIUserReviewsView.h"
+#import "AHYReservationVC.h"
 #import "Masonry.h"
 
 #define headerViewHeight    160
@@ -45,7 +46,6 @@
     [super loadView];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBarHidden = YES;
     
     _headerView = [[UIProfileHeaderView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, headerViewHeight)];
     _headerView.backgroundColor = AHYBlue;
@@ -94,15 +94,25 @@
     _reserveBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, DeviceScreenHeight-bottomButtonHeight, DeviceScreenWidth/2, bottomButtonHeight)];
     _reserveBtn.backgroundColor = AHYBlue;
     _reserveBtn.titleLabel.font = TradeGothicLTBoldTwo(18);
+    [_reserveBtn setImage:[UIImage imageNamed:@"reserveIcon"] forState:UIControlStateNormal];
+    [_reserveBtn setImageEdgeInsets:UIEdgeInsetsMake(17, (DeviceScreenWidth/2-87.5)/2, 17, DeviceScreenWidth/2-(DeviceScreenWidth/2-87.5)/2-17)];
     [_reserveBtn setTitle:@"Reserve" forState:UIControlStateNormal];
     [_reserveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_reserveBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 4, 0, 0)];
+    _reserveBtn.adjustsImageWhenHighlighted = NO;
+    [_reserveBtn addTarget:self action:@selector(reserveAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_reserveBtn];
     
     _chatBtn = [[UIButton alloc] initWithFrame:CGRectMake(DeviceScreenWidth/2, DeviceScreenHeight-bottomButtonHeight, DeviceScreenWidth/2, bottomButtonHeight)];
     _chatBtn.backgroundColor = AHYYellow;
     _chatBtn.titleLabel.font = TradeGothicLTBoldTwo(18);
+    [_chatBtn setImage:[UIImage imageNamed:@"chatIcon"] forState:UIControlStateNormal];
+    [_chatBtn setImageEdgeInsets:UIEdgeInsetsMake(17, (DeviceScreenWidth/2-68)/2, 15, DeviceScreenWidth/2-(DeviceScreenWidth/2-68)/2-21)];
     [_chatBtn setTitle:@"Chat" forState:UIControlStateNormal];
     [_chatBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_chatBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, 0)];
+    _chatBtn.adjustsImageWhenHighlighted = NO;
+    [_reserveBtn addTarget:self action:@selector(chatAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_chatBtn];
 }
 
@@ -117,12 +127,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)goBack {
     [self.navigationController popViewControllerAnimated:YES];
     self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)shareAction {
+    
+}
+
+- (void)reserveAction {
+    AHYReservationVC *vc = [[AHYReservationVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)chatAction {
     
 }
 
