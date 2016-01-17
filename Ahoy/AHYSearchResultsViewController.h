@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AHYSearchResultsViewController : UITableViewController<UISearchResultsUpdating, UISearchBarDelegate>
+@interface AHYSearchResultsViewController : UIViewController<UISearchResultsUpdating>
 
 @end

@@ -46,15 +46,11 @@
 #pragma mark -configure
 
 - (void)configure:(AHYTopic *)topic {
-//    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
-//                  placeholderImage:nil
-//                           options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.thumbnailUrl]
+                  placeholderImage:[UIImage imageNamed:@"c2Topic1Thumbnail"]
+                           options:SDWebImageProgressiveDownload ];
     _topic = topic;
-    _imageView.image = [UIImage imageNamed:topic.imgUrl];
-    _topicNameLabel.attributedText = topic.name;
-    //TODO separate number with ","
-    _descriptionLabel.text = [NSString stringWithFormat:@"%@Advisors|%@Sessions", @(topic.totalAdvisors), @(topic.totalSessions)];
-    
+    _topicNameLabel.text = topic.tName;
 }
 
 #pragma mark -subviews

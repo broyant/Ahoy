@@ -10,4 +10,10 @@
 
 @implementation AHYTopic
 
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"topicId": @"tid",
+                                                       @"topicName": @"tName",
+                                                       @"thumbnailUrl": @"thumbnailUrl"}];
+}
+
 @end

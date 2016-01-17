@@ -10,4 +10,17 @@
 
 @implementation AHYAdvisor
 
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"advisorId": @"aid",
+                                                       @"advisorName": @"name",
+                                                       @"reviewRating": @"reviewRate",
+                                                       @"title": @"title",
+                                                       @"price": @"price",
+                                                       @"thumbnailUrl": @"portraitUrl"}];
+}
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
 @end

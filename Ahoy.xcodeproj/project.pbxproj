@@ -56,7 +56,10 @@
 		7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21C81C0F494400BC407E /* AHYSearchResultsViewController.m */; };
 		7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */; };
 		7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */; };
+		7ED6D2331C36C453003C81AD /* AHYSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */; };
 		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
+		7EF6B4691C21C00C00EA7C65 /* AHYDiscoverDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */; };
+		7EF6B46C1C21CB4600EA7C65 /* AHYTopicCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */; };
 		B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC70946D6FBBBF66DB552EFC /* libPods.a */; };
 		FC18603F1C2D1A0400BD410B /* AHYReviewReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */; };
 		FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */; };
@@ -158,11 +161,17 @@
 		7E6C21CE1C1B23A900BC407E /* AHYNetworkType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYNetworkType.h; sourceTree = "<group>"; };
 		7E6C21CF1C1B243E00BC407E /* AHYNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYNetworkResponse.h; sourceTree = "<group>"; };
 		7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYNetworkResponse.m; sourceTree = "<group>"; };
+		7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSearchHistory.h; sourceTree = "<group>"; };
+		7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSearchHistory.m; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
 		FC18603D1C2D1A0400BD410B /* AHYReviewReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReviewReservationVC.h; path = Reservation/AHYReviewReservationVC.h; sourceTree = "<group>"; };
 		FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYReviewReservationVC.m; path = Reservation/AHYReviewReservationVC.m; sourceTree = "<group>"; };
+		7EF6B4671C21C00C00EA7C65 /* AHYDiscoverDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDiscoverDataSource.h; sourceTree = "<group>"; };
+		7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDiscoverDataSource.m; sourceTree = "<group>"; };
+		7EF6B46A1C21C19800EA7C65 /* AHYHttpUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYHttpUrl.h; sourceTree = "<group>"; };
+		7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicCategory.m; sourceTree = "<group>"; };
 		FC4B2CD61C1986F800F58103 /* UIAdvisorPageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAdvisorPageCollectionCell.h; path = User/UIAdvisorPageCollectionCell.h; sourceTree = "<group>"; };
 		FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAdvisorPageCollectionCell.m; path = User/UIAdvisorPageCollectionCell.m; sourceTree = "<group>"; };
 		FC4B2CD91C1987E900F58103 /* UIAdvisorNormalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAdvisorNormalCollectionCell.h; path = User/UIAdvisorNormalCollectionCell.h; sourceTree = "<group>"; };
@@ -371,6 +380,7 @@
 				6FAAC51A1BDA0EF90085017B /* AHYColor.h */,
 				6FAAC51B1BDA12710085017B /* AHYFont.h */,
 				1892F8121BF0A7F000EE1457 /* AHYFrame.h */,
+				7EF6B46A1C21C19800EA7C65 /* AHYHttpUrl.h */,
 			);
 			name = Constant;
 			path = Ahoy/Constant;
@@ -380,10 +390,13 @@
 			isa = PBXGroup;
 			children = (
 				6FAAC53B1BDF563C0085017B /* AHYTopicCategory.h */,
+				7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */,
 				6FAAC53C1BDF5B640085017B /* AHYAdvisor.h */,
 				6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */,
 				6FAAC5351BDF54DA0085017B /* AHYTopic.h */,
 				6FAAC5361BDF54DA0085017B /* AHYTopic.m */,
+				7EF6B4671C21C00C00EA7C65 /* AHYDiscoverDataSource.h */,
+				7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -404,6 +417,7 @@
 		7E0B65AA1BCD54B3004BAA76 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				7ED6D2301C36C435003C81AD /* Model */,
 				7E0B65A61BCD53D5004BAA76 /* AHYSearchViewController.h */,
 				7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */,
 				7E6C21C71C0F494400BC407E /* AHYSearchResultsViewController.h */,
@@ -493,6 +507,22 @@
 				FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */,
 			);
 			name = Reservation;
+		7ED6D2301C36C435003C81AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */,
+				7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC5535B11C084364002A05BE /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				FC5535AA1C08195F002A05BE /* CustomTagView.h */,
+				FC5535AB1C08195F002A05BE /* CustomTagView.m */,
+			);
+			name = Tag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -658,6 +688,7 @@
 				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */,
+				7EF6B46C1C21CB4600EA7C65 /* AHYTopicCategory.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
 				FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */,
@@ -669,9 +700,11 @@
 				FC6EC1DF1C29914E0081C4D7 /* AHYCancelReservationVC.m in Sources */,
 				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
 				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
+				7ED6D2331C36C453003C81AD /* AHYSearchHistory.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
 				FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */,
 				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
+				7EF6B4691C21C00C00EA7C65 /* AHYDiscoverDataSource.m in Sources */,
 				FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */,
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				FC5535B71C085901002A05BE /* AHYUser.m in Sources */,

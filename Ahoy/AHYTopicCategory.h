@@ -6,14 +6,13 @@
 //  Copyright © 2015年 Ahoy. All rights reserved.
 //
 
-#ifndef AHYTopicCategory_h
-#define AHYTopicCategory_h
+#import "JSONModelLib.h"
+#import "AHYTopic.h"
 
-typedef NS_ENUM(unsigned int, TopicCategory) {
-    kTopicUnknown = 0,                   // 无数据
-    kTopicProgramming = 1,
-    kTopicDesign = 2,
-    kTopicManagement = 3
-};
+@interface AHYTopicCategory : JSONModel
 
-#endif /* AHYTopicCategory_h */
+@property (nonatomic, assign) NSInteger cid;
+@property (nonatomic, strong) NSString <Optional> *cName;
+@property (nonatomic, strong) NSArray <ConvertOnDemand, Optional, AHYTopic> *topics;
+
+@end

@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AHYTopic;
 
 @interface AHYTopicViewController : UITableViewController
 
-- (instancetype)initWithTopic:(AHYTopic *)topic;
+- (instancetype)initWithTopicID:(NSInteger)topicID;
 
 @end

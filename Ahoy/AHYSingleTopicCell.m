@@ -31,11 +31,10 @@
 #pragma mark -configure
 
 - (void)configure:(AHYTopic *)topic {
-//    [_topicImageView sd_setImageWithURL:[NSURL URLWithString:topic.imgUrl]
-//                       placeholderImage:nil
-//                                options:SDWebImageContinueInBackground | SDWebImageProgressiveDownload ];
-    _topicImageView.image = [UIImage imageNamed:topic.imgUrl];
-    _topicLabel.attributedText = topic.name;
+    [_topicImageView sd_setImageWithURL:[NSURL URLWithString:topic.thumbnailUrl]
+                       placeholderImage:[UIImage imageNamed:@"c1Topic1Thumbnail"]
+                                options:SDWebImageProgressiveDownload ];
+    _topicLabel.text = topic.tName;
 }
 
 #pragma mark -subviews
