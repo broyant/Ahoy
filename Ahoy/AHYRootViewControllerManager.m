@@ -10,6 +10,7 @@
 #import "AHYDiscoverViewController.h"
 #import "AHYSearchViewController.h"
 #import "AHYProfileViewController.h"
+#import "AHYSettingViewController.h"
 
 @interface AHYRootViewControllerManager()
 
@@ -38,8 +39,13 @@
     AHYProfileViewController *tabVC4 = [AHYProfileViewController getInstance];
     tabVC4.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Profile"] selectedImage:[UIImage imageNamed:@"Profile"]];
     
+    AHYSettingViewController *settingVC = [[AHYSettingViewController alloc] init];
+    UINavigationController *tabVC5 = [[UINavigationController alloc] initWithRootViewController:settingVC];
+    tabVC5.navigationBar.barTintColor = AHYBlue;
+    [tabVC5.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
+    tabVC5.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"More"] selectedImage:[UIImage imageNamed:@"More"]];
     
-    self.tabBarController.viewControllers = @[tabVC1, tabVC2, tabVC3, tabVC4];
+    self.tabBarController.viewControllers = @[tabVC1, tabVC2, tabVC3, tabVC4, tabVC5];
     //remove title and make image center
     for (UITabBarItem *tabBarItem in self.tabBarController.tabBar.items) {
         tabBarItem.title = @"";

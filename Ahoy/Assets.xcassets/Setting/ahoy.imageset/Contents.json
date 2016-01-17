@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Discover.pdf"
+      "filename" : "ahoy.pdf"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "version" : "1",
+    "author" : "zeplin"
   }
 }

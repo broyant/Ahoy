@@ -45,6 +45,9 @@
 		7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */; };
 		7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */; };
 		7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1375311BCA6EB100AB3CA9 /* LaunchScreen.storyboard */; };
+		7E22CAA71C4BD2320013635C /* AHYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */; };
+		7E22CAAC1C4BE29F0013635C /* AHYSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */; };
+		7E22CAAD1C4BE29F0013635C /* AHYSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */; };
 		7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E36292A1BEE3F160000711F /* AHYTopicViewController.m */; };
 		7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */; };
 		7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */; };
@@ -141,6 +144,11 @@
 		7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E1375321BCA6EB100AB3CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1375341BCA6EB100AB3CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E22CAA51C4BD2320013635C /* AHYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingViewController.h; sourceTree = "<group>"; };
+		7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingViewController.m; sourceTree = "<group>"; };
+		7E22CAA91C4BE29F0013635C /* AHYSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingTableViewCell.h; sourceTree = "<group>"; };
+		7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingTableViewCell.m; sourceTree = "<group>"; };
+		7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYSettingTableViewCell.xib; sourceTree = "<group>"; };
 		7E3629291BEE3F160000711F /* AHYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopicViewController.h; sourceTree = "<group>"; };
 		7E36292A1BEE3F160000711F /* AHYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicViewController.m; sourceTree = "<group>"; };
 		7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisorFilterView.h; sourceTree = "<group>"; };
@@ -166,12 +174,12 @@
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
-		FC18603D1C2D1A0400BD410B /* AHYReviewReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReviewReservationVC.h; path = Reservation/AHYReviewReservationVC.h; sourceTree = "<group>"; };
-		FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYReviewReservationVC.m; path = Reservation/AHYReviewReservationVC.m; sourceTree = "<group>"; };
 		7EF6B4671C21C00C00EA7C65 /* AHYDiscoverDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDiscoverDataSource.h; sourceTree = "<group>"; };
 		7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDiscoverDataSource.m; sourceTree = "<group>"; };
 		7EF6B46A1C21C19800EA7C65 /* AHYHttpUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYHttpUrl.h; sourceTree = "<group>"; };
 		7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicCategory.m; sourceTree = "<group>"; };
+		FC18603D1C2D1A0400BD410B /* AHYReviewReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReviewReservationVC.h; path = Reservation/AHYReviewReservationVC.h; sourceTree = "<group>"; };
+		FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYReviewReservationVC.m; path = Reservation/AHYReviewReservationVC.m; sourceTree = "<group>"; };
 		FC4B2CD61C1986F800F58103 /* UIAdvisorPageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAdvisorPageCollectionCell.h; path = User/UIAdvisorPageCollectionCell.h; sourceTree = "<group>"; };
 		FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAdvisorPageCollectionCell.m; path = User/UIAdvisorPageCollectionCell.m; sourceTree = "<group>"; };
 		FC4B2CD91C1987E900F58103 /* UIAdvisorNormalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAdvisorNormalCollectionCell.h; path = User/UIAdvisorNormalCollectionCell.h; sourceTree = "<group>"; };
@@ -449,6 +457,7 @@
 		7E13751F1BCA6EB100AB3CA9 /* Ahoy */ = {
 			isa = PBXGroup;
 			children = (
+				7E22CAA41C4BD1D70013635C /* Setting */,
 				7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */,
 				7E1375231BCA6EB100AB3CA9 /* AppDelegate.h */,
 				7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */,
@@ -475,6 +484,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7E22CAA41C4BD1D70013635C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAA51C4BD2320013635C /* AHYSettingViewController.h */,
+				7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */,
+				7E22CAA81C4BE24F0013635C /* View */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		7E22CAA81C4BE24F0013635C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAA91C4BE29F0013635C /* AHYSettingTableViewCell.h */,
+				7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */,
+				7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7E6C21CA1C1B228500BC407E /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +514,15 @@
 				7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		7ED6D2301C36C435003C81AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */,
+				7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FC5535B11C084364002A05BE /* Tag */ = {
@@ -507,22 +545,6 @@
 				FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */,
 			);
 			name = Reservation;
-		7ED6D2301C36C435003C81AD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */,
-				7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		FC5535B11C084364002A05BE /* Tag */ = {
-			isa = PBXGroup;
-			children = (
-				FC5535AA1C08195F002A05BE /* CustomTagView.h */,
-				FC5535AB1C08195F002A05BE /* CustomTagView.m */,
-			);
-			name = Tag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,6 +624,7 @@
 				1892F8391BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf in Resources */,
 				1892F83A1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf in Resources */,
 				1892F83F1BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf in Resources */,
+				7E22CAAD1C4BE29F0013635C /* AHYSettingTableViewCell.xib in Resources */,
 				1892F8401BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf in Resources */,
 				1892F83E1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf in Resources */,
 				1892F8241BF0BA1600EE1457 /* avenirnextdemibolditalic.otf in Resources */,
@@ -688,10 +711,12 @@
 				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */,
+				7E22CAAC1C4BE29F0013635C /* AHYSettingTableViewCell.m in Sources */,
 				7EF6B46C1C21CB4600EA7C65 /* AHYTopicCategory.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
 				FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */,
+				7E22CAA71C4BD2320013635C /* AHYSettingViewController.m in Sources */,
 				FC5535AC1C08195F002A05BE /* CustomTagView.m in Sources */,
 				FC5535A91C080F35002A05BE /* UIUserReviewsView.m in Sources */,
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
