@@ -10,4 +10,7 @@
 
 @interface UIProfileHeaderView : UIView
 
+
+- (id)initWithFrame:(CGRect)frame delegat:(id)delegate;
+
 @end

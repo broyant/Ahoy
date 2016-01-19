@@ -68,6 +68,8 @@
 		FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5535B91C085EC2002A05BE /* AHYReviewTag.m */; };
 		FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5B355E1C28059B00FDE1D0 /* Utility.m */; };
 		FC5F2C6B1C2153A6002D1779 /* UITopicSelectCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5F2C6A1C2153A6002D1779 /* UITopicSelectCollectionCell.m */; };
+		FC677BC21C4C985600604793 /* UIUserTopicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC677BC11C4C985600604793 /* UIUserTopicsView.m */; };
+		FC677BC51C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC677BC41C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m */; };
 		FC6EC1DF1C29914E0081C4D7 /* AHYCancelReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EC1DC1C29914E0081C4D7 /* AHYCancelReservationVC.m */; };
 		FC6EC1E01C29914E0081C4D7 /* AHYReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EC1DE1C29914E0081C4D7 /* AHYReservationVC.m */; };
 		FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */; };
@@ -179,6 +181,10 @@
 		FC5B355E1C28059B00FDE1D0 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		FC5F2C691C2153A6002D1779 /* UITopicSelectCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITopicSelectCollectionCell.h; path = User/UITopicSelectCollectionCell.h; sourceTree = "<group>"; };
 		FC5F2C6A1C2153A6002D1779 /* UITopicSelectCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITopicSelectCollectionCell.m; path = User/UITopicSelectCollectionCell.m; sourceTree = "<group>"; };
+		FC677BC01C4C985600604793 /* UIUserTopicsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUserTopicsView.h; path = User/UIUserTopicsView.h; sourceTree = "<group>"; };
+		FC677BC11C4C985600604793 /* UIUserTopicsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserTopicsView.m; path = User/UIUserTopicsView.m; sourceTree = "<group>"; };
+		FC677BC31C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIReviewsEvaluateCollectionCell.h; path = User/UIReviewsEvaluateCollectionCell.h; sourceTree = "<group>"; };
+		FC677BC41C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIReviewsEvaluateCollectionCell.m; path = User/UIReviewsEvaluateCollectionCell.m; sourceTree = "<group>"; };
 		FC6EC1DB1C29914E0081C4D7 /* AHYCancelReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYCancelReservationVC.h; path = Reservation/AHYCancelReservationVC.h; sourceTree = "<group>"; };
 		FC6EC1DC1C29914E0081C4D7 /* AHYCancelReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYCancelReservationVC.m; path = Reservation/AHYCancelReservationVC.m; sourceTree = "<group>"; };
 		FC6EC1DD1C29914E0081C4D7 /* AHYReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReservationVC.h; path = Reservation/AHYReservationVC.h; sourceTree = "<group>"; };
@@ -280,6 +286,10 @@
 				FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */,
 				FC5F2C691C2153A6002D1779 /* UITopicSelectCollectionCell.h */,
 				FC5F2C6A1C2153A6002D1779 /* UITopicSelectCollectionCell.m */,
+				FC677BC01C4C985600604793 /* UIUserTopicsView.h */,
+				FC677BC11C4C985600604793 /* UIUserTopicsView.m */,
+				FC677BC31C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.h */,
+				FC677BC41C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -643,6 +653,7 @@
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
+				FC677BC21C4C985600604793 /* UIUserTopicsView.m in Sources */,
 				7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */,
 				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
@@ -665,6 +676,7 @@
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				FC5535B71C085901002A05BE /* AHYUser.m in Sources */,
 				FC5F2C6B1C2153A6002D1779 /* UITopicSelectCollectionCell.m in Sources */,
+				FC677BC51C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m in Sources */,
 				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,
 				7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */,
 			);

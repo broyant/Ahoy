@@ -287,8 +287,9 @@
         make.height.mas_equalTo(15);
     }];
     
-    UIView *payBG = [[UIView alloc] init];
+    UIButton *payBG = [[UIButton alloc] init];
     payBG.backgroundColor = [UIColor whiteColor];
+    [payBG addTarget:self action:@selector(payReservationAction) forControlEvents:UIControlEventTouchUpInside];
     [bottomView addSubview:payBG];
     [payBG mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_priceLabel.mas_top);
@@ -509,6 +510,16 @@
     transition.type = kCATransitionFade;
     [[self navigationController].view.layer addAnimation:transition forKey:@"fadeTransition"];
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+- (void)payReservationAction
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Come to pay!"
+                                                        message:[NSString stringWithFormat:@"startTime:%@, endTime:%@, have topic:YES",_startDate,_endDate]
+                                                       delegate:self
+                                              cancelButtonTitle:@"No"
+                                              otherButtonTitles:@"Yes", nil];
+    [alertView show];
 }
 
 @end

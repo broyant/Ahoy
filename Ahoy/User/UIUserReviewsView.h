@@ -11,8 +11,6 @@
 
 @interface UIUserReviewsView : UIView
 
-@property(nonatomic, strong) AHYUser  *userMsg;
-
-- (CGFloat)getheight;
+- (id)initWithFrame:(CGRect)frame;
 
 @end

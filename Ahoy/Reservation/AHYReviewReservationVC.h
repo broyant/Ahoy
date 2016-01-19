@@ -10,4 +10,9 @@
 
 @interface AHYReviewReservationVC : UIViewController
 
+@property (nonatomic, strong)  NSDate *startDate;
+@property (nonatomic, strong)  NSDate *endDate;
+@property (nonatomic, assign)  float payMoney;
+@property (nonatomic, strong)  NSString *callTips;
+
 @end
