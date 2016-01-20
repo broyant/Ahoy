@@ -8,6 +8,7 @@
 
 #import "AHYSettingViewController.h"
 #import "AHYSettingTableViewCell.h"
+#import "AHYSettingNotificationController.h"
 #import <Masonry.h>
 
 @interface AHYSettingViewController ()
@@ -59,6 +60,10 @@
     return 30.f;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.f;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AHYSettingTableViewCell *cell = (AHYSettingTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"settingCell" forIndexPath:indexPath];
     NSArray *images = [self.items[indexPath.section] valueForKey:@"image"];
@@ -71,12 +76,54 @@
     return cell;
 }
 
+#pragma mark - TableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            [self gernalSectionToPush:indexPath.row];
+            break;
+        case 1:
+            [self paymentSectionToPush:indexPath.row];
+            break;
+        case 2:
+            [self settingSectionToPush:indexPath.row];
+            break;
+        case 3:
+            [self miscellaneousSectionToPush:indexPath.row];
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - push 
+
+- (void)gernalSectionToPush:(NSInteger)row {
 
 }
 
-#pragma mark -private
+- (void)paymentSectionToPush:(NSInteger)row {
+
+}
+
+- (void)settingSectionToPush:(NSInteger)row {
+    if (row == 0) {
+        //notification
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"AHYSettingNotification" bundle:nil];
+        AHYSettingNotificationController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"AHYSettingNotificationController"];
+        vc.navigationItem.title = @"Notifications";
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (row == 1) {
+       //account info
+    }
+}
+
+- (void)miscellaneousSectionToPush:(NSInteger)row {
+
+}
+
+#pragma mark - Private
 
 - (NSArray *)items {
     if (!_items) {
@@ -130,17 +177,18 @@
     }];
     
     [logoutButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(view.mas_centerX);
         make.top.mas_equalTo(versionLabel.mas_bottom).mas_offset(20);
-        make.width.mas_equalTo(345);
         make.height.mas_equalTo(40);
+        make.leading.mas_offset(15);
+        make.trailing.mas_offset(-15);
     }];
     
     return view;
 }
 
 - (void)logout {
-
+ 
 }
+
 
 @end

@@ -48,6 +48,9 @@
 		7E22CAA71C4BD2320013635C /* AHYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */; };
 		7E22CAAC1C4BE29F0013635C /* AHYSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */; };
 		7E22CAAD1C4BE29F0013635C /* AHYSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */; };
+		7E22CAB11C4FD4DB0013635C /* AHYSettingNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAAF1C4FD4DB0013635C /* AHYSettingNotificationController.m */; };
+		7E22CAB41C4FD99C0013635C /* AHYSettingNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E22CAB31C4FD99C0013635C /* AHYSettingNotification.storyboard */; };
+		7E22CAB91C4FE7390013635C /* UINavigationController+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAB81C4FE7390013635C /* UINavigationController+MethodSwizzling.m */; };
 		7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E36292A1BEE3F160000711F /* AHYTopicViewController.m */; };
 		7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */; };
 		7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */; };
@@ -149,6 +152,11 @@
 		7E22CAA91C4BE29F0013635C /* AHYSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingTableViewCell.h; sourceTree = "<group>"; };
 		7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingTableViewCell.m; sourceTree = "<group>"; };
 		7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYSettingTableViewCell.xib; sourceTree = "<group>"; };
+		7E22CAAE1C4FD4DB0013635C /* AHYSettingNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingNotificationController.h; sourceTree = "<group>"; };
+		7E22CAAF1C4FD4DB0013635C /* AHYSettingNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingNotificationController.m; sourceTree = "<group>"; };
+		7E22CAB31C4FD99C0013635C /* AHYSettingNotification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AHYSettingNotification.storyboard; sourceTree = "<group>"; };
+		7E22CAB71C4FE7390013635C /* UINavigationController+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MethodSwizzling.h"; sourceTree = "<group>"; };
+		7E22CAB81C4FE7390013635C /* UINavigationController+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MethodSwizzling.m"; sourceTree = "<group>"; };
 		7E3629291BEE3F160000711F /* AHYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopicViewController.h; sourceTree = "<group>"; };
 		7E36292A1BEE3F160000711F /* AHYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicViewController.m; sourceTree = "<group>"; };
 		7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisorFilterView.h; sourceTree = "<group>"; };
@@ -353,8 +361,9 @@
 		6FAAC5111BDA00530085017B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7E22CAB61C4FE7020013635C /* ViewController */,
 				7E6C21CA1C1B228500BC407E /* Network */,
-				6FAAC5181BDA039E0085017B /* Views */,
+				6FAAC5181BDA039E0085017B /* View */,
 				6FAAC5151BDA03900085017B /* UIColor+Hex.h */,
 				6FAAC5161BDA03900085017B /* UIColor+Hex.m */,
 				7E3C066A1BF2457300E8F5D7 /* UIImage+Color.h */,
@@ -366,7 +375,7 @@
 			path = Ahoy/Utility;
 			sourceTree = "<group>";
 		};
-		6FAAC5181BDA039E0085017B /* Views */ = {
+		6FAAC5181BDA039E0085017B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FC5535B11C084364002A05BE /* Tag */,
@@ -379,7 +388,7 @@
 				1892F8501BF3193600EE1457 /* CustomTableViewCell.h */,
 				1892F8511BF3193600EE1457 /* CustomTableViewCell.m */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
 		6FAAC5191BDA0EA50085017B /* Constant */ = {
@@ -457,7 +466,7 @@
 		7E13751F1BCA6EB100AB3CA9 /* Ahoy */ = {
 			isa = PBXGroup;
 			children = (
-				7E22CAA41C4BD1D70013635C /* Setting */,
+				7E22CAA41C4BD1D70013635C /* More */,
 				7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */,
 				7E1375231BCA6EB100AB3CA9 /* AppDelegate.h */,
 				7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */,
@@ -484,14 +493,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7E22CAA41C4BD1D70013635C /* Setting */ = {
+		7E22CAA41C4BD1D70013635C /* More */ = {
 			isa = PBXGroup;
 			children = (
 				7E22CAA51C4BD2320013635C /* AHYSettingViewController.h */,
 				7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */,
+				7E22CAB51C4FE2280013635C /* Setting */,
 				7E22CAA81C4BE24F0013635C /* View */,
 			);
-			name = Setting;
+			name = More;
 			sourceTree = "<group>";
 		};
 		7E22CAA81C4BE24F0013635C /* View */ = {
@@ -502,6 +512,25 @@
 				7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		7E22CAB51C4FE2280013635C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAAE1C4FD4DB0013635C /* AHYSettingNotificationController.h */,
+				7E22CAAF1C4FD4DB0013635C /* AHYSettingNotificationController.m */,
+				7E22CAB31C4FD99C0013635C /* AHYSettingNotification.storyboard */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		7E22CAB61C4FE7020013635C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAB71C4FE7390013635C /* UINavigationController+MethodSwizzling.h */,
+				7E22CAB81C4FE7390013635C /* UINavigationController+MethodSwizzling.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		7E6C21CA1C1B228500BC407E /* Network */ = {
@@ -615,6 +644,7 @@
 				1892F8421BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf in Resources */,
 				7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */,
 				1892F8431BF0BA2000EE1457 /* Trade Gothic LT.ttf in Resources */,
+				7E22CAB41C4FD99C0013635C /* AHYSettingNotification.storyboard in Resources */,
 				1892F83B1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf in Resources */,
 				1892F8361BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf in Resources */,
 				1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */,
@@ -712,6 +742,7 @@
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */,
 				7E22CAAC1C4BE29F0013635C /* AHYSettingTableViewCell.m in Sources */,
+				7E22CAB11C4FD4DB0013635C /* AHYSettingNotificationController.m in Sources */,
 				7EF6B46C1C21CB4600EA7C65 /* AHYTopicCategory.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
@@ -721,6 +752,7 @@
 				FC5535A91C080F35002A05BE /* UIUserReviewsView.m in Sources */,
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
 				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
+				7E22CAB91C4FE7390013635C /* UINavigationController+MethodSwizzling.m in Sources */,
 				7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */,
 				FC6EC1DF1C29914E0081C4D7 /* AHYCancelReservationVC.m in Sources */,
 				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
