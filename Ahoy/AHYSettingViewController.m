@@ -110,7 +110,7 @@
 - (void)settingSectionToPush:(NSInteger)row {
     if (row == 0) {
         //notification
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"AHYSettingNotification" bundle:nil];
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"AHYSetting" bundle:nil];
         AHYSettingNotificationController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"AHYSettingNotificationController"];
         vc.navigationItem.title = @"Notifications";
         [self.navigationController pushViewController:vc animated:YES];

@@ -23,16 +23,12 @@
 - (UIViewController *)rootViewController {    
     AHYDiscoverViewController *discoverVC = [[AHYDiscoverViewController alloc] init];
     UINavigationController *tabVC1 = [[UINavigationController alloc] initWithRootViewController:discoverVC];
-    tabVC1.navigationBar.barTintColor = AHYBlue;
-    [tabVC1.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
     tabVC1.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Discover"] selectedImage:[UIImage imageNamed:@"Discover"]];
     
     AHYSearchViewController *searchVC = [[AHYSearchViewController alloc] init];
     UINavigationController *tabVC2 = [[UINavigationController alloc] initWithRootViewController:searchVC];
-    tabVC2.navigationBar.barTintColor = AHYBlue;
     tabVC2.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Search"] selectedImage:[UIImage imageNamed:@"Search"]];
     
-    //TODO replace with real instance
     UIViewController *tabVC3 = [[UIViewController alloc] init];
     tabVC3.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Chat"] selectedImage:[UIImage imageNamed:@"Chat"]];
     
@@ -41,8 +37,6 @@
     
     AHYSettingViewController *settingVC = [[AHYSettingViewController alloc] init];
     UINavigationController *tabVC5 = [[UINavigationController alloc] initWithRootViewController:settingVC];
-    tabVC5.navigationBar.barTintColor = AHYBlue;
-    [tabVC5.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
     tabVC5.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"More"] selectedImage:[UIImage imageNamed:@"More"]];
     
     self.tabBarController.viewControllers = @[tabVC1, tabVC2, tabVC3, tabVC4, tabVC5];

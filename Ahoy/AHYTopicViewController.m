@@ -93,11 +93,8 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 #pragma mark - Custom Navigation Bar Item
 
 - (void)customNavigationBarItem {
-    UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(popBack)];
-    self.navigationItem.leftBarButtonItem = leftBarItem;
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filterButton"] style:UIBarButtonItemStylePlain target:self action:@selector(filterAdvisor)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 #pragma mark - AHYAdvisorFilterViewDelegate
