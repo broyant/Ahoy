@@ -79,10 +79,11 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
 {
     self.navigationItem.rightBarButtonItem = nil;
     
+    static CGFloat kLeftRightMarginBySystem = 8.f;
+    
     _headerView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.bounds.size.width, 44.f)];
     _headerView.backgroundColor = [UIColor clearColor];
     self.navigationItem.titleView = _headerView;
-    _headerView.backgroundColor = [UIColor cyanColor];
     
     _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_headerView addSubview:_cancelButton];
@@ -94,7 +95,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     [_cancelButton addTarget:self action:@selector(cancelSearchButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
     [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.equalTo(_headerView.mas_trailing).with.offset(-14);
+        make.trailing.equalTo(_headerView.mas_trailing).with.offset(-14 + kLeftRightMarginBySystem);
         make.width.mas_equalTo(48);
         make.height.mas_equalTo(19);
         make.centerY.mas_equalTo(_headerView.mas_centerY);
@@ -109,7 +110,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     [_searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(30.f);
         make.bottom.equalTo(_headerView.mas_bottom).with.offset(-6);
-        make.leading.equalTo(_headerView);
+        make.leading.equalTo(_headerView).offset(15.f-kLeftRightMarginBySystem);
         make.trailing.equalTo(_cancelButton.mas_leading).with.offset(-11);
 
     }];
@@ -231,7 +232,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     if (!cell) {
         cell = [[AHYContactListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[AHYContactListCell reuseIdentifier]];
         NSMutableArray *rightUtilityButtons = [NSMutableArray array];
-        [rightUtilityButtons sw_addUtilityButtonWithColor:AHYYellow title:@"MORE"];
+        [rightUtilityButtons sw_addUtilityButtonWithColor:AHYYellow title:@"REVIEW"];
         [rightUtilityButtons sw_addUtilityButtonWithColor:AHYRed title:@"DELETE"];
         [cell setRightUtilityButtons:rightUtilityButtons WithButtonWidth:85.f];
     }

@@ -115,14 +115,14 @@
 - (void)setupTimeLabel
 {
     _timeLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectZero];
-    _timeLabel.font = TradeGothicLTBold(14);
+    _timeLabel.font = TradeGothicLT(12);
     _timeLabel.textColor = AHYSteelGrey;
     _timeLabel.textAlignment = NSTextAlignmentRight;
     [self.contentView addSubview:_timeLabel];
     [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.trailing.equalTo(self).offset(-14);
         make.bottom.equalTo(_nameLabel);
-        make.height.mas_equalTo(16);
+        make.height.mas_equalTo(19);
     }];
 }
 
@@ -181,7 +181,7 @@
     _nameLabel.text = _buddy.displayName;
     
     NSString *company = [_buddy.extraInfoAttr valueForKey:@"ahy_company"];
-    _companyLabel.text = [NSString stringWithFormat:@" -%@",company];
+    _companyLabel.text = [NSString stringWithFormat:@" - %@",company];
     
     NSString *topic = [_buddy.extraInfoAttr valueForKey:@"ahy_topic"];
     _topicLabel.text = [NSString stringWithFormat:@"Topic: %@",topic];
