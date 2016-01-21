@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CD091991C510F4A00AEF0FE /* AHYContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091981C510F4A00AEF0FE /* AHYContactListViewController.m */; };
+		0CD0919C1C510F5E00AEF0FE /* AHYContactListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0919B1C510F5E00AEF0FE /* AHYContactListCell.m */; };
+		0CD091A21C51120100AEF0FE /* AHYCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0919F1C51120100AEF0FE /* AHYCommentView.m */; };
+		0CD091A31C51120100AEF0FE /* AHYReserveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091A11C51120100AEF0FE /* AHYReserveView.m */; };
+		0CD091D41C51124500AEF0FE /* AHYDatabaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091AE1C51124500AEF0FE /* AHYDatabaseView.m */; };
+		0CD091D51C51124500AEF0FE /* AHYDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091B11C51124500AEF0FE /* AHYDatabaseManager.m */; };
+		0CD091D61C51124500AEF0FE /* AHYLeanMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091B31C51124500AEF0FE /* AHYLeanMessageManager.m */; };
+		0CD091D71C51124500AEF0FE /* OTRColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091B61C51124500AEF0FE /* OTRColors.m */; };
+		0CD091D81C51124500AEF0FE /* OTRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091B81C51124500AEF0FE /* OTRConstants.m */; };
+		0CD091D91C51124500AEF0FE /* OTRImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091BA1C51124500AEF0FE /* OTRImages.m */; };
+		0CD091DA1C51124500AEF0FE /* OTRNotificationPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091BC1C51124500AEF0FE /* OTRNotificationPermissions.m */; };
+		0CD091DB1C51124500AEF0FE /* OTRPasswordGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091BE1C51124500AEF0FE /* OTRPasswordGenerator.m */; };
+		0CD091DC1C51124500AEF0FE /* OTRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C01C51124500AEF0FE /* OTRUtilities.m */; };
+		0CD091DD1C51124500AEF0FE /* AHYChatAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C31C51124500AEF0FE /* AHYChatAccount.m */; };
+		0CD091DE1C51124500AEF0FE /* AHYCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C51C51124500AEF0FE /* AHYCommentItem.m */; };
+		0CD091DF1C51124500AEF0FE /* AHYReservationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C71C51124500AEF0FE /* AHYReservationItem.m */; };
+		0CD091E01C51124500AEF0FE /* OTRBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C91C51124500AEF0FE /* OTRBuddy.m */; };
+		0CD091E11C51124500AEF0FE /* OTRImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091CB1C51124500AEF0FE /* OTRImageItem.m */; };
+		0CD091E21C51124500AEF0FE /* OTRMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091CD1C51124500AEF0FE /* OTRMediaItem.m */; };
+		0CD091E31C51124500AEF0FE /* OTRMessage+JSQMessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091CF1C51124500AEF0FE /* OTRMessage+JSQMessageData.m */; };
+		0CD091E41C51124500AEF0FE /* OTRMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091D11C51124500AEF0FE /* OTRMessage.m */; };
+		0CD091E51C51124500AEF0FE /* OTRYapDatabaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091D31C51124500AEF0FE /* OTRYapDatabaseObject.m */; };
+		0CD091EB1C51137600AEF0FE /* OTRColorFadingDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091E81C51137600AEF0FE /* OTRColorFadingDotView.m */; };
+		0CD091EC1C51137600AEF0FE /* OTRComposingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091EA1C51137600AEF0FE /* OTRComposingImageView.m */; };
+		0CD091EF1C51140300AEF0FE /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD091ED1C51140300AEF0FE /* AVOSCloud.framework */; };
+		0CD091F01C51140300AEF0FE /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD091EE1C51140300AEF0FE /* AVOSCloudIM.framework */; };
+		0CD091F11C51144300AEF0FE /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD091ED1C51140300AEF0FE /* AVOSCloud.framework */; };
+		0CD091F21C51144300AEF0FE /* AVOSCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD091ED1C51140300AEF0FE /* AVOSCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CD091F31C51144300AEF0FE /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD091EE1C51140300AEF0FE /* AVOSCloudIM.framework */; };
+		0CD091F41C51144300AEF0FE /* AVOSCloudIM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD091EE1C51140300AEF0FE /* AVOSCloudIM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CD091F81C5116F600AEF0FE /* UIImage+BBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091F71C5116F600AEF0FE /* UIImage+BBlock.m */; };
+		0CD091FB1C5117F000AEF0FE /* AHYChatMediaFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091FA1C5117F000AEF0FE /* AHYChatMediaFileManager.m */; };
+		0CD091FF1C5122EC00AEF0FE /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091FE1C5122EC00AEF0FE /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0CD092021C51232B00AEF0FE /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD092011C51232B00AEF0FE /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892F8101BF0A24F00EE1457 /* AHYProfileViewController.m */; };
 		1892F8221BF0BA1600EE1457 /* avenirnextbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F81C1BF0BA1600EE1457 /* avenirnextbold.otf */; };
 		1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1892F81D1BF0BA1600EE1457 /* avenirnextdemibold.otf */; };
@@ -74,7 +108,80 @@
 		FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF0E71E1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0CD091F51C51144400AEF0FE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0CD091F21C51144300AEF0FE /* AVOSCloud.framework in Embed Frameworks */,
+				0CD091F41C51144300AEF0FE /* AVOSCloudIM.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0CD091971C510F4A00AEF0FE /* AHYContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYContactListViewController.h; path = Chat/AHYContactListViewController.h; sourceTree = "<group>"; };
+		0CD091981C510F4A00AEF0FE /* AHYContactListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYContactListViewController.m; path = Chat/AHYContactListViewController.m; sourceTree = "<group>"; };
+		0CD0919A1C510F5E00AEF0FE /* AHYContactListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYContactListCell.h; path = Chat/AHYContactListCell.h; sourceTree = "<group>"; };
+		0CD0919B1C510F5E00AEF0FE /* AHYContactListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYContactListCell.m; path = Chat/AHYContactListCell.m; sourceTree = "<group>"; };
+		0CD0919E1C51120100AEF0FE /* AHYCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYCommentView.h; path = Chat/AHYCommentView.h; sourceTree = "<group>"; };
+		0CD0919F1C51120100AEF0FE /* AHYCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYCommentView.m; path = Chat/AHYCommentView.m; sourceTree = "<group>"; };
+		0CD091A01C51120100AEF0FE /* AHYReserveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReserveView.h; path = Chat/AHYReserveView.h; sourceTree = "<group>"; };
+		0CD091A11C51120100AEF0FE /* AHYReserveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYReserveView.m; path = Chat/AHYReserveView.m; sourceTree = "<group>"; };
+		0CD091AD1C51124500AEF0FE /* AHYDatabaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDatabaseView.h; sourceTree = "<group>"; };
+		0CD091AE1C51124500AEF0FE /* AHYDatabaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDatabaseView.m; sourceTree = "<group>"; };
+		0CD091B01C51124500AEF0FE /* AHYDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDatabaseManager.h; sourceTree = "<group>"; };
+		0CD091B11C51124500AEF0FE /* AHYDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDatabaseManager.m; sourceTree = "<group>"; };
+		0CD091B21C51124500AEF0FE /* AHYLeanMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYLeanMessageManager.h; sourceTree = "<group>"; };
+		0CD091B31C51124500AEF0FE /* AHYLeanMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYLeanMessageManager.m; sourceTree = "<group>"; };
+		0CD091B51C51124500AEF0FE /* OTRColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRColors.h; sourceTree = "<group>"; };
+		0CD091B61C51124500AEF0FE /* OTRColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRColors.m; sourceTree = "<group>"; };
+		0CD091B71C51124500AEF0FE /* OTRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRConstants.h; sourceTree = "<group>"; };
+		0CD091B81C51124500AEF0FE /* OTRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRConstants.m; sourceTree = "<group>"; };
+		0CD091B91C51124500AEF0FE /* OTRImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRImages.h; sourceTree = "<group>"; };
+		0CD091BA1C51124500AEF0FE /* OTRImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRImages.m; sourceTree = "<group>"; };
+		0CD091BB1C51124500AEF0FE /* OTRNotificationPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRNotificationPermissions.h; sourceTree = "<group>"; };
+		0CD091BC1C51124500AEF0FE /* OTRNotificationPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRNotificationPermissions.m; sourceTree = "<group>"; };
+		0CD091BD1C51124500AEF0FE /* OTRPasswordGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRPasswordGenerator.h; sourceTree = "<group>"; };
+		0CD091BE1C51124500AEF0FE /* OTRPasswordGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRPasswordGenerator.m; sourceTree = "<group>"; };
+		0CD091BF1C51124500AEF0FE /* OTRUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRUtilities.h; sourceTree = "<group>"; };
+		0CD091C01C51124500AEF0FE /* OTRUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRUtilities.m; sourceTree = "<group>"; };
+		0CD091C21C51124500AEF0FE /* AHYChatAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYChatAccount.h; sourceTree = "<group>"; };
+		0CD091C31C51124500AEF0FE /* AHYChatAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYChatAccount.m; sourceTree = "<group>"; };
+		0CD091C41C51124500AEF0FE /* AHYCommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYCommentItem.h; sourceTree = "<group>"; };
+		0CD091C51C51124500AEF0FE /* AHYCommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYCommentItem.m; sourceTree = "<group>"; };
+		0CD091C61C51124500AEF0FE /* AHYReservationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYReservationItem.h; sourceTree = "<group>"; };
+		0CD091C71C51124500AEF0FE /* AHYReservationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYReservationItem.m; sourceTree = "<group>"; };
+		0CD091C81C51124500AEF0FE /* OTRBuddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRBuddy.h; sourceTree = "<group>"; };
+		0CD091C91C51124500AEF0FE /* OTRBuddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRBuddy.m; sourceTree = "<group>"; };
+		0CD091CA1C51124500AEF0FE /* OTRImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRImageItem.h; sourceTree = "<group>"; };
+		0CD091CB1C51124500AEF0FE /* OTRImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRImageItem.m; sourceTree = "<group>"; };
+		0CD091CC1C51124500AEF0FE /* OTRMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRMediaItem.h; sourceTree = "<group>"; };
+		0CD091CD1C51124500AEF0FE /* OTRMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRMediaItem.m; sourceTree = "<group>"; };
+		0CD091CE1C51124500AEF0FE /* OTRMessage+JSQMessageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OTRMessage+JSQMessageData.h"; sourceTree = "<group>"; };
+		0CD091CF1C51124500AEF0FE /* OTRMessage+JSQMessageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OTRMessage+JSQMessageData.m"; sourceTree = "<group>"; };
+		0CD091D01C51124500AEF0FE /* OTRMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRMessage.h; sourceTree = "<group>"; };
+		0CD091D11C51124500AEF0FE /* OTRMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRMessage.m; sourceTree = "<group>"; };
+		0CD091D21C51124500AEF0FE /* OTRYapDatabaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRYapDatabaseObject.h; sourceTree = "<group>"; };
+		0CD091D31C51124500AEF0FE /* OTRYapDatabaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRYapDatabaseObject.m; sourceTree = "<group>"; };
+		0CD091E71C51137600AEF0FE /* OTRColorFadingDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRColorFadingDotView.h; sourceTree = "<group>"; };
+		0CD091E81C51137600AEF0FE /* OTRColorFadingDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRColorFadingDotView.m; sourceTree = "<group>"; };
+		0CD091E91C51137600AEF0FE /* OTRComposingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRComposingImageView.h; sourceTree = "<group>"; };
+		0CD091EA1C51137600AEF0FE /* OTRComposingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRComposingImageView.m; sourceTree = "<group>"; };
+		0CD091ED1C51140300AEF0FE /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = Ahoy/Chat/AVOSCloud/Framework/AVOSCloud.framework; sourceTree = "<group>"; };
+		0CD091EE1C51140300AEF0FE /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloudIM.framework; path = Ahoy/Chat/AVOSCloud/Framework/AVOSCloudIM.framework; sourceTree = "<group>"; };
+		0CD091F61C5116F600AEF0FE /* UIImage+BBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBlock.h"; sourceTree = "<group>"; };
+		0CD091F71C5116F600AEF0FE /* UIImage+BBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBlock.m"; sourceTree = "<group>"; };
+		0CD091F91C5117F000AEF0FE /* AHYChatMediaFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYChatMediaFileManager.h; sourceTree = "<group>"; };
+		0CD091FA1C5117F000AEF0FE /* AHYChatMediaFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYChatMediaFileManager.m; sourceTree = "<group>"; };
+		0CD091FD1C5122EC00AEF0FE /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		0CD091FE1C5122EC00AEF0FE /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		0CD092001C51232B00AEF0FE /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		0CD092011C51232B00AEF0FE /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		1892F80F1BF0A24F00EE1457 /* AHYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYProfileViewController.h; sourceTree = "<group>"; };
 		1892F8101BF0A24F00EE1457 /* AHYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYProfileViewController.m; sourceTree = "<group>"; };
 		1892F8121BF0A7F000EE1457 /* AHYFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYFrame.h; sourceTree = "<group>"; };
@@ -195,15 +302,168 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD091EF1C51140300AEF0FE /* AVOSCloud.framework in Frameworks */,
+				0CD091F01C51140300AEF0FE /* AVOSCloudIM.framework in Frameworks */,
 				7E4DA13D1BFCC9FE00978C5A /* libz.1.dylib in Frameworks */,
 				B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */,
+				0CD091F31C51144300AEF0FE /* AVOSCloudIM.framework in Frameworks */,
 				7E4DA13B1BFCC85700978C5A /* Reveal.framework in Frameworks */,
+				0CD091F11C51144300AEF0FE /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CD091901C4FD7BF00AEF0FE /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091FC1C5122EC00AEF0FE /* Categories */,
+				0CD0919D1C51109400AEF0FE /* OTRChat */,
+				0CD091961C4FD85C00AEF0FE /* Views */,
+				0CD091951C4FD85400AEF0FE /* Model */,
+				0CD091941C4FD84800AEF0FE /* ViewControllers */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		0CD091941C4FD84800AEF0FE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091971C510F4A00AEF0FE /* AHYContactListViewController.h */,
+				0CD091981C510F4A00AEF0FE /* AHYContactListViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0CD091951C4FD85400AEF0FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0CD091961C4FD85C00AEF0FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CD0919E1C51120100AEF0FE /* AHYCommentView.h */,
+				0CD0919F1C51120100AEF0FE /* AHYCommentView.m */,
+				0CD091A01C51120100AEF0FE /* AHYReserveView.h */,
+				0CD091A11C51120100AEF0FE /* AHYReserveView.m */,
+				0CD0919A1C510F5E00AEF0FE /* AHYContactListCell.h */,
+				0CD0919B1C510F5E00AEF0FE /* AHYContactListCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0CD0919D1C51109400AEF0FE /* OTRChat */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091E61C51137600AEF0FE /* Views */,
+				0CD091AC1C51124500AEF0FE /* DatabaseView */,
+				0CD091AF1C51124500AEF0FE /* Service */,
+				0CD091B41C51124500AEF0FE /* Utilities */,
+				0CD091C11C51124500AEF0FE /* YapStorage */,
+			);
+			name = OTRChat;
+			sourceTree = "<group>";
+		};
+		0CD091AC1C51124500AEF0FE /* DatabaseView */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091AD1C51124500AEF0FE /* AHYDatabaseView.h */,
+				0CD091AE1C51124500AEF0FE /* AHYDatabaseView.m */,
+			);
+			name = DatabaseView;
+			path = Chat/OTRChat/DatabaseView;
+			sourceTree = "<group>";
+		};
+		0CD091AF1C51124500AEF0FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091F91C5117F000AEF0FE /* AHYChatMediaFileManager.h */,
+				0CD091FA1C5117F000AEF0FE /* AHYChatMediaFileManager.m */,
+				0CD091B01C51124500AEF0FE /* AHYDatabaseManager.h */,
+				0CD091B11C51124500AEF0FE /* AHYDatabaseManager.m */,
+				0CD091B21C51124500AEF0FE /* AHYLeanMessageManager.h */,
+				0CD091B31C51124500AEF0FE /* AHYLeanMessageManager.m */,
+			);
+			name = Service;
+			path = Chat/OTRChat/Service;
+			sourceTree = "<group>";
+		};
+		0CD091B41C51124500AEF0FE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091F61C5116F600AEF0FE /* UIImage+BBlock.h */,
+				0CD091F71C5116F600AEF0FE /* UIImage+BBlock.m */,
+				0CD091B51C51124500AEF0FE /* OTRColors.h */,
+				0CD091B61C51124500AEF0FE /* OTRColors.m */,
+				0CD091B71C51124500AEF0FE /* OTRConstants.h */,
+				0CD091B81C51124500AEF0FE /* OTRConstants.m */,
+				0CD091B91C51124500AEF0FE /* OTRImages.h */,
+				0CD091BA1C51124500AEF0FE /* OTRImages.m */,
+				0CD091BB1C51124500AEF0FE /* OTRNotificationPermissions.h */,
+				0CD091BC1C51124500AEF0FE /* OTRNotificationPermissions.m */,
+				0CD091BD1C51124500AEF0FE /* OTRPasswordGenerator.h */,
+				0CD091BE1C51124500AEF0FE /* OTRPasswordGenerator.m */,
+				0CD091BF1C51124500AEF0FE /* OTRUtilities.h */,
+				0CD091C01C51124500AEF0FE /* OTRUtilities.m */,
+			);
+			name = Utilities;
+			path = Chat/OTRChat/Utilities;
+			sourceTree = "<group>";
+		};
+		0CD091C11C51124500AEF0FE /* YapStorage */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091C21C51124500AEF0FE /* AHYChatAccount.h */,
+				0CD091C31C51124500AEF0FE /* AHYChatAccount.m */,
+				0CD091C41C51124500AEF0FE /* AHYCommentItem.h */,
+				0CD091C51C51124500AEF0FE /* AHYCommentItem.m */,
+				0CD091C61C51124500AEF0FE /* AHYReservationItem.h */,
+				0CD091C71C51124500AEF0FE /* AHYReservationItem.m */,
+				0CD091C81C51124500AEF0FE /* OTRBuddy.h */,
+				0CD091C91C51124500AEF0FE /* OTRBuddy.m */,
+				0CD091CA1C51124500AEF0FE /* OTRImageItem.h */,
+				0CD091CB1C51124500AEF0FE /* OTRImageItem.m */,
+				0CD091CC1C51124500AEF0FE /* OTRMediaItem.h */,
+				0CD091CD1C51124500AEF0FE /* OTRMediaItem.m */,
+				0CD091CE1C51124500AEF0FE /* OTRMessage+JSQMessageData.h */,
+				0CD091CF1C51124500AEF0FE /* OTRMessage+JSQMessageData.m */,
+				0CD091D01C51124500AEF0FE /* OTRMessage.h */,
+				0CD091D11C51124500AEF0FE /* OTRMessage.m */,
+				0CD091D21C51124500AEF0FE /* OTRYapDatabaseObject.h */,
+				0CD091D31C51124500AEF0FE /* OTRYapDatabaseObject.m */,
+			);
+			name = YapStorage;
+			path = Chat/OTRChat/YapStorage;
+			sourceTree = "<group>";
+		};
+		0CD091E61C51137600AEF0FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CD091E71C51137600AEF0FE /* OTRColorFadingDotView.h */,
+				0CD091E81C51137600AEF0FE /* OTRColorFadingDotView.m */,
+				0CD091E91C51137600AEF0FE /* OTRComposingImageView.h */,
+				0CD091EA1C51137600AEF0FE /* OTRComposingImageView.m */,
+			);
+			name = Views;
+			path = Chat/OTRChat/Views;
+			sourceTree = "<group>";
+		};
+		0CD091FC1C5122EC00AEF0FE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0CD092001C51232B00AEF0FE /* GTMNSString+HTML.h */,
+				0CD092011C51232B00AEF0FE /* GTMNSString+HTML.m */,
+				0CD091FD1C5122EC00AEF0FE /* NSString+HTML.h */,
+				0CD091FE1C5122EC00AEF0FE /* NSString+HTML.m */,
+			);
+			name = Categories;
+			path = Chat/Categories;
+			sourceTree = "<group>";
+		};
 		155C17EA8F325DD5C9B3F927 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +558,8 @@
 		6299A34A76006285610475DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CD091ED1C51140300AEF0FE /* AVOSCloud.framework */,
+				0CD091EE1C51140300AEF0FE /* AVOSCloudIM.framework */,
 				7E4DA13C1BFCC9FE00978C5A /* libz.1.dylib */,
 				7E4DA13A1BFCC85700978C5A /* Reveal.framework */,
 				FC70946D6FBBBF66DB552EFC /* libPods.a */,
@@ -425,6 +687,7 @@
 		7E13751F1BCA6EB100AB3CA9 /* Ahoy */ = {
 			isa = PBXGroup;
 			children = (
+				0CD091901C4FD7BF00AEF0FE /* Chat */,
 				7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */,
 				7E1375231BCA6EB100AB3CA9 /* AppDelegate.h */,
 				7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */,
@@ -498,6 +761,7 @@
 				7E13751B1BCA6EB100AB3CA9 /* Resources */,
 				6DFE04B8CA73B130F54B42BA /* Embed Pods Frameworks */,
 				405C1E286732BD2C97C148E5 /* Copy Pods Resources */,
+				0CD091F51C51144400AEF0FE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -628,26 +892,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD091DF1C51124500AEF0FE /* AHYReservationItem.m in Sources */,
 				6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */,
 				FC4B2CDB1C1987E900F58103 /* UIAdvisorNormalCollectionCell.m in Sources */,
 				7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */,
+				0CD091F81C5116F600AEF0FE /* UIImage+BBlock.m in Sources */,
+				0CD0919C1C510F5E00AEF0FE /* AHYContactListCell.m in Sources */,
 				FC54224B1C11D1BE008BC3E5 /* AHYAdVisorProfileVC.m in Sources */,
+				0CD091EC1C51137600AEF0FE /* OTRComposingImageView.m in Sources */,
+				0CD091DA1C51124500AEF0FE /* OTRNotificationPermissions.m in Sources */,
 				6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */,
+				0CD091991C510F4A00AEF0FE /* AHYContactListViewController.m in Sources */,
+				0CD091A21C51120100AEF0FE /* AHYCommentView.m in Sources */,
+				0CD091D51C51124500AEF0FE /* AHYDatabaseManager.m in Sources */,
 				7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */,
+				0CD091DE1C51124500AEF0FE /* AHYCommentItem.m in Sources */,
 				FC6EC1E01C29914E0081C4D7 /* AHYReservationVC.m in Sources */,
+				0CD091D81C51124500AEF0FE /* OTRConstants.m in Sources */,
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,
+				0CD091FB1C5117F000AEF0FE /* AHYChatMediaFileManager.m in Sources */,
 				7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */,
 				7E3C06721BF2466A00E8F5D7 /* RFSegmentView.m in Sources */,
 				FC18603F1C2D1A0400BD410B /* AHYReviewReservationVC.m in Sources */,
 				1892F8521BF3193600EE1457 /* CustomTableViewCell.m in Sources */,
+				0CD091E51C51124500AEF0FE /* OTRYapDatabaseObject.m in Sources */,
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
 				7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */,
+				0CD092021C51232B00AEF0FE /* GTMNSString+HTML.m in Sources */,
 				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
+				0CD091EB1C51137600AEF0FE /* OTRColorFadingDotView.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
 				FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */,
 				FC5535AC1C08195F002A05BE /* CustomTagView.m in Sources */,
@@ -655,17 +933,31 @@
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
 				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
 				7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */,
+				0CD091D41C51124500AEF0FE /* AHYDatabaseView.m in Sources */,
 				FC6EC1DF1C29914E0081C4D7 /* AHYCancelReservationVC.m in Sources */,
 				7E0C9EAA1BF873F000B2BCCB /* main.m in Sources */,
+				0CD091DD1C51124500AEF0FE /* AHYChatAccount.m in Sources */,
+				0CD091E31C51124500AEF0FE /* OTRMessage+JSQMessageData.m in Sources */,
+				0CD091D61C51124500AEF0FE /* AHYLeanMessageManager.m in Sources */,
+				0CD091E41C51124500AEF0FE /* OTRMessage.m in Sources */,
+				0CD091A31C51120100AEF0FE /* AHYReserveView.m in Sources */,
+				0CD091E21C51124500AEF0FE /* OTRMediaItem.m in Sources */,
 				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
+				0CD091E01C51124500AEF0FE /* OTRBuddy.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
+				0CD091DB1C51124500AEF0FE /* OTRPasswordGenerator.m in Sources */,
 				FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */,
 				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
 				FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */,
+				0CD091D71C51124500AEF0FE /* OTRColors.m in Sources */,
+				0CD091D91C51124500AEF0FE /* OTRImages.m in Sources */,
+				0CD091FF1C5122EC00AEF0FE /* NSString+HTML.m in Sources */,
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				FC5535B71C085901002A05BE /* AHYUser.m in Sources */,
 				FC5F2C6B1C2153A6002D1779 /* UITopicSelectCollectionCell.m in Sources */,
 				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,
+				0CD091DC1C51124500AEF0FE /* OTRUtilities.m in Sources */,
+				0CD091E11C51124500AEF0FE /* OTRImageItem.m in Sources */,
 				7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,6 +1065,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ahoy/Chat/AVOSCloud/Framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
@@ -818,6 +1111,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Ahoy/Chat/AVOSCloud/Framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";

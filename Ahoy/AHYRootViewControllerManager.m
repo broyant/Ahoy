@@ -11,6 +11,9 @@
 #import "AHYSearchViewController.h"
 #import "AHYProfileViewController.h"
 
+//add by G.N 20160121
+#import "AHYContactListViewController.h"
+
 @interface AHYRootViewControllerManager()
 
 @property(nonatomic, strong) UITabBarController *tabBarController;
@@ -32,7 +35,10 @@
     tabVC2.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Search"] selectedImage:[UIImage imageNamed:@"Search"]];
     
     //TODO replace with real instance
-    UIViewController *tabVC3 = [[UIViewController alloc] init];
+//    UIViewController *tabVC3 = [[UIViewController alloc] init];
+    AHYContactListViewController *contactListVC = [[AHYContactListViewController alloc] init];
+    UINavigationController *tabVC3 = [[UINavigationController alloc] initWithRootViewController:contactListVC];
+    tabVC3.navigationBar.barTintColor = AHYBlue;
     tabVC3.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Chat"] selectedImage:[UIImage imageNamed:@"Chat"]];
     
     AHYProfileViewController *tabVC4 = [AHYProfileViewController getInstance];

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -69,7 +69,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURLY RATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVh-Ed-QXH">
-                            <rect key="frame" x="15" y="161" width="111.5" height="21"/>
+                            <rect key="frame" x="15" y="161" width="112" height="21"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,14 +97,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYd-Py-YdF" customClass="NMRangeSlider">
-                            <rect key="frame" x="15" y="229" width="570" height="36.5"/>
+                            <rect key="frame" x="15" y="229" width="570" height="37"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="sliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="zqR-Lw-9sq"/>
                             </connections>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1+ star" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OZ-Dd-o0l">
-                            <rect key="frame" x="530" y="318.5" width="55" height="21"/>
+                            <rect key="frame" x="530" y="319" width="55" height="21"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="G8u-KN-8Wl"/>
@@ -129,7 +129,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REVIEW RATING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0p-jr-ELS">
-                            <rect key="frame" x="15" y="280" width="125.5" height="21"/>
+                            <rect key="frame" x="15" y="280" width="126" height="21"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="uYr-uW-RWm"/>
