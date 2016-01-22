@@ -179,12 +179,27 @@
     }
     
     _nameLabel.text = _buddy.displayName;
+
     
     NSString *company = [_buddy.extraInfoAttr valueForKey:@"ahy_company"];
     _companyLabel.text = [NSString stringWithFormat:@" - %@",company];
     
     NSString *topic = [_buddy.extraInfoAttr valueForKey:@"ahy_topic"];
     _topicLabel.text = [NSString stringWithFormat:@"Topic: %@",topic];
+    
+    if (keyword.length > 0) {
+        [_nameLabel setText:_buddy.displayName afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+            NSRange blueRange = [[[mutableAttributedString string] lowercaseString] rangeOfString:[keyword lowercaseString] options:NSCaseInsensitiveSearch];
+            [mutableAttributedString addAttribute:(id)kCTForegroundColorAttributeName value:(id)AHYBlue.CGColor range:blueRange];
+            return mutableAttributedString;
+        }];
+        
+        [_topicLabel setText:[NSString stringWithFormat:@"Topic: %@",topic] afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+            NSRange blueRange = [[[mutableAttributedString string] lowercaseString] rangeOfString:[keyword lowercaseString] options:NSCaseInsensitiveSearch];
+            [mutableAttributedString addAttribute:(id)kCTForegroundColorAttributeName value:(id)AHYBlue.CGColor range:blueRange];
+            return mutableAttributedString;
+        }];
+    }
     
     _timeLabel.text = [self dateString:_buddy.lastMessageDate];
 

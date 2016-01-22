@@ -10,22 +10,23 @@
 #import "AHYReserveView.h"
 #import "JSQMessagesMediaViewBubbleImageMasker.h"
 
-NSString * const reservationType = @"AHYReservetion";
+NSString *reservationType = @"AHYReservetion";
 
-#define kFixHeightInBubble 60.f
+#define kFixPartHeightInBubble 225.f
 
 @implementation AHYReservationItem
 
 - (CGSize)mediaViewDisplaySize
 {
-    return CGSizeMake(0.f, kFixHeightInBubble);
+    return CGSizeMake(0.f, kFixPartHeightInBubble);
 }
 
 - (UIView *)mediaView
 {
-    AHYReserveView *reserveView = [[AHYReserveView alloc] initWithDate:_rsvDate time:_rsvTime note:_rsvNote];
-    [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:reserveView isOutgoing:!self.isIncoming];
-    return reserveView;
+//    AHYReserveView *reserveView = [[AHYReserveView alloc] initWithDate:_rsvDate time:_rsvTime note:_rsvNote];
+//    [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:reserveView isOutgoing:!self.isIncoming];
+//    return reserveView;
+    return nil;
     
 }
 
@@ -36,7 +37,7 @@ NSString * const reservationType = @"AHYReservetion";
 
 - (NSUInteger)hash
 {
-    return super.hash  ^ self.rsvDate.hash ^self.rsvTime.hash ^self.rsvNote.hash;
+    return super.hash ^ self.startTime.hash ^self.endTime.hash ^self.rsvNote.hash ^self.topic.hash;
 }
 
 + (NSString *)collection

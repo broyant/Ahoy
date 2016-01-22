@@ -36,7 +36,7 @@ NSString *const AHYCommentType = @"AHYComment";
 
 - (NSUInteger)hash
 {
-    return super.hash ^ self.rate ^ self.comment.hash;
+    return super.hash ^ self.rating ^ self.comment.hash;
 }
 
 + (NSString *)collection

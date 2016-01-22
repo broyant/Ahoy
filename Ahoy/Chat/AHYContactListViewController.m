@@ -46,10 +46,17 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.edgesForExtendedLayout = UIRectEdgeBottom;
-    self.title = @"Chat";
+//    self.title = @"Chat";
+    self.navigationItem.title = @"CHATS";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _rightBarItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchBarItemPress:)];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0.f, 0.f, 14.f, 14.f);
+    [button setImage:[UIImage imageNamed:@"chat_search"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(searchBarItemPress:) forControlEvents:UIControlEventTouchUpInside];
+    _rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+
+//    _rightBarItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchBarItemPress:)];
     self.navigationItem.rightBarButtonItem = _rightBarItem;
     
     [self setupContactListTableView];
@@ -241,11 +248,14 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     OTRBuddy *buddy = nil;
     if (tableView == _contactListTableView) {
         buddy = [self.dataSource objectAtIndex:indexPath.row];
+        [cell configureWithOTRBuddy:buddy keyword:nil];
     }
     else{
         buddy = [self.searchResultDataSource objectAtIndex:indexPath.row];
+        NSString *keyword = [_searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [cell configureWithOTRBuddy:buddy keyword:keyword];
     }
-    [cell configureWithOTRBuddy:buddy keyword:nil];
+
     
     return cell;
 }

@@ -10,12 +10,21 @@
 
 @interface AHYReserveView : UIView
 
-@property (nonatomic, strong) NSString *date;
+//start Time,in seconds,actually should be NSTimeInterval
+@property (nonatomic, strong) NSString *startTime;
+//end Time,same above;
+@property (nonatomic, strong) NSString *endTime;
+//Topic to carry on;
+@property (nonatomic, strong) NSString *topic;
+//money have paid;
+@property (nonatomic, assign) NSUInteger moneyPaid;
+//note for reservation;
+@property (nonatomic, strong) NSString *rsvNote;
 
-@property (nonatomic, strong) NSString *time;
-
-@property (nonatomic, strong) NSString *note;
-
-- (instancetype)initWithDate:(NSString *)date time:(NSString *)time note:(NSString *)note;
+- (void)configureWithStartTime:(NSString *)startTime
+                          endTime:(NSString *)endTime
+                            topic:(NSString *)topic
+                        moneyPaid:(NSUInteger)moneyPaid
+                          rsvNote:(NSString *)rsvNote;
 
 @end

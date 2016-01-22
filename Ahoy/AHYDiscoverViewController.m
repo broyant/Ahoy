@@ -87,7 +87,7 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Discover";
+    self.navigationItem.title = @"DISCOVER";
     [self.tableView registerClass:[AHYAdvisorListCell class] forCellReuseIdentifier:kAdvisorListCellIdentifier];
     self.tableView.tableHeaderView = [self headerView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

@@ -8,14 +8,19 @@
 
 #import "OTRMediaItem.h"
 
-extern NSString * const AHYReservationType;
+extern NSString *AHYReservationType;
 
 @interface AHYReservationItem : OTRMediaItem
 
-@property (nonatomic, strong) NSString *rsvDate;
-
-@property (nonatomic, strong) NSString *rsvTime;
-
+//start Time,in seconds,actually should be NSTimeInterval
+@property (nonatomic, strong) NSString *startTime;
+//end Time,same above;
+@property (nonatomic, strong) NSString *endTime;
+//Topic to carry on;
+@property (nonatomic, strong) NSString *topic;
+//money have payed;
+@property (nonatomic, assign) NSUInteger moneyPaid;
+//note for reservation;
 @property (nonatomic, strong) NSString *rsvNote;
 
 @end

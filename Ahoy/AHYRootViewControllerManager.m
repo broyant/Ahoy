@@ -26,7 +26,7 @@
     AHYDiscoverViewController *discoverVC = [[AHYDiscoverViewController alloc] init];
     UINavigationController *tabVC1 = [[UINavigationController alloc] initWithRootViewController:discoverVC];
     tabVC1.navigationBar.barTintColor = AHYBlue;
-    [tabVC1.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
+    [tabVC1.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite,NSFontAttributeName:TradeGothicLTBold(18)}];
     tabVC1.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Discover"] selectedImage:[UIImage imageNamed:@"Discover"]];
     
     AHYSearchViewController *searchVC = [[AHYSearchViewController alloc] init];
@@ -39,6 +39,7 @@
     AHYContactListViewController *contactListVC = [[AHYContactListViewController alloc] init];
     UINavigationController *tabVC3 = [[UINavigationController alloc] initWithRootViewController:contactListVC];
     tabVC3.navigationBar.barTintColor = AHYBlue;
+    [tabVC3.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite,NSFontAttributeName:TradeGothicLTBold(18)}];
     tabVC3.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"Chat"] selectedImage:[UIImage imageNamed:@"Chat"]];
     
     AHYProfileViewController *tabVC4 = [AHYProfileViewController getInstance];
