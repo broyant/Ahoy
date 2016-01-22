@@ -63,6 +63,9 @@
 		7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21C81C0F494400BC407E /* AHYSearchResultsViewController.m */; };
 		7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */; };
 		7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */; };
+		7E85356D1C526C470033526A /* ahy_homepage in Resources */ = {isa = PBXBuildFile; fileRef = 7E85356A1C526C470033526A /* ahy_homepage */; };
+		7E85356E1C526C470033526A /* ahy_popularAdvisor in Resources */ = {isa = PBXBuildFile; fileRef = 7E85356B1C526C470033526A /* ahy_popularAdvisor */; };
+		7E85356F1C526C470033526A /* ahy_recommendTopics in Resources */ = {isa = PBXBuildFile; fileRef = 7E85356C1C526C470033526A /* ahy_recommendTopics */; };
 		7ED6D2331C36C453003C81AD /* AHYSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */; };
 		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
 		7EF6B4691C21C00C00EA7C65 /* AHYDiscoverDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */; };
@@ -180,6 +183,9 @@
 		7E6C21CE1C1B23A900BC407E /* AHYNetworkType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYNetworkType.h; sourceTree = "<group>"; };
 		7E6C21CF1C1B243E00BC407E /* AHYNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYNetworkResponse.h; sourceTree = "<group>"; };
 		7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYNetworkResponse.m; sourceTree = "<group>"; };
+		7E85356A1C526C470033526A /* ahy_homepage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ahy_homepage; sourceTree = "<group>"; };
+		7E85356B1C526C470033526A /* ahy_popularAdvisor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ahy_popularAdvisor; sourceTree = "<group>"; };
+		7E85356C1C526C470033526A /* ahy_recommendTopics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ahy_recommendTopics; sourceTree = "<group>"; };
 		7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSearchHistory.h; sourceTree = "<group>"; };
 		7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSearchHistory.m; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
@@ -417,6 +423,7 @@
 				6FAAC5361BDF54DA0085017B /* AHYTopic.m */,
 				7EF6B4671C21C00C00EA7C65 /* AHYDiscoverDataSource.h */,
 				7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */,
+				7E8535701C527CA90033526A /* mockData */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -469,12 +476,12 @@
 		7E13751F1BCA6EB100AB3CA9 /* Ahoy */ = {
 			isa = PBXGroup;
 			children = (
-				7E22CAA41C4BD1D70013635C /* More */,
 				7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */,
 				7E1375231BCA6EB100AB3CA9 /* AppDelegate.h */,
 				7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */,
 				7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */,
 				7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */,
+				7E22CAA41C4BD1D70013635C /* More */,
 				7E0B65A91BCD54A6004BAA76 /* Discover */,
 				7E0B65AA1BCD54B3004BAA76 /* Search */,
 				FC6EC1DA1C2990B60081C4D7 /* Reservation */,
@@ -548,6 +555,16 @@
 				7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		7E8535701C527CA90033526A /* mockData */ = {
+			isa = PBXGroup;
+			children = (
+				7E85356A1C526C470033526A /* ahy_homepage */,
+				7E85356B1C526C470033526A /* ahy_popularAdvisor */,
+				7E85356C1C526C470033526A /* ahy_recommendTopics */,
+			);
+			name = mockData;
 			sourceTree = "<group>";
 		};
 		7ED6D2301C36C435003C81AD /* Model */ = {
@@ -643,6 +660,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E85356F1C526C470033526A /* ahy_recommendTopics in Resources */,
 				1892F8371BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf in Resources */,
 				1892F8261BF0BA1600EE1457 /* avenirnextregular.otf in Resources */,
 				1892F8251BF0BA1600EE1457 /* avenirnextmedium.otf in Resources */,
@@ -654,8 +672,10 @@
 				1892F8361BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf in Resources */,
 				1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */,
 				1892F83C1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf in Resources */,
+				7E85356E1C526C470033526A /* ahy_popularAdvisor in Resources */,
 				7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */,
 				7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */,
+				7E85356D1C526C470033526A /* ahy_homepage in Resources */,
 				1892F8391BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf in Resources */,
 				1892F83A1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf in Resources */,
 				1892F83F1BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf in Resources */,
@@ -884,6 +904,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MOCK=1",
+				);
 				INFOPLIST_FILE = Ahoy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

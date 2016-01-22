@@ -1,0 +1,97 @@
+{
+"results": [
+{
+"categoryId": 1,
+"categoryName": "Programming",
+"topics": [
+{
+"topicId": 1,
+"topicName": "Python",
+"thumbnailUrl": null
+},
+{
+"topicId": 2,
+"topicName": "JavaScript",
+"thumbnailUrl": null
+},
+{
+"topicId": 3,
+"topicName": "Java",
+"thumbnailUrl": null
+},
+{
+"topicId": 4,
+"topicName": "C++",
+"thumbnailUrl": null
+},
+{
+"topicId": 5,
+"topicName": "PHP",
+"thumbnailUrl": null
+}
+]
+},
+{
+"categoryId": 2,
+"categoryName": "Design",
+"topics": [
+{
+"topicId": 6,
+"topicName": "A",
+"thumbnailUrl": null
+},
+{
+"topicId": 7,
+"topicName": "B",
+"thumbnailUrl": null
+},
+{
+"topicId": 8,
+"topicName": "C",
+"thumbnailUrl": null
+},
+{
+"topicId": 9,
+"topicName": "D",
+"thumbnailUrl": null
+},
+{
+"topicId": 10,
+"topicName": "E",
+"thumbnailUrl": null
+}
+]
+},
+{
+"categoryId": 3,
+"categoryName": "Project Management",
+"topics": [
+{
+"topicId": 11,
+"topicName": "F",
+"thumbnailUrl": null
+},
+{
+"topicId": 12,
+"topicName": "G",
+"thumbnailUrl": null
+},
+{
+"topicId": 13,
+"topicName": "H",
+"thumbnailUrl": null
+},
+{
+"topicId": 14,
+"topicName": "I",
+"thumbnailUrl": null
+},
+{
+"topicId": 15,
+"topicName": "J",
+"thumbnailUrl": null
+}
+]
+}
+]
+}

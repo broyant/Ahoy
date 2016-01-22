@@ -18,6 +18,19 @@
     }
     
     [JSONHTTPClient getJSONFromURLWithString:DISCOVER_TOPIC_CATEGROY_URL completion:^(id json, JSONModelError *err) {
+#ifdef MOCK
+        NSData *mockJsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ahy_homepage" ofType:nil]];
+        NSDictionary *mockJson = [NSJSONSerialization JSONObjectWithData:mockJsonData options:0 error:nil];
+        NSArray *results = [mockJson objectForKey:@"results"];
+        NSError *error = nil;
+        NSArray *topics = [AHYTopicCategory arrayOfModelsFromDictionaries:results error:&error];
+        if (!error) {
+            completeHandler(topics);
+        }else {
+            completeHandler(nil);
+            NSLog(@"download success, but parse topic category fail.Error:%@",error);
+        }
+#else
         if (!err) {
             NSArray *results = [(NSDictionary*)json objectForKey:@"results"];
             NSError *error = nil;
@@ -31,8 +44,9 @@
         }else {
             NSLog(@"download topic category fail.Error:%@",err);
         }
+#endif
     }];
-
+    
 }
 
 + (void)downloadPopularAdvisors:(void (^)(NSArray *advisors))completeHandler {
@@ -44,6 +58,20 @@
         return;
     }
     [JSONHTTPClient getJSONFromURLWithString:DISCOVER_RECOMMEND_TOPIC_URL completion:^(id json, JSONModelError *err) {
+#ifdef MOCK
+        NSData *mockJsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ahy_recommendTopics" ofType:nil]];
+        NSDictionary *mockJson = [NSJSONSerialization JSONObjectWithData:mockJsonData options:0 error:nil];
+        NSArray *results = [mockJson objectForKey:@"results"];
+        NSError *error = nil;
+        NSArray *topics = [AHYTopic arrayOfModelsFromDictionaries:results error:&error];
+        if (!error) {
+            completeHandler(topics);
+        }else {
+            completeHandler(nil);
+            NSLog(@"download success, but parse recommend topic  fail.Error:%@",error);
+        }
+        
+#else
         if (!err) {
             NSArray *results = [(NSDictionary*)json objectForKey:@"results"];
             NSError *error = nil;
@@ -57,6 +85,7 @@
         }else {
             NSLog(@"download topic recommend topics fail.Error:%@",err);
         }
+#endif
     }];
 }
 
@@ -70,6 +99,19 @@
         return;
     }
     [JSONHTTPClient getJSONFromURLWithString:url completion:^(id json, JSONModelError *err) {
+#ifdef MOCK
+        NSData *mockJsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ahy_popularAdvisor" ofType:nil]];
+        NSDictionary *mockJson = [NSJSONSerialization JSONObjectWithData:mockJsonData options:0 error:nil];
+        NSArray *results = [mockJson objectForKey:@"results"];
+        NSError *error = nil;
+        NSArray *advisors = [AHYAdvisor arrayOfModelsFromDictionaries:results error:&error];
+        if (!error) {
+            completeHandler(advisors);
+        }else {
+            completeHandler(nil);
+            NSLog(@"download success, but parse popular advisors fail.Error:%@",error);
+        }
+#else
         if (!err) {
             NSArray *results = [(NSDictionary*)json objectForKey:@"results"];
             NSError *error = nil;
@@ -83,6 +125,7 @@
         }else {
             NSLog(@"download popular advisors fail.Error:%@",err);
         }
+#endif
     }];
 }
 

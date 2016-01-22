@@ -29,6 +29,7 @@
         UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(popBack)];
         self.navigationItem.leftBarButtonItem = leftBarItem;
     }
+    self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barTintColor = AHYBlue;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
