@@ -23,8 +23,7 @@
 
 @implementation OTRComposingImageView
 
-- (id)initWithImage:(UIImage *)image
-{
+- (id)initWithImage:(UIImage *)image {
     if (self = [super initWithImage:image]) {
         CGFloat radius = 4.0;
         NSInteger numDots = 3;
@@ -59,8 +58,7 @@
     return self;
 }
 
-- (NSLayoutConstraint *)centerConstraintForView:(UIView *)view
-{
+- (NSLayoutConstraint *)centerConstraintForView:(UIView *)view {
     NSLayoutConstraint * constraint = [NSLayoutConstraint constraintWithItem:view
                                                                    attribute:NSLayoutAttributeCenterY
                                                                    relatedBy:NSLayoutRelationEqual
@@ -87,8 +85,7 @@
     self.blinking = NO;
 }
 
-- (void)setupConstraints
-{
+- (void)setupConstraints {
     CGFloat rightSideBuffer = 12;
     CGFloat leftSideBuffer = rightSideBuffer + 6.0;
     

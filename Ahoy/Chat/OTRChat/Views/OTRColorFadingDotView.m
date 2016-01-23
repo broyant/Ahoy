@@ -18,8 +18,7 @@
 
 @implementation OTRColorFadingDotView
 
-- (instancetype)initWithColor:(UIColor *)color radius:(CGFloat)radius
-{
+- (instancetype)initWithColor:(UIColor *)color radius:(CGFloat)radius {
     
     if (self = [self initWithFrame:CGRectMake(0, 0, radius*2, radius*2)]) {
         UIImage * circle = [OTRImages circleWithRadius:radius];
@@ -37,8 +36,7 @@
     return self;
 }
 
-- (void)startColorAnimationWithDelay:(NSTimeInterval)delay
-{
+- (void)startColorAnimationWithDelay:(NSTimeInterval)delay {
     [UIView animateWithDuration:self.animationDuration
                           delay:delay
                         options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionBeginFromCurrentState
@@ -50,8 +48,7 @@
      ];
 }
 
-- (void)stopColorAnimation
-{
+- (void)stopColorAnimation {
     [self.layer removeAllAnimations];
     [UIView animateWithDuration:self.animationDuration
                           delay:0.0
@@ -64,8 +61,7 @@
      ];
 }
 
--(void)updateConstraints
-{
+-(void)updateConstraints {
     [super updateConstraints];
     
     NSLayoutConstraint * constraint = [NSLayoutConstraint constraintWithItem:self

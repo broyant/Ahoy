@@ -14,31 +14,26 @@
 
 @implementation AHYCommentItem
 
-- (CGSize)mediaViewDisplaySize
-{
+- (CGSize)mediaViewDisplaySize {
     return CGSizeMake(0.f, kFixHeightInBubble);
 }
 
-- (UIView *)mediaView
-{
+- (UIView *)mediaView {
     AHYCommentView *commentView = [[AHYCommentView alloc] init];
     [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:commentView isOutgoing:!self.isIncoming];
     return commentView;
     
 }
 
-- (NSUInteger)mediaHash
-{
+- (NSUInteger)mediaHash {
     return self.hash;
 }
 
-- (NSUInteger)hash
-{
+- (NSUInteger)hash {
     return super.hash ^ self.rating ^ self.comment.hash;
 }
 
-+ (NSString *)collection
-{
++ (NSString *)collection {
     return [OTRMediaItem collection];
 }
 

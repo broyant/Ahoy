@@ -14,8 +14,9 @@
 #import "UIUserReviewsView.h"
 #import "AHYReservationVC.h"
 #import "Masonry.h"
+#import "UIUserTopicsView.h"
 
-#define headerViewHeight    160
+#define headerViewHeight    200
 #define scoreViewHeight     90
 #define imageScrollViewHeight     250
 #define recommandAdvisorViewHeight     224
@@ -30,7 +31,8 @@
     UIAdvisePageScrollView  *_recommandAdvisorView;
 
     UIUserIntroductionView *_introductionTable;
-    
+    UIUserTopicsView     *_topicTable;
+
     UIButton    *_backBtn;
     UIButton    *_shareBtn;
     UIButton    *_reserveBtn;
@@ -47,33 +49,23 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _headerView = [[UIProfileHeaderView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, headerViewHeight)];
+    _headerView = [[UIProfileHeaderView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, headerViewHeight) delegat:self];
     _headerView.backgroundColor = AHYBlue;
     [self.view addSubview:_headerView];
     
-    _introductionTable = [[UIUserIntroductionView alloc] initWithFrame:CGRectMake(0, headerViewHeight+30, DeviceScreenWidth, DeviceScreenHeight-headerViewHeight-bottomButtonHeight-30)];
+    _introductionTable = [[UIUserIntroductionView alloc] initWithFrame:CGRectMake(0, headerViewHeight, DeviceScreenWidth, DeviceScreenHeight-headerViewHeight-kTabBarHeight)];
     _introductionTable.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_introductionTable];
     
-    UIView *header = [[UIView alloc] init];
-    header.backgroundColor = [UIColor whiteColor];
+    _topicTable = [[UIUserTopicsView alloc] initWithFrame:CGRectMake(0, headerViewHeight, DeviceScreenWidth, DeviceScreenHeight-headerViewHeight-kTabBarHeight)];
+    _topicTable.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_topicTable];
+    _topicTable.hidden = YES;
     
-    _scoreView = [[UIUserScoreView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, scoreViewHeight)];
-    _scoreView.backgroundColor = [UIColor whiteColor];
-    [header addSubview:_scoreView];
-    
-    _imageScollView = [[UIAdvisePageScrollView alloc] initWithFrame:CGRectMake(0, scoreViewHeight, DeviceScreenWidth, imageScrollViewHeight) scrollType:CollectionPageScroll];
-    _imageScollView.backgroundColor = [UIColor whiteColor];
-    [header addSubview:_imageScollView];
-    
-    _reviewsView = [[UIUserReviewsView alloc] init];
+    _reviewsView = [[UIUserReviewsView alloc] initWithFrame:CGRectMake(0, headerViewHeight, DeviceScreenWidth, DeviceScreenHeight-headerViewHeight-kTabBarHeight)];
     _reviewsView.backgroundColor = [UIColor whiteColor];
-    [header addSubview:_reviewsView];
-    CGFloat height = [_reviewsView getheight];
-    _reviewsView.frame = CGRectMake(0, scoreViewHeight+imageScrollViewHeight, DeviceScreenWidth, height);
-    
-    header.frame = CGRectMake(0, 0, DeviceScreenWidth, scoreViewHeight+imageScrollViewHeight+_reviewsView.frame.size.height);
-    [_introductionTable setTableViewHeader:header];
+    [self.view addSubview:_reviewsView];
+    _reviewsView.hidden = YES;
     
     _recommandAdvisorView = [[UIAdvisePageScrollView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, recommandAdvisorViewHeight) scrollType:CollectionNomalScroll];
     _recommandAdvisorView.backgroundColor = [UIColor whiteColor];
@@ -149,6 +141,29 @@
 
 - (void)chatAction {
     
+}
+
+#pragma mark -- action
+
+- (void)aboutBtnTouched
+{
+    _introductionTable.hidden = NO;
+    _topicTable.hidden = YES;
+    _reviewsView.hidden = YES;
+}
+
+- (void)topicsBtnTouched
+{
+    _introductionTable.hidden = YES;
+    _topicTable.hidden = NO;
+    _reviewsView.hidden = YES;
+}
+
+- (void)reviewsBtnTouched
+{
+    _introductionTable.hidden = YES;
+    _topicTable.hidden = YES;
+    _reviewsView.hidden = NO;
 }
 
 /*

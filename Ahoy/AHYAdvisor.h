@@ -6,15 +6,16 @@
 //  Copyright © 2015年 Ahoy. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "JSONModelLib.h"
 
-@interface AHYAdvisor : NSObject
+@interface AHYAdvisor : JSONModel
 
+@property (nonatomic, assign) NSInteger aid;
 @property (nonatomic, strong) NSString *portraitUrl;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *experience;
 @property (nonatomic, assign) CGFloat price;
-@property (nonatomic, assign) CGFloat rate;
+@property (nonatomic, assign) CGFloat reviewRate;
 
 @end

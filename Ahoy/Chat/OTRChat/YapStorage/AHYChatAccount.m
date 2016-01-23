@@ -28,8 +28,7 @@ NSString *const OTRXMPPTorImageName           = @"xmpp-tor-logo.png";
 
 @implementation AHYChatAccount
 
-- (id)init
-{
+- (id)init {
     if(self = [super init])
     {
         _accountType = OTRAccountTypeNone;
@@ -37,8 +36,7 @@ NSString *const OTRXMPPTorImageName           = @"xmpp-tor-logo.png";
     return self;
 }
 
-- (id)initWithAccountType:(OTRAccountType)acctType
-{
+- (id)initWithAccountType:(OTRAccountType)acctType {
     if (self = [self init]) {
         
         _accountType = acctType;
@@ -51,39 +49,33 @@ NSString *const OTRXMPPTorImageName           = @"xmpp-tor-logo.png";
 //    return OTRProtocolTypeNone;
 //}
 
-- (UIImage *)accountImage
-{
+- (UIImage *)accountImage {
     return nil;
 }
 
-- (NSString *)accountDisplayName
-{
+- (NSString *)accountDisplayName {
     return @"";
 }
 
 
-- (void)setAvatarData:(NSData *)avatarData
-{
+- (void)setAvatarData:(NSData *)avatarData {
     if (![self.avatarData isEqualToData:avatarData]) {
         _avatarData = avatarData;
         [OTRImages removeImageWithIdentifier:self.uniqueId];
     }
 }
 
-- (UIImage *)avatarImage
-{
+- (UIImage *)avatarImage {
     //on setAvatar clear this buddies image cache
     //invalidate if jid or display name changes
     return [OTRImages avatarImageWithUniqueIdentifier:self.uniqueId avatarData:self.avatarData displayName:self.displayName username:self.uniqueId];
 }
 
-- (NSString *)description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"%@ - %@",NSStringFromClass([self class]), self.uniqueId];
 }
 
-- (NSArray *)allBuddiesWithTransaction:(YapDatabaseReadTransaction *)transaction
-{
+- (NSArray *)allBuddiesWithTransaction:(YapDatabaseReadTransaction *)transaction {
     NSMutableArray *allBuddies = [NSMutableArray array];
     [[transaction ext:AHYYapDatabaseRelationshipName] enumerateEdgesWithName:OTRBuddyEdges.account destinationKey:self.uniqueId collection:[AHYChatAccount collection] usingBlock:^(YapDatabaseRelationshipEdge *edge, BOOL *stop)
      {
@@ -99,8 +91,7 @@ NSString *const OTRXMPPTorImageName           = @"xmpp-tor-logo.png";
 #pragma - mark Class Methods
 
 
-+ (NSArray *)allAccountsWithUserid:(NSString *)userid transaction:(YapDatabaseReadTransaction*)transaction
-{
++ (NSArray *)allAccountsWithUserid:(NSString *)userid transaction:(YapDatabaseReadTransaction*)transaction {
     __block NSMutableArray *accountsArray = [NSMutableArray array];
     [transaction enumerateKeysAndObjectsInCollection:[AHYChatAccount collection] usingBlock:^(NSString *key, AHYChatAccount *account, BOOL *stop) {
         if ([account isKindOfClass:[AHYChatAccount class]] && [account.uniqueId isEqualToString:userid]){
@@ -110,8 +101,7 @@ NSString *const OTRXMPPTorImageName           = @"xmpp-tor-logo.png";
     return accountsArray;
 }
 
-+ (NSArray *)allAccountsWithTransaction:(YapDatabaseReadTransaction*)transaction
-{
++ (NSArray *)allAccountsWithTransaction:(YapDatabaseReadTransaction*)transaction {
     NSMutableArray *accounts = [NSMutableArray array];
     NSArray *allAccountKeys = [transaction allKeysInCollection:[AHYChatAccount collection]];
     [allAccountKeys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

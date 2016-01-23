@@ -6,20 +6,18 @@
 //  Copyright © 2015年 Ahoy. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "AHYTopicCategory.h"
+#import "JSONModelLib.h"
 @class AHYAdvisor;
 
-@interface AHYTopic : NSObject
+@protocol AHYTopic <NSObject>
 
-@property (nonatomic, strong) NSString *imgUrl;
-//@property (nonatomic, strong) NSString *advisorListUrl; //get advisors when push into advisor list
-@property (nonatomic, strong) NSAttributedString *name;
-@property (nonatomic, assign) NSUInteger totalAdvisors;
-@property (nonatomic, assign) NSUInteger totalSessions;
-@property (nonatomic, assign) TopicCategory category;
-@property (nonatomic, assign) BOOL isRecommended;
-@property (nonatomic, strong) NSArray *advisors;
+@end
+
+@interface AHYTopic : JSONModel
+
+@property (nonatomic, assign) NSInteger tid;
+@property (nonatomic, strong) NSString<Optional> *thumbnailUrl;
+@property (nonatomic, strong) NSString<Optional> *tName;
 
 @end
 

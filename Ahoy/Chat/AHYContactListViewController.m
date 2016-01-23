@@ -65,14 +65,12 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     
 }
 
-- (void)searchBarItemPress:(UIBarButtonItem *)sender
-{
+- (void)searchBarItemPress:(UIBarButtonItem *)sender {
     NSLog(@"search bar item press.");
     [self showSearchView];
 }
 
-- (void)cancelSearchButtonPressed
-{
+- (void)cancelSearchButtonPressed {
     self.title = @"Chat";
     self.navigationItem.titleView = nil;
     self.navigationItem.rightBarButtonItem = _rightBarItem;
@@ -82,8 +80,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     _searchKeyword = @"";
 }
 
-- (void)showSearchView
-{
+- (void)showSearchView {
     self.navigationItem.rightBarButtonItem = nil;
     
     static CGFloat kLeftRightMarginBySystem = 8.f;
@@ -130,8 +127,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setupContactListTableView
-{
+- (void)setupContactListTableView {
     _contactListTableView = [[UITableView alloc] init];
     _contactListTableView.backgroundColor = [UIColor clearColor];
     _contactListTableView = [[UITableView alloc] initWithFrame:CGRectZero];
@@ -148,8 +144,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
 
 }
 
-- (void)setupSearchDisplayView
-{
+- (void)setupSearchDisplayView {
     _searchContainerView = [[UIView alloc] init];
     [self.view addSubview:_searchContainerView];
     _searchContainerView.hidden = YES;
@@ -182,8 +177,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     }];
 }
 
-- (NSMutableArray *)dataSource
-{
+- (NSMutableArray *)dataSource {
     if (!_dataSource) {
         _dataSource = [[NSMutableArray alloc] init];
     }
@@ -213,8 +207,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     return _dataSource;
 }
 
-- (NSMutableArray *)searchResultDataSource
-{
+- (NSMutableArray *)searchResultDataSource {
     if (!_searchResultDataSource) {
         _searchResultDataSource = [NSMutableArray array];
     }
@@ -223,8 +216,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == _contactListTableView) {
         return [self.dataSource count];
     }
@@ -233,8 +225,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AHYContactListCell *cell = [tableView dequeueReusableCellWithIdentifier:[AHYContactListCell reuseIdentifier]];
     if (!cell) {
         cell = [[AHYContactListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[AHYContactListCell reuseIdentifier]];
@@ -263,15 +254,13 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return kAHYContactListTableCellHeight;
 }
 
 #pragma mark - SWTableViewDelegate
 
-- (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state
-{
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state {
     switch (state) {
         case 0:
             NSLog(@"utility buttons closed");
@@ -351,14 +340,12 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     }
 }
 
-- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
-{
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell {
     // allow just one cell's utility button to be open at once
     return YES;
 }
 
-- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state
-{
+- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
     switch (state) {
         case 1:
             // set to NO to disable all left utility buttons appearing
@@ -375,8 +362,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     return YES;
 }
 
-- (void)didTriggerSearchWithKeyword:(NSString *)keyword
-{
+- (void)didTriggerSearchWithKeyword:(NSString *)keyword {
     [_searchResultDataSource removeAllObjects];
     
     keyword = [keyword stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -405,8 +391,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
 }
 
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     _searchKeyword = [searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (_searchKeyword.length > 0) {
         [self didTriggerSearchWithKeyword:_searchKeyword];

@@ -47,8 +47,8 @@
     [UIView animateWithDuration:0.2 animations:^{
         [keyWindow addSubview:self];
     }];
-    
 }
+
 - (void)hidden {
    [UIView animateWithDuration:0.2 animations:^{
        [self removeFromSuperview];

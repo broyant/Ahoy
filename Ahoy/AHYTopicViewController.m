@@ -14,20 +14,21 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 #import "AHYTopic.h"
 #import "AHYAdVisorProfileVC.h"
 #import "AHYAdvisorFilterView.h"
+#import "AHYDiscoverDataSource.h"
 #import "Masonry.h"
 
 @interface AHYTopicViewController ()<UIGestureRecognizerDelegate, AHYAdvisorFilterViewDelegate>
 
-@property (nonatomic, strong) AHYTopic *topic;
-
+@property (nonatomic, strong) NSArray *advisors;
+@property (nonatomic, assign) NSInteger topicID;
 @end
 
 @implementation AHYTopicViewController
 
-- (instancetype)initWithTopic:(AHYTopic *)topic {
+- (instancetype)initWithTopicID:(NSInteger)topicID {
     self = [super init];
     if (self) {
-        _topic = topic;
+        _topicID = topicID;
     }
     return self;
 }
@@ -36,13 +37,19 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
     [super viewDidLoad];
     [self.tableView registerClass:[AHYAdvisorListCell class] forCellReuseIdentifier:kAdvisorListCellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.navigationItem.title = _topic.name.string;
     [self customNavigationBarItem];
+    [AHYDiscoverDataSource downloadAdvisorsWithTopicID:_topicID completion:^(NSArray *advisors) {
+        _advisors = advisors;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationController.navigationBarHidden = NO;
 }
 
 #pragma mark - actions
@@ -62,12 +69,12 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _topic.advisors.count;
+    return _advisors.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AHYAdvisorListCell *cell = [tableView dequeueReusableCellWithIdentifier:kAdvisorListCellIdentifier forIndexPath:indexPath];
-    [cell configure:_topic.advisors[indexPath.row]];
+    [cell configure:_advisors[indexPath.row]];
     return cell;
 }
 
@@ -79,20 +86,15 @@ static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
     NSLog(@"%s:%@",__func__,self);
     
     AHYAdVisorProfileVC *vc = [[AHYAdVisorProfileVC alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Custom Navigation Bar Item
 
 - (void)customNavigationBarItem {
-    UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(popBack)];
-    self.navigationItem.leftBarButtonItem = leftBarItem;
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filterButton"] style:UIBarButtonItemStylePlain target:self action:@selector(filterAdvisor)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 #pragma mark - AHYAdvisorFilterViewDelegate

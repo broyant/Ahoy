@@ -9,8 +9,8 @@
 #import <SWTableViewCell/SWTableViewCell.h>
 #import "OTRBuddy.h"
 
-#define kAHYContactListTableCellHeight 90.f
-
+static CGFloat const kAHYContactListTableCellHeight = 90.f;
+//#define kAHYContactListTableCellHeight 90.f
 @interface AHYContactListCell : SWTableViewCell
 
 @property (nonatomic,strong,readonly) OTRBuddy *buddy;

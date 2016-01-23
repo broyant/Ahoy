@@ -14,7 +14,8 @@
 #import "OTRMessage.h"
 #import "OTRConstants.h"
 
-#define AHYYapDatabaseName @"chatYap.sqlite"
+NSString* const AHYYapDatabaseName = @"chatYap.sqlite";
+//#define AHYYapDatabaseName @"chatYap.sqlite"
 
 NSString *const AHYYapDatabaseRelationshipName = @"AHYYapDatabaseRelationshipName";
 NSString *const AHYYapDatabseMessageIdSecondaryIndex = @"AHYYapDatabseMessageIdSecondaryIndex";
@@ -35,8 +36,7 @@ NSString *const ChatDatabaseDirectory = @"Database";
 @implementation AHYDatabaseManager
 
 #pragma mark - public APIs
-- (void)deallocDatabase
-{
+- (void)deallocDatabase {
     _readOnlyDatabaseConnection = nil;
     _readWriteDatabaseConnection = nil;
     _database = nil;
@@ -60,26 +60,22 @@ NSString *const ChatDatabaseDirectory = @"Database";
     return success;
 }
 
-- (YapDatabaseConnection *)newConnection
-{
+- (YapDatabaseConnection *)newConnection {
     return [self.database newConnection];
 }
 
-+ (BOOL)existsYapDatabase:(NSString *)databaseName
-{
++ (BOOL)existsYapDatabase:(NSString *)databaseName {
     
     NSString *path = [[self class] yapDatabasePathWithName:databaseName];
     return [[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
-+ (NSString *)yapDatabasePathWithName:(NSString *)name
-{
++ (NSString *)yapDatabasePathWithName:(NSString *)name {
     NSString *databasePath = [NSString stringWithFormat:@"%@/%@",name,ChatDatabaseDirectory];
     return [[self yapDatabaseDirectory] stringByAppendingPathComponent:databasePath];
 }
 
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
     static id databaseManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -90,8 +86,7 @@ NSString *const ChatDatabaseDirectory = @"Database";
 
 #pragma mark - private APIs
 
-- (BOOL)setupYapDatabaseWithName:(NSString *)name
-{
+- (BOOL)setupYapDatabaseWithName:(NSString *)name {
     YapDatabaseOptions *options = [[YapDatabaseOptions alloc] init];
     options.corruptAction = YapDatabaseCorruptAction_Fail;
 
@@ -146,8 +141,7 @@ NSString *const ChatDatabaseDirectory = @"Database";
     }
 }
 
-- (BOOL)setupSecondaryIndexes
-{
+- (BOOL)setupSecondaryIndexes {
     YapDatabaseSecondaryIndexSetup *setup = [[YapDatabaseSecondaryIndexSetup alloc] init];
     [setup addColumn:AHYYapDatabseMessageIdSecondaryIndex withType:YapDatabaseSecondaryIndexTypeText];
     

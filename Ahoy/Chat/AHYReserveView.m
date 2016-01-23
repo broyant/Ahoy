@@ -40,8 +40,7 @@
 
 @implementation AHYReserveView
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         [self setupSubviews];
@@ -49,8 +48,7 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupSubviews];
@@ -62,8 +60,7 @@
                           endTime:(NSString *)endTime
                             topic:(NSString *)topic
                         moneyPaid:(NSUInteger)moneyPaid
-                          rsvNote:(NSString *)rsvNote
-{
+                          rsvNote:(NSString *)rsvNote {
     NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[startTime integerValue]];
     NSDate *endDate = [NSDate dateWithTimeIntervalSince1970:[endTime integerValue]];
     
@@ -81,8 +78,7 @@
     _noteTextView.text = rsvNote;
 }
 
-- (void)setupSubviews
-{
+- (void)setupSubviews {
     [self setupTitleView];
     [self setupTime];
     [self setupDate];
@@ -91,8 +87,7 @@
     [self setupNote];
 }
 
-- (void)setupTitleView
-{
+- (void)setupTitleView {
     _titleIcon = [UIImageView new];
     [self addSubview:_titleIcon];
     _titleIcon.backgroundColor = [UIColor yellowColor];
@@ -121,11 +116,9 @@
         make.top.mas_equalTo(34.f);
         make.height.mas_equalTo(0.5);
     }];
-    
 }
 
-- (void)setupTime
-{
+- (void)setupTime {
     _timeLabel = [UILabel new];
     [self addSubview:_timeLabel];
     _timeLabel.font = TradeGothicLTBold(14);
@@ -159,11 +152,9 @@
         make.top.mas_equalTo(74);
         make.height.mas_equalTo(0.5);
     }];
-    
 }
 
-- (void)setupDate
-{
+- (void)setupDate {
     _dateLabel = [UILabel new];
     [self addSubview:_dateLabel];
     _dateLabel.textAlignment = NSTextAlignmentLeft;
@@ -196,11 +187,9 @@
         make.top.mas_equalTo(114);
         make.height.mas_equalTo(0.5);
     }];
-    
 }
 
-- (void)setupTopic
-{
+- (void)setupTopic {
     _topicLabel = [UILabel new];
     [self addSubview:_topicLabel];
     _topicLabel.textAlignment = NSTextAlignmentLeft;
@@ -233,12 +222,9 @@
         make.top.mas_equalTo(154);
         make.height.mas_equalTo(0.5);
     }];
-
-    
 }
 
-- (void)setupMoney
-{
+- (void)setupMoney {
     _moneyLabel = [UILabel new];
     [self addSubview:_moneyLabel];
     _moneyLabel.textAlignment = NSTextAlignmentLeft;
@@ -271,11 +257,9 @@
         make.top.mas_equalTo(194);
         make.height.mas_equalTo(0.5);
     }];
-    
 }
 
-- (void)setupNote
-{
+- (void)setupNote {
     _noteLabel = [UILabel new];
     [self addSubview:_noteLabel];
     _noteLabel.textAlignment = NSTextAlignmentLeft;

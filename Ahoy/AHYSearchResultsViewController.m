@@ -9,15 +9,20 @@
 static CGFloat const kTopicsViewHeight = 192.f;
 static CGFloat const kAdvisorListHeaderHeight = 19.f;
 static NSString * const kCellIdentifier = @"advisorListCell";
+static NSString * const kNoResultsTips = @"You can search topics, or search advisors by their names, companies, positions and their offerings for different topics.";
 
 #import "AHYSearchResultsViewController.h"
 #import "AHYCategoryView.h"
 #import "AHYAdvisorListCell.h"
+#import "AHYDiscoverDataSource.h"
+#import <Masonry.h>
 
-@interface AHYSearchResultsViewController ()<AHYCategoryViewDelegate>
+@interface AHYSearchResultsViewController ()<AHYCategoryViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *advisors;
 @property (nonatomic, strong) NSArray *topics;
+@property (nonatomic, strong) UILabel *noResultView;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -25,11 +30,10 @@ static NSString * const kCellIdentifier = @"advisorListCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[AHYAdvisorListCell class] forCellReuseIdentifier:kCellIdentifier];
-    if (_topics.count) {
-        self.tableView.tableHeaderView = [self headerView];
-    }
+    [self configureNoResultsView];
+    [self configureTableView];
     self.edgesForExtendedLayout = UIRectEdgeBottom;
+    NSLog(@"%s:%@",__func__,self);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,20 +57,15 @@ static NSString * const kCellIdentifier = @"advisorListCell";
     return cell;
 }
 
-#pragma mark - UISearchBar delegate
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-
-}
-
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-
+   [AHYDiscoverDataSource downloadPopularAdvisors:^(NSArray *advisors) {
+       _advisors = advisors;
+       dispatch_async(dispatch_get_main_queue(), ^{
+           [self.tableView reloadData];
+       });
+   }];
 }
 
 #pragma mark --AHYRecommendViewDelegate
@@ -75,7 +74,7 @@ static NSString * const kCellIdentifier = @"advisorListCell";
     //
 }
 
-#pragma mark --headerView
+#pragma mark --subViews
 
 - (UIView *)headerView {
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
@@ -97,6 +96,33 @@ static NSString * const kCellIdentifier = @"advisorListCell";
     //adjust header view frame
     headerView.frame = CGRectMake(0, 0, screenSize.width, ty);
     return headerView;
+}
+
+- (void)configureNoResultsView {
+    _noResultView = [[UILabel alloc] init];
+    _noResultView.textColor = AHYGrey40;
+    _noResultView.font = TradeGothicLT(16);
+    _noResultView.numberOfLines = 0;
+    _noResultView.text = kNoResultsTips;
+    _noResultView.textAlignment = NSTextAlignmentCenter;
+    
+    [self.view addSubview:_noResultView];
+    [_noResultView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.mas_greaterThanOrEqualTo(20);
+        make.center.equalTo(self.view);
+    }];
+}
+
+- (void)configureTableView {
+    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc] init];
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
+    [self.view addSubview:_tableView];
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 @end

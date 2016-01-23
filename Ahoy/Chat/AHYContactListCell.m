@@ -12,7 +12,6 @@
 #import "UIImageView+WebCache.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface  AHYContactListCell()
 {
@@ -40,8 +39,7 @@
 }
 */
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = AHYWhite;
@@ -60,8 +58,7 @@
 
 #pragma mark - SubViews
 
-- (void)setupSubViews
-{
+- (void)setupSubViews {
     [self setupAvatarImageView];
     [self setupNameLabel];
     [self setupCompanyLabel];
@@ -70,8 +67,7 @@
     [self setupBottomLine];
 }
 
-- (void)setupAvatarImageView
-{
+- (void)setupAvatarImageView {
     _avatarImageView = [[UIImageView alloc] init];
     [self.contentView addSubview:_avatarImageView];
     _avatarImageView.backgroundColor = [UIColor yellowColor];
@@ -83,8 +79,7 @@
     }];
 }
 
-- (void)setupNameLabel
-{
+- (void)setupNameLabel {
     _nameLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectZero];
     _nameLabel.font = TradeGothicLTBoldTwo(18);
     _nameLabel.textColor = AHYBlack100;
@@ -98,8 +93,7 @@
     }];
 }
 
-- (void)setupCompanyLabel
-{
+- (void)setupCompanyLabel {
     _companyLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _companyLabel.font = AvenirNextRegular(14);
     _companyLabel.textColor = AHYSteelGrey;
@@ -112,8 +106,7 @@
     }];
 }
 
-- (void)setupTimeLabel
-{
+- (void)setupTimeLabel {
     _timeLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectZero];
     _timeLabel.font = TradeGothicLT(12);
     _timeLabel.textColor = AHYSteelGrey;
@@ -127,8 +120,7 @@
 }
 
 
-- (void)setupTopicLabel
-{
+- (void)setupTopicLabel {
     _topicLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectZero];
     _topicLabel.font = AvenirNextRegular(16);
     _topicLabel.textColor = AHYBlack100;
@@ -142,8 +134,7 @@
 }
 
 
-- (void)setupBottomLine
-{
+- (void)setupBottomLine {
     _bottomLine = [[UIView alloc] init];
     _bottomLine.backgroundColor = AHYGrey10;
     [self.contentView addSubview:_bottomLine];
@@ -156,8 +147,7 @@
 
 
 
-- (void)configureWithOTRBuddy:(OTRBuddy *)buddy keyword:(NSString *)keyword
-{
+- (void)configureWithOTRBuddy:(OTRBuddy *)buddy keyword:(NSString *)keyword {
     _buddy = buddy;
     _keyword = keyword;
     
@@ -205,15 +195,13 @@
 
 }
 
-+ (NSString *)reuseIdentifier
-{
++ (NSString *)reuseIdentifier {
     return NSStringFromClass([self class]);
 }
 
 
 #pragma private - APIs
-- (NSString *)dateString:(NSDate *)messageDate
-{
+- (NSString *)dateString:(NSDate *)messageDate {
     NSTimeInterval timeInterval = fabs([messageDate timeIntervalSinceNow]);
     NSString * dateString = nil;
     if (timeInterval < 60){

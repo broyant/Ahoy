@@ -47,8 +47,7 @@ NSString *AHYPushAccountGroup = @"Account";
  *register the conversation list view.
  *
  */
-+ (BOOL)registerConversationDatabaseView
-{
++ (BOOL)registerConversationDatabaseView {
     YapDatabaseView *conversationView = [[AHYDatabaseManager sharedInstance].database registeredExtension:AHYConversationDatabaseViewExtensionName];
     if (conversationView) {
         return YES;
@@ -87,8 +86,7 @@ NSString *AHYPushAccountGroup = @"Account";
     return [[AHYDatabaseManager sharedInstance].database registerExtension:databaseView withName:AHYConversationDatabaseViewExtensionName];
 }
 
-+ (BOOL)registerBlockedBuddyDatabaseView
-{
++ (BOOL)registerBlockedBuddyDatabaseView {
     YapDatabaseView *blockedView = [[AHYDatabaseManager sharedInstance].database registeredExtension:AHYBlockedBuddyDatabaseViewExtensionName];
     if (blockedView) {
         return YES;
@@ -127,8 +125,7 @@ NSString *AHYPushAccountGroup = @"Account";
     return [[AHYDatabaseManager sharedInstance].database registerExtension:databaseView withName:AHYBlockedBuddyDatabaseViewExtensionName];
 }
 
-+ (BOOL)registerChatDatabaseView
-{
++ (BOOL)registerChatDatabaseView {
     if ([[AHYDatabaseManager sharedInstance].database registeredExtension:AHYChatDatabaseViewExtensionName]) {
         return YES;
     }
@@ -164,8 +161,7 @@ NSString *AHYPushAccountGroup = @"Account";
     return [[AHYDatabaseManager sharedInstance].database registerExtension:view withName:AHYChatDatabaseViewExtensionName];
 }
 
-+ (BOOL)registerBuddyNameSearchDatabaseView
-{
++ (BOOL)registerBuddyNameSearchDatabaseView {
     if ([[AHYDatabaseManager sharedInstance].database registeredExtension:AHYBuddyNameSearchDatabaseViewExtensionName]) {
         return YES;
     }
@@ -194,8 +190,7 @@ NSString *AHYPushAccountGroup = @"Account";
     return [[AHYDatabaseManager sharedInstance].database registerExtension:fullTextSearch withName:AHYBuddyNameSearchDatabaseViewExtensionName];
 }
 
-+ (BOOL)registerAllBuddiesDatabaseView
-{
++ (BOOL)registerAllBuddiesDatabaseView {
     if ([[AHYDatabaseManager sharedInstance].database registeredExtension:AHYAllBuddiesDatabaseViewExtensionName]) {
         return YES;
     }
@@ -247,8 +242,7 @@ NSString *AHYPushAccountGroup = @"Account";
     
 }
 
-+ (BOOL)registerUnreadMessagesView
-{
++ (BOOL)registerUnreadMessagesView {
     
     YapDatabaseViewFiltering *viewFiltering = [YapDatabaseViewFiltering withObjectBlock:^BOOL(YapDatabaseReadTransaction *transaction,NSString *group, NSString *collection, NSString *key, id object) {
         
@@ -264,11 +258,5 @@ NSString *AHYPushAccountGroup = @"Account";
     
     return [[AHYDatabaseManager sharedInstance].database registerExtension:filteredView withName:AHYUnreadMessagesViewExtensionName];
 }
-
-
-
-
-
-
 
 @end

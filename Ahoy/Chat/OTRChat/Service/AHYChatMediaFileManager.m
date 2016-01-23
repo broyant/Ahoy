@@ -27,8 +27,7 @@ NSString *const kChatMediaDirectory = @"Media";
 
 @implementation AHYChatMediaFileManager
 
-- (instancetype)init
-{
+- (instancetype)init {
     if (self = [super init]) {
         self.concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         
@@ -36,8 +35,7 @@ NSString *const kChatMediaDirectory = @"Media";
     return self;
 }
 
-- (void)setData:(NSData *)data forItem:(OTRMediaItem *)mediaItem buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(NSInteger bytesWritten, NSString *filePath,NSError *error))completion completionQueue:(dispatch_queue_t)completionQueue
-{
+- (void)setData:(NSData *)data forItem:(OTRMediaItem *)mediaItem buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(NSInteger bytesWritten, NSString *filePath,NSError *error))completion completionQueue:(dispatch_queue_t)completionQueue {
     
     if (!completionQueue) {
         completionQueue = dispatch_get_main_queue();
@@ -97,8 +95,7 @@ NSString *const kChatMediaDirectory = @"Media";
     });
     
 }
-- (void)dataForItem:(OTRMediaItem *)mediaItem buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(NSData *, NSError *))completion completionQueue:(dispatch_queue_t)completionQueue
-{
+- (void)dataForItem:(OTRMediaItem *)mediaItem buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(NSData *, NSError *))completion completionQueue:(dispatch_queue_t)completionQueue {
     if (!completionQueue) {
         completionQueue = dispatch_get_main_queue();
     }
@@ -140,8 +137,7 @@ NSString *const kChatMediaDirectory = @"Media";
         }
     });
 }
-- (void)dataForItemID:(NSString *)itemID buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(NSData *, NSError *))completion completionQueue:(dispatch_queue_t)completionQueue
-{
+- (void)dataForItemID:(NSString *)itemID buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(NSData *, NSError *))completion completionQueue:(dispatch_queue_t)completionQueue {
     if (!completionQueue) {
         completionQueue = dispatch_get_main_queue();
     }
@@ -181,8 +177,7 @@ NSString *const kChatMediaDirectory = @"Media";
     });
 }
 
--(void)deleteMediaFileOfBuddy:(NSString *)buddyUniqueId completion:(void (^)(BOOL successed, NSError *error))completion completionQueue:(dispatch_queue_t)completionQueue
-{
+-(void)deleteMediaFileOfBuddy:(NSString *)buddyUniqueId completion:(void (^)(BOOL successed, NSError *error))completion completionQueue:(dispatch_queue_t)completionQueue {
     dispatch_async(self.concurrentQueue, ^{
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -225,8 +220,7 @@ NSString *const kChatMediaDirectory = @"Media";
     
 }
 
--(void)deleteAllMediaFileOfAccount:(NSString *)accountId completion:(void (^)(BOOL successed, NSError *error))completion completionQueue:(dispatch_queue_t)completionQueue
-{
+-(void)deleteAllMediaFileOfAccount:(NSString *)accountId completion:(void (^)(BOOL successed, NSError *error))completion completionQueue:(dispatch_queue_t)completionQueue {
     dispatch_async(self.concurrentQueue, ^{
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -262,8 +256,7 @@ NSString *const kChatMediaDirectory = @"Media";
 }
 
 -(void)deleteMessage:(NSString *)mediaUniqueId buddyUniqueId:(NSString *)buddyUniqueId completion:(void (^)(BOOL successed, NSError *error))completion
-     completionQueue:(dispatch_queue_t)completionQueue;
-{
+     completionQueue:(dispatch_queue_t)completionQueue {
     dispatch_async(self.concurrentQueue, ^{
         
         NSString *filePath = [[self class] pathForMediaItemUniqueId:mediaUniqueId buddyUniqueId:buddyUniqueId];
@@ -304,8 +297,7 @@ NSString *const kChatMediaDirectory = @"Media";
 }
 
 
-- (void)emoticonName:(NSString *)imageName subName:(NSString *)subName completion:(void (^)(UIImage *image))completion
-{
+- (void)emoticonName:(NSString *)imageName subName:(NSString *)subName completion:(void (^)(UIImage *image))completion {
     NSString *imagePath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"Images/%@",subName]]  stringByAppendingPathComponent:imageName];
     UIImage *emoticon = [UIImage imageWithContentsOfFile:imagePath];
     
@@ -315,8 +307,7 @@ NSString *const kChatMediaDirectory = @"Media";
 
 #pragma - mark Class Methods
 
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -326,8 +317,7 @@ NSString *const kChatMediaDirectory = @"Media";
     return sharedInstance;
 }
 
-+ (NSString *)pathForMediaItem:(OTRMediaItem *)mediaItem buddyUniqueId:(NSString *)buddyUniqueId
-{
++ (NSString *)pathForMediaItem:(OTRMediaItem *)mediaItem buddyUniqueId:(NSString *)buddyUniqueId {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [NSString stringWithFormat:@"/%@/%@/%@",kChatRootDirectory,userID,kChatMediaDirectory];
@@ -339,8 +329,7 @@ NSString *const kChatMediaDirectory = @"Media";
     return nil;
 }
 
-+ (NSString *)pathForMediaItemUniqueId:(NSString *)uniqueId buddyUniqueId:(NSString *)buddyUniqueId
-{
++ (NSString *)pathForMediaItemUniqueId:(NSString *)uniqueId buddyUniqueId:(NSString *)buddyUniqueId {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [NSString stringWithFormat:@"/%@/%@/%@",kChatRootDirectory,userID,kChatMediaDirectory];

@@ -79,6 +79,13 @@
 		7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */; };
 		7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */; };
 		7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1375311BCA6EB100AB3CA9 /* LaunchScreen.storyboard */; };
+		7E22CAA71C4BD2320013635C /* AHYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */; };
+		7E22CAAC1C4BE29F0013635C /* AHYSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */; };
+		7E22CAAD1C4BE29F0013635C /* AHYSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */; };
+		7E22CAB11C4FD4DB0013635C /* AHYSettingNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAAF1C4FD4DB0013635C /* AHYSettingNotificationController.m */; };
+		7E22CAB41C4FD99C0013635C /* AHYSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E22CAB31C4FD99C0013635C /* AHYSetting.storyboard */; };
+		7E22CAB91C4FE7390013635C /* UINavigationController+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CAB81C4FE7390013635C /* UINavigationController+MethodSwizzling.m */; };
+		7E22CABC1C51353C0013635C /* UIViewController+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E22CABB1C51353C0013635C /* UIViewController+MethodSwizzling.m */; };
 		7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E36292A1BEE3F160000711F /* AHYTopicViewController.m */; };
 		7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C065C1BEF984600E8F5D7 /* AHYAdvisorFilterView.m */; };
 		7E3C066C1BF2457300E8F5D7 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C066B1BF2457300E8F5D7 /* UIImage+Color.m */; };
@@ -90,7 +97,13 @@
 		7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21C81C0F494400BC407E /* AHYSearchResultsViewController.m */; };
 		7E6C21CD1C1B231C00BC407E /* AHYNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */; };
 		7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */; };
+		7E85356D1C526C470033526A /* ahy_homepage in Resources */ = {isa = PBXBuildFile; fileRef = 7E85356A1C526C470033526A /* ahy_homepage */; };
+		7E85356E1C526C470033526A /* ahy_popularAdvisor in Resources */ = {isa = PBXBuildFile; fileRef = 7E85356B1C526C470033526A /* ahy_popularAdvisor */; };
+		7E85356F1C526C470033526A /* ahy_recommendTopics in Resources */ = {isa = PBXBuildFile; fileRef = 7E85356C1C526C470033526A /* ahy_recommendTopics */; };
+		7ED6D2331C36C453003C81AD /* AHYSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */; };
 		7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */; };
+		7EF6B4691C21C00C00EA7C65 /* AHYDiscoverDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */; };
+		7EF6B46C1C21CB4600EA7C65 /* AHYTopicCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */; };
 		B0B5C99B4C05120E1A9BAF35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC70946D6FBBBF66DB552EFC /* libPods.a */; };
 		FC18603F1C2D1A0400BD410B /* AHYReviewReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */; };
 		FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B2CD71C1986F800F58103 /* UIAdvisorPageCollectionCell.m */; };
@@ -102,6 +115,8 @@
 		FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5535B91C085EC2002A05BE /* AHYReviewTag.m */; };
 		FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5B355E1C28059B00FDE1D0 /* Utility.m */; };
 		FC5F2C6B1C2153A6002D1779 /* UITopicSelectCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5F2C6A1C2153A6002D1779 /* UITopicSelectCollectionCell.m */; };
+		FC677BC21C4C985600604793 /* UIUserTopicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC677BC11C4C985600604793 /* UIUserTopicsView.m */; };
+		FC677BC51C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC677BC41C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m */; };
 		FC6EC1DF1C29914E0081C4D7 /* AHYCancelReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EC1DC1C29914E0081C4D7 /* AHYCancelReservationVC.m */; };
 		FC6EC1E01C29914E0081C4D7 /* AHYReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EC1DE1C29914E0081C4D7 /* AHYReservationVC.m */; };
 		FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */; };
@@ -243,6 +258,18 @@
 		7E13752F1BCA6EB100AB3CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E1375321BCA6EB100AB3CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1375341BCA6EB100AB3CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E22CAA51C4BD2320013635C /* AHYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingViewController.h; sourceTree = "<group>"; };
+		7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingViewController.m; sourceTree = "<group>"; };
+		7E22CAA91C4BE29F0013635C /* AHYSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingTableViewCell.h; sourceTree = "<group>"; };
+		7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingTableViewCell.m; sourceTree = "<group>"; };
+		7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHYSettingTableViewCell.xib; sourceTree = "<group>"; };
+		7E22CAAE1C4FD4DB0013635C /* AHYSettingNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSettingNotificationController.h; sourceTree = "<group>"; };
+		7E22CAAF1C4FD4DB0013635C /* AHYSettingNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSettingNotificationController.m; sourceTree = "<group>"; };
+		7E22CAB31C4FD99C0013635C /* AHYSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AHYSetting.storyboard; sourceTree = "<group>"; };
+		7E22CAB71C4FE7390013635C /* UINavigationController+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MethodSwizzling.h"; sourceTree = "<group>"; };
+		7E22CAB81C4FE7390013635C /* UINavigationController+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MethodSwizzling.m"; sourceTree = "<group>"; };
+		7E22CABA1C51353C0013635C /* UIViewController+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MethodSwizzling.h"; sourceTree = "<group>"; };
+		7E22CABB1C51353C0013635C /* UIViewController+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MethodSwizzling.m"; sourceTree = "<group>"; };
 		7E3629291BEE3F160000711F /* AHYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYTopicViewController.h; sourceTree = "<group>"; };
 		7E36292A1BEE3F160000711F /* AHYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicViewController.m; sourceTree = "<group>"; };
 		7E3C065B1BEF984600E8F5D7 /* AHYAdvisorFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYAdvisorFilterView.h; sourceTree = "<group>"; };
@@ -263,9 +290,18 @@
 		7E6C21CE1C1B23A900BC407E /* AHYNetworkType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYNetworkType.h; sourceTree = "<group>"; };
 		7E6C21CF1C1B243E00BC407E /* AHYNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYNetworkResponse.h; sourceTree = "<group>"; };
 		7E6C21D01C1B243E00BC407E /* AHYNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYNetworkResponse.m; sourceTree = "<group>"; };
+		7E85356A1C526C470033526A /* ahy_homepage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ahy_homepage; sourceTree = "<group>"; };
+		7E85356B1C526C470033526A /* ahy_popularAdvisor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ahy_popularAdvisor; sourceTree = "<group>"; };
+		7E85356C1C526C470033526A /* ahy_recommendTopics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ahy_recommendTopics; sourceTree = "<group>"; };
+		7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYSearchHistory.h; sourceTree = "<group>"; };
+		7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYSearchHistory.m; sourceTree = "<group>"; };
 		7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYRootViewControllerManager.h; sourceTree = "<group>"; };
 		7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYRootViewControllerManager.m; sourceTree = "<group>"; };
 		7EE5AF281BCB28B7002B1771 /* Ahoy-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ahoy-Prefix.pch"; sourceTree = "<group>"; };
+		7EF6B4671C21C00C00EA7C65 /* AHYDiscoverDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYDiscoverDataSource.h; sourceTree = "<group>"; };
+		7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYDiscoverDataSource.m; sourceTree = "<group>"; };
+		7EF6B46A1C21C19800EA7C65 /* AHYHttpUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHYHttpUrl.h; sourceTree = "<group>"; };
+		7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYTopicCategory.m; sourceTree = "<group>"; };
 		FC18603D1C2D1A0400BD410B /* AHYReviewReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReviewReservationVC.h; path = Reservation/AHYReviewReservationVC.h; sourceTree = "<group>"; };
 		FC18603E1C2D1A0400BD410B /* AHYReviewReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYReviewReservationVC.m; path = Reservation/AHYReviewReservationVC.m; sourceTree = "<group>"; };
 		FC4B2CD61C1986F800F58103 /* UIAdvisorPageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAdvisorPageCollectionCell.h; path = User/UIAdvisorPageCollectionCell.h; sourceTree = "<group>"; };
@@ -286,6 +322,10 @@
 		FC5B355E1C28059B00FDE1D0 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		FC5F2C691C2153A6002D1779 /* UITopicSelectCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITopicSelectCollectionCell.h; path = User/UITopicSelectCollectionCell.h; sourceTree = "<group>"; };
 		FC5F2C6A1C2153A6002D1779 /* UITopicSelectCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITopicSelectCollectionCell.m; path = User/UITopicSelectCollectionCell.m; sourceTree = "<group>"; };
+		FC677BC01C4C985600604793 /* UIUserTopicsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUserTopicsView.h; path = User/UIUserTopicsView.h; sourceTree = "<group>"; };
+		FC677BC11C4C985600604793 /* UIUserTopicsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUserTopicsView.m; path = User/UIUserTopicsView.m; sourceTree = "<group>"; };
+		FC677BC31C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIReviewsEvaluateCollectionCell.h; path = User/UIReviewsEvaluateCollectionCell.h; sourceTree = "<group>"; };
+		FC677BC41C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIReviewsEvaluateCollectionCell.m; path = User/UIReviewsEvaluateCollectionCell.m; sourceTree = "<group>"; };
 		FC6EC1DB1C29914E0081C4D7 /* AHYCancelReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYCancelReservationVC.h; path = Reservation/AHYCancelReservationVC.h; sourceTree = "<group>"; };
 		FC6EC1DC1C29914E0081C4D7 /* AHYCancelReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYCancelReservationVC.m; path = Reservation/AHYCancelReservationVC.m; sourceTree = "<group>"; };
 		FC6EC1DD1C29914E0081C4D7 /* AHYReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYReservationVC.h; path = Reservation/AHYReservationVC.h; sourceTree = "<group>"; };
@@ -540,6 +580,10 @@
 				FC784C391C1D3FA6007FCD7F /* UIUserScoreView.m */,
 				FC5F2C691C2153A6002D1779 /* UITopicSelectCollectionCell.h */,
 				FC5F2C6A1C2153A6002D1779 /* UITopicSelectCollectionCell.m */,
+				FC677BC01C4C985600604793 /* UIUserTopicsView.h */,
+				FC677BC11C4C985600604793 /* UIUserTopicsView.m */,
+				FC677BC31C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.h */,
+				FC677BC41C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -588,8 +632,9 @@
 		6FAAC5111BDA00530085017B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7E22CAB61C4FE7020013635C /* ViewController */,
 				7E6C21CA1C1B228500BC407E /* Network */,
-				6FAAC5181BDA039E0085017B /* Views */,
+				6FAAC5181BDA039E0085017B /* View */,
 				6FAAC5151BDA03900085017B /* UIColor+Hex.h */,
 				6FAAC5161BDA03900085017B /* UIColor+Hex.m */,
 				7E3C066A1BF2457300E8F5D7 /* UIImage+Color.h */,
@@ -601,7 +646,7 @@
 			path = Ahoy/Utility;
 			sourceTree = "<group>";
 		};
-		6FAAC5181BDA039E0085017B /* Views */ = {
+		6FAAC5181BDA039E0085017B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FC5535B11C084364002A05BE /* Tag */,
@@ -614,7 +659,7 @@
 				1892F8501BF3193600EE1457 /* CustomTableViewCell.h */,
 				1892F8511BF3193600EE1457 /* CustomTableViewCell.m */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
 		6FAAC5191BDA0EA50085017B /* Constant */ = {
@@ -623,6 +668,7 @@
 				6FAAC51A1BDA0EF90085017B /* AHYColor.h */,
 				6FAAC51B1BDA12710085017B /* AHYFont.h */,
 				1892F8121BF0A7F000EE1457 /* AHYFrame.h */,
+				7EF6B46A1C21C19800EA7C65 /* AHYHttpUrl.h */,
 			);
 			name = Constant;
 			path = Ahoy/Constant;
@@ -632,10 +678,14 @@
 			isa = PBXGroup;
 			children = (
 				6FAAC53B1BDF563C0085017B /* AHYTopicCategory.h */,
+				7EF6B46B1C21CB4600EA7C65 /* AHYTopicCategory.m */,
 				6FAAC53C1BDF5B640085017B /* AHYAdvisor.h */,
 				6FAAC53D1BDF5B640085017B /* AHYAdvisor.m */,
 				6FAAC5351BDF54DA0085017B /* AHYTopic.h */,
 				6FAAC5361BDF54DA0085017B /* AHYTopic.m */,
+				7EF6B4671C21C00C00EA7C65 /* AHYDiscoverDataSource.h */,
+				7EF6B4681C21C00C00EA7C65 /* AHYDiscoverDataSource.m */,
+				7E8535701C527CA90033526A /* mockData */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -656,6 +706,7 @@
 		7E0B65AA1BCD54B3004BAA76 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				7ED6D2301C36C435003C81AD /* Model */,
 				7E0B65A61BCD53D5004BAA76 /* AHYSearchViewController.h */,
 				7E0B65A71BCD53D5004BAA76 /* AHYSearchViewController.m */,
 				7E6C21C71C0F494400BC407E /* AHYSearchResultsViewController.h */,
@@ -693,6 +744,7 @@
 				7E1375241BCA6EB100AB3CA9 /* AppDelegate.m */,
 				7EE5AF241BCB26A0002B1771 /* AHYRootViewControllerManager.h */,
 				7EE5AF251BCB26A0002B1771 /* AHYRootViewControllerManager.m */,
+				7E22CAA41C4BD1D70013635C /* More */,
 				7E0B65A91BCD54A6004BAA76 /* Discover */,
 				7E0B65AA1BCD54B3004BAA76 /* Search */,
 				FC6EC1DA1C2990B60081C4D7 /* Reservation */,
@@ -714,6 +766,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7E22CAA41C4BD1D70013635C /* More */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAA51C4BD2320013635C /* AHYSettingViewController.h */,
+				7E22CAA61C4BD2320013635C /* AHYSettingViewController.m */,
+				7E22CAB51C4FE2280013635C /* Setting */,
+				7E22CAA81C4BE24F0013635C /* View */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		7E22CAA81C4BE24F0013635C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAA91C4BE29F0013635C /* AHYSettingTableViewCell.h */,
+				7E22CAAA1C4BE29F0013635C /* AHYSettingTableViewCell.m */,
+				7E22CAAB1C4BE29F0013635C /* AHYSettingTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7E22CAB51C4FE2280013635C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAAE1C4FD4DB0013635C /* AHYSettingNotificationController.h */,
+				7E22CAAF1C4FD4DB0013635C /* AHYSettingNotificationController.m */,
+				7E22CAB31C4FD99C0013635C /* AHYSetting.storyboard */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		7E22CAB61C4FE7020013635C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E22CAB71C4FE7390013635C /* UINavigationController+MethodSwizzling.h */,
+				7E22CAB81C4FE7390013635C /* UINavigationController+MethodSwizzling.m */,
+				7E22CABA1C51353C0013635C /* UIViewController+MethodSwizzling.h */,
+				7E22CABB1C51353C0013635C /* UIViewController+MethodSwizzling.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		7E6C21CA1C1B228500BC407E /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,6 +818,25 @@
 				7E6C21CC1C1B231C00BC407E /* AHYNetworkEngine.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		7E8535701C527CA90033526A /* mockData */ = {
+			isa = PBXGroup;
+			children = (
+				7E85356A1C526C470033526A /* ahy_homepage */,
+				7E85356B1C526C470033526A /* ahy_popularAdvisor */,
+				7E85356C1C526C470033526A /* ahy_recommendTopics */,
+			);
+			name = mockData;
+			sourceTree = "<group>";
+		};
+		7ED6D2301C36C435003C81AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7ED6D2311C36C453003C81AD /* AHYSearchHistory.h */,
+				7ED6D2321C36C453003C81AD /* AHYSearchHistory.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FC5535B11C084364002A05BE /* Tag */ = {
@@ -811,21 +924,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E85356F1C526C470033526A /* ahy_recommendTopics in Resources */,
 				1892F8371BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20.ttf in Resources */,
 				1892F8261BF0BA1600EE1457 /* avenirnextregular.otf in Resources */,
 				1892F8251BF0BA1600EE1457 /* avenirnextmedium.otf in Resources */,
 				1892F8421BF0BA2000EE1457 /* Trade Gothic LT Oblique.ttf in Resources */,
 				7E1375331BCA6EB100AB3CA9 /* LaunchScreen.storyboard in Resources */,
 				1892F8431BF0BA2000EE1457 /* Trade Gothic LT.ttf in Resources */,
+				7E22CAB41C4FD99C0013635C /* AHYSetting.storyboard in Resources */,
 				1892F83B1BF0BA2000EE1457 /* Trade Gothic LT Bold Oblique.ttf in Resources */,
 				1892F8361BF0BA2000EE1457 /* Trade Gothic LT Bold Condensed No. 20 Oblique.ttf in Resources */,
 				1892F8231BF0BA1600EE1457 /* avenirnextdemibold.otf in Resources */,
 				1892F83C1BF0BA2000EE1457 /* Trade Gothic LT Condensed Bold.ttf in Resources */,
+				7E85356E1C526C470033526A /* ahy_popularAdvisor in Resources */,
 				7E1375301BCA6EB100AB3CA9 /* Assets.xcassets in Resources */,
 				7E3C06771BF38FDA00E8F5D7 /* AHYAdvisorFilterView.xib in Resources */,
+				7E85356D1C526C470033526A /* ahy_homepage in Resources */,
 				1892F8391BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2 Oblique.ttf in Resources */,
 				1892F83A1BF0BA2000EE1457 /* Trade Gothic LT Bold No. 2.ttf in Resources */,
 				1892F83F1BF0BA2000EE1457 /* Trade Gothic LT Extended.ttf in Resources */,
+				7E22CAAD1C4BE29F0013635C /* AHYSettingTableViewCell.xib in Resources */,
 				1892F8401BF0BA2000EE1457 /* Trade Gothic LT Light Oblique.ttf in Resources */,
 				1892F83E1BF0BA2000EE1457 /* Trade Gothic LT Condensed No. 18.ttf in Resources */,
 				1892F8241BF0BA1600EE1457 /* avenirnextdemibolditalic.otf in Resources */,
@@ -893,6 +1011,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */,
+				7E22CABC1C51353C0013635C /* UIViewController+MethodSwizzling.m in Sources */,
 				FC4B2CDB1C1987E900F58103 /* UIAdvisorNormalCollectionCell.m in Sources */,
 				7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */,
 				0CD091F81C5116F600AEF0FE /* UIImage+BBlock.m in Sources */,
@@ -919,19 +1038,25 @@
 				6FAAC5231BDA75870085017B /* AHYSingleTopicCell.m in Sources */,
 				FC5535BA1C085EC2002A05BE /* AHYReviewTag.m in Sources */,
 				6FAAC5171BDA03900085017B /* UIColor+Hex.m in Sources */,
+				FC677BC21C4C985600604793 /* UIUserTopicsView.m in Sources */,
 				7E6C21D11C1B243E00BC407E /* AHYNetworkResponse.m in Sources */,
 				0CD092021C51232B00AEF0FE /* GTMNSString+HTML.m in Sources */,
 				1892F8491BF3083D00EE1457 /* UIProfileHeaderView.m in Sources */,
 				1892F8111BF0A24F00EE1457 /* AHYProfileViewController.m in Sources */,
 				FC5B355F1C28059B00FDE1D0 /* Utility.m in Sources */,
+				7E22CAAC1C4BE29F0013635C /* AHYSettingTableViewCell.m in Sources */,
+				7E22CAB11C4FD4DB0013635C /* AHYSettingNotificationController.m in Sources */,
+				7EF6B46C1C21CB4600EA7C65 /* AHYTopicCategory.m in Sources */,
 				7E0B65A51BCD53AA004BAA76 /* AHYDiscoverViewController.m in Sources */,
 				0CD091EB1C51137600AEF0FE /* OTRColorFadingDotView.m in Sources */,
 				7E36292B1BEE3F160000711F /* AHYTopicViewController.m in Sources */,
 				FCF0E71F1BF5D6D8002BDCE2 /* UIAdvisePageScrollView.m in Sources */,
+				7E22CAA71C4BD2320013635C /* AHYSettingViewController.m in Sources */,
 				FC5535AC1C08195F002A05BE /* CustomTagView.m in Sources */,
 				FC5535A91C080F35002A05BE /* UIUserReviewsView.m in Sources */,
 				7E3C066F1BF2459600E8F5D7 /* NMRangeSlider.m in Sources */,
 				7E3C065D1BEF984600E8F5D7 /* AHYAdvisorFilterView.m in Sources */,
+				7E22CAB91C4FE7390013635C /* UINavigationController+MethodSwizzling.m in Sources */,
 				7E6C21C91C0F494400BC407E /* AHYSearchResultsViewController.m in Sources */,
 				0CD091D41C51124500AEF0FE /* AHYDatabaseView.m in Sources */,
 				FC6EC1DF1C29914E0081C4D7 /* AHYCancelReservationVC.m in Sources */,
@@ -944,10 +1069,12 @@
 				0CD091E21C51124500AEF0FE /* OTRMediaItem.m in Sources */,
 				1892F84F1BF3131A00EE1457 /* UIUserIntroductionView.m in Sources */,
 				0CD091E01C51124500AEF0FE /* OTRBuddy.m in Sources */,
+				7ED6D2331C36C453003C81AD /* AHYSearchHistory.m in Sources */,
 				7E0B65A81BCD53D5004BAA76 /* AHYSearchViewController.m in Sources */,
 				0CD091DB1C51124500AEF0FE /* OTRPasswordGenerator.m in Sources */,
 				FC4B2CD81C1986F800F58103 /* UIAdvisorPageCollectionCell.m in Sources */,
 				6FAAC5371BDF54DA0085017B /* AHYTopic.m in Sources */,
+				7EF6B4691C21C00C00EA7C65 /* AHYDiscoverDataSource.m in Sources */,
 				FC784C3A1C1D3FA6007FCD7F /* UIUserScoreView.m in Sources */,
 				0CD091D71C51124500AEF0FE /* OTRColors.m in Sources */,
 				0CD091D91C51124500AEF0FE /* OTRImages.m in Sources */,
@@ -955,6 +1082,7 @@
 				6FAAC53E1BDF5B640085017B /* AHYAdvisor.m in Sources */,
 				FC5535B71C085901002A05BE /* AHYUser.m in Sources */,
 				FC5F2C6B1C2153A6002D1779 /* UITopicSelectCollectionCell.m in Sources */,
+				FC677BC51C4CAA5900604793 /* UIReviewsEvaluateCollectionCell.m in Sources */,
 				6FAAC5141BDA00530085017B /* AVStarsView.m in Sources */,
 				0CD091DC1C51124500AEF0FE /* OTRUtilities.m in Sources */,
 				0CD091E11C51124500AEF0FE /* OTRImageItem.m in Sources */,
@@ -1069,6 +1197,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Ahoy/Ahoy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MOCK=1",
+				);
 				INFOPLIST_FILE = Ahoy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

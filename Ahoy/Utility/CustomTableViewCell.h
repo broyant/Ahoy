@@ -25,6 +25,10 @@ typedef enum {
 @property (nonatomic, strong) UIImageView   *cellImage;
 @property (nonatomic, strong) UILabel   *otherLabel;
 
+@property (nonatomic, strong) UILabel   *valueEvaluate;
+@property (nonatomic, strong) UILabel   *communicateEvaluate;
+@property (nonatomic, strong) UILabel   *friendlyEvaluate;
+
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier tableViewCellStyle:(TableViewCellStyle)cellStyle;

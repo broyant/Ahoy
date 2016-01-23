@@ -186,8 +186,7 @@
 
 #pragma - mark sendMesage
 
-- (void)sendCommonMessage:(AVIMMessage *)message completion:(void (^)(void))completion
-{
+- (void)sendCommonMessage:(AVIMMessage *)message completion:(void (^)(void))completion {
     [self.currentConversation sendMessage:message callback:^(BOOL succeeded, NSError *error)
      {
          if (succeeded) {
@@ -201,8 +200,7 @@
      }];
 }
 
-- (void)sendTypeMessage:(AVIMTypedMessage *)message completion:(void (^)(BOOL))completion
-{
+- (void)sendTypeMessage:(AVIMTypedMessage *)message completion:(void (^)(BOOL))completion {
     __block OTRMessage *msg = [[OTRMessage alloc] init];
     
     __block AHYCommentItem *commentItem = nil;
@@ -285,8 +283,7 @@
 #pragma mark - AVIMClientDelegate
 
 
-- (void)conversation:(AVIMConversation *)conversation didReceiveCommonMessage:(AVIMMessage *)message
-{
+- (void)conversation:(AVIMConversation *)conversation didReceiveCommonMessage:(AVIMMessage *)message {
     // 接收到新的普通消息
     
     __block OTRMessage *msg = [[OTRMessage alloc] init];
@@ -332,8 +329,7 @@
     
 }
 
-- (void)conversation:(AVIMConversation *)conversation didReceiveTypedMessage:(AVIMTypedMessage *)message
-{
+- (void)conversation:(AVIMConversation *)conversation didReceiveTypedMessage:(AVIMTypedMessage *)message {
     // 接收到新的富媒体消息
     __block OTRMessage *msg = [[OTRMessage alloc] init];
     __block AHYCommentItem *commentItem = nil;
@@ -437,15 +433,13 @@
     NSLog(@"offline error:%@", error);
 }
 
-- (void)updateIconBadgeNumber
-{
+- (void)updateIconBadgeNumber {
     NSInteger unread = [[UIApplication sharedApplication] applicationIconBadgeNumber];
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:unread+1];
 }
 
-- (NSString *)peerIdInConversation:(AVIMConversation *)conversation
-{
+- (NSString *)peerIdInConversation:(AVIMConversation *)conversation {
     NSString *peerId = @"";
     for (NSString *userId in conversation.members) {
         if (![userId isEqualToString:[self selfClientID]]) {

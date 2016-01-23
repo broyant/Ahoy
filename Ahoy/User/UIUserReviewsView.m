@@ -7,27 +7,31 @@
 //
 
 #import "UIUserReviewsView.h"
-#import "CustomTagView.h"
-#import "AHYReviewTag.h"
 #import "AVStarsView.h"
 #import "Masonry.h"
+#import "UIReviewsEvaluateCollectionCell.h"
+#import "CustomTableViewCell.h"
 
 #define leftOffset  15
-#define topOffset  18
-#define bottomOffset  25
 
-@interface UIUserReviewsView ()
+#define starViewHeight  96
+#define collectionCellHeight  90
+
+#define reviewBtnHeight  40
+#define reviewBtnBGViewHeight  (reviewBtnHeight+65)
+
+static NSString *const CollectionCellIdentifier = @"EvaluateCell";
+
+
+@interface UIUserReviewsView ()<UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate>
 {
     AVStarsView  *_starsView;
-    CustomTagView *_tagView;
+    
+    UICollectionView    *_collectionView;
+    UITableView  *_tableView;
     
     UILabel *_titleLabel;
     UILabel *_countLabel;
-    UIView *_reviewCell;
-    UIButton  *_reviewBtn;
-    UIButton  *_moreBtn;
-    
-    CGFloat _totalHeight;
 }
 
 @end
@@ -38,249 +42,227 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        _totalHeight = 0;
-        UIView *dividerView = [[UIView alloc] initWithFrame:CGRectMake(leftOffset, _totalHeight, DeviceScreenWidth-leftOffset, 0.5)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, DeviceScreenWidth, frame.size.height)];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.pagingEnabled = NO;
+        _tableView.showsHorizontalScrollIndicator = NO;
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.scrollsToTop = NO;
+        _tableView.bounces = YES;
+        _tableView.directionalLockEnabled = YES;
+        _tableView.alwaysBounceHorizontal = NO;
+        _tableView.alwaysBounceVertical = YES;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self addSubview:_tableView];
+        
+        UIView *headerView = [[UIView alloc] init];
+        headerView.backgroundColor = [UIColor whiteColor];
+        if (true) {
+            headerView.frame = CGRectMake(0, 0, DeviceScreenWidth, starViewHeight+collectionCellHeight*3);
+        } else {
+            headerView.frame = CGRectMake(0, 0, DeviceScreenWidth, starViewHeight+collectionCellHeight*3+reviewBtnBGViewHeight);
+        }
+        _tableView.tableHeaderView = headerView;
+        
+        UILabel *starLabel = [[UILabel alloc] init];
+        starLabel.numberOfLines = 1;
+        starLabel.text = @"OVERALL RATING";
+        starLabel.font = TradeGothicLTBoldTwo(14);
+        starLabel.textColor = AHYGrey40;
+        [headerView addSubview:starLabel];
+        [starLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.mas_equalTo(leftOffset);
+            make.top.mas_equalTo(19);
+            make.size.mas_equalTo(CGSizeMake(DeviceScreenWidth-2*leftOffset, 19));
+        }];
+        
+        _starsView = [[AVStarsView alloc] initWithFrame:CGRectMake(0, 0, 165, 25)];
+        _starsView.count = 5;
+        _starsView.rating = 5;
+        _starsView.onColor = AHYYellow;
+        _starsView.offColor = RGBCOLORA(188, 189, 190, 1);
+        [headerView addSubview:_starsView];
+        [_starsView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(starLabel.mas_leading);
+            make.top.equalTo(starLabel.mas_bottom).offset(12);
+            make.size.mas_equalTo(CGSizeMake(165, 25));
+        }];
+        
+        _countLabel = [[UILabel alloc] init];
+        _countLabel.numberOfLines = 1;
+        _countLabel.text = @"50 Reviews";
+        _countLabel.font = TradeGothicLT(12);
+        _countLabel.textColor = RGBCOLORA(144, 146, 148, 1);
+        [headerView addSubview:_countLabel];
+        [_countLabel sizeToFit];
+        [_countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.trailing.offset(-leftOffset);
+            make.top.equalTo(starLabel.mas_bottom).offset(20);
+            make.height.mas_equalTo(15);
+        }];
+        
+        UIView *dividerView = [[UIView alloc] init];
         dividerView.backgroundColor = AHYGrey10;
-        [self addSubview:dividerView];
-        _totalHeight += topOffset;
+        [headerView addSubview:dividerView];
+        [dividerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.offset(leftOffset);
+            make.top.equalTo(_starsView.mas_bottom).offset(20);
+            make.size.mas_equalTo(CGSizeMake(DeviceScreenWidth-leftOffset, 0.5));
+        }];
         
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftOffset, _totalHeight, DeviceScreenWidth-2*leftOffset, 19)];
-        _titleLabel.numberOfLines = 1;
-        _titleLabel.text = @"YIKAI’S REVIEWS";
-        _titleLabel.font = TradeGothicLTBoldTwo(14);
-        _titleLabel.textColor = AHYGrey40;
-        [self addSubview:_titleLabel];
-        _totalHeight += 19;
-        
-        [self addStarsView];
-        
-        [self addReviewCountView];
-        
-        [self addTagView];
-        
-        [self addReviewContentView];
-        
-        [self addViewButton];
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.itemSize = CGSizeMake(DeviceScreenWidth, collectionCellHeight);
+        layout.minimumLineSpacing = 0;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [_collectionView registerClass:[UIReviewsEvaluateCollectionCell class] forCellWithReuseIdentifier:CollectionCellIdentifier];
+        [headerView addSubview:_collectionView];
+        [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(dividerView.mas_bottom).offset(1);
+            make.leading.offset(0);
+            make.size.mas_equalTo(CGSizeMake(DeviceScreenWidth, collectionCellHeight*3));
+        }];
         
         return self;
     }
     return nil;
 }
 
-- (void)addStarsView
+#pragma mark -- UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    _starsView = [[AVStarsView alloc] initWithFrame:CGRectMake(0, 0, 95, 15)];
-    _starsView.count = 5;
-    _starsView.rating = 5;
-    _starsView.onColor = AHYYellow;
-    _starsView.offColor = AHYGrey28;
-    [self addSubview:_starsView];
-    [_starsView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(_titleLabel.mas_leading);
-        make.top.equalTo(_titleLabel.mas_bottom).offset(7);
-        make.size.mas_equalTo(CGSizeMake(95, 15));
-    }];
-    _totalHeight += 7 + 15;
+    return 3;
 }
 
-- (void)addReviewCountView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    _countLabel = [[UILabel alloc] init];
-    _countLabel.numberOfLines = 1;
-    _countLabel.text = @"50 Reviews";
-    _countLabel.font = TradeGothicLT(12);
-    _countLabel.textColor = RGBCOLORA(144, 146, 148, 1);
-    [self addSubview:_countLabel];
-    [_countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.offset(-leftOffset);
-        make.top.equalTo(_starsView.mas_top);
-        make.height.mas_equalTo(15);
-    }];
+    return 1;
 }
 
-- (void)addTagView
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    _tagView = [[CustomTagView alloc] init];
-    _tagView.backgroundColor = [UIColor clearColor];
-    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:0];
-    for (int i=0; i<10; i++) {
-        NSDictionary *dict = nil;
-        if (i<5) {
-            dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",i],@"tagId",@"Patients",@"tagName",@"1",@"isHighlight",[NSString stringWithFormat:@"%d",i*i],@"numberOfReviews", nil];
-        } else {
-            dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",i],@"tagId",@"Knowledgeable",@"tagName",@"0",@"isHighlight",[NSString stringWithFormat:@"%d",i*i],@"numberOfReviews", nil];
-        }
-        
-        AHYReviewTag *tag = [[AHYReviewTag alloc] init];
-        [tag parse:dict];
-        [array addObject:tag];
+    UIReviewsEvaluateCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionCellIdentifier forIndexPath:indexPath];
+    if (indexPath.row == 0) {
+        cell.titleLabel.text = @"VALUE";
+        [cell.positiveButton setTitle:@"Positive (50)" forState:UIControlStateNormal];
+        [cell.neutralButton setTitle:@"Neutral (0)" forState:UIControlStateNormal];
+        [cell.negativeButton setTitle:@"Negative (0)" forState:UIControlStateNormal];
+    } else if (indexPath.row == 1) {
+        cell.titleLabel.text = @"COMMUNICATION";
+        [cell.positiveButton setTitle:@"Positive (45)" forState:UIControlStateNormal];
+        [cell.neutralButton setTitle:@"Neutral (3)" forState:UIControlStateNormal];
+        [cell.negativeButton setTitle:@"Negative (2)" forState:UIControlStateNormal];
+    } else if (indexPath.row == 2) {
+        cell.titleLabel.text = @"FRIENDLINESS";
+        [cell.positiveButton setTitle:@"Positive (48)" forState:UIControlStateNormal];
+        [cell.neutralButton setTitle:@"Neutral (1)" forState:UIControlStateNormal];
+        [cell.negativeButton setTitle:@"Negative (9)" forState:UIControlStateNormal];
     }
-    [_tagView setTags:array];
-    CGSize size = [_tagView fittedSize];
-    [self addSubview:_tagView];
     
-    [_tagView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_starsView.mas_bottom).offset(15);
-        make.size.mas_equalTo(CGSizeMake(size.width, size.height));
-    }];
-    _totalHeight += 15 + size.height;
+    return cell;
 }
 
-- (void)addReviewContentView
-{
-    _reviewCell = [[UIView alloc] init];
-    _reviewCell.backgroundColor = [UIColor clearColor];
-    [self addSubview:_reviewCell];
-    [_reviewCell mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (_tagView) {
-            make.top.equalTo(_tagView.mas_bottom).offset(25);
-        } else {
-            make.top.equalTo(_starsView.mas_bottom).offset(25);
-        }
-        make.size.mas_equalTo(CGSizeMake(DeviceScreenWidth, 112));
-    }];
-    
-    _totalHeight += 25 + 112;
-    
-    UIImageView *imageView = [[UIImageView alloc] init];
-    [_reviewCell addSubview:imageView];
-    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(0);
-        make.leading.offset(leftOffset);
-        make.size.mas_equalTo(CGSizeMake(35, 35));
-    }];
-    
-    UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.font = TradeGothicLT(16);
-    titleLabel.textColor = AHYBlack100;
-    titleLabel.numberOfLines = 1;
-    titleLabel.backgroundColor = [UIColor clearColor];
-    [_reviewCell addSubview:titleLabel];
-    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(0);
-        make.leading.equalTo(imageView.mas_trailing).offset(9);
-        make.height.mas_equalTo(19);
-        make.right.mas_lessThanOrEqualTo(-(66+70+leftOffset+8+9));
-    }];
-    
-    AVStarsView *starsView = [[AVStarsView alloc] initWithFrame:CGRectMake(0, 0, 70, 10)];
-    starsView.count = 5;
-    starsView.rating = 5;
-    starsView.onColor = AHYYellow;
-    starsView.offColor = AHYGrey28;
-    [_reviewCell addSubview:starsView];
-    [starsView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(5);
-        make.leading.equalTo(titleLabel.mas_trailing).offset(8);
-        make.size.mas_equalTo(CGSizeMake(70, 10));
-    }];
-    
-    // 日期
-    UILabel *otherLabel = [[UILabel alloc] init];
-    otherLabel.font = TradeGothicLT(12);
-    otherLabel.textColor = AHYSteelGrey;
-    otherLabel.numberOfLines = 1;
-    otherLabel.backgroundColor = [UIColor clearColor];
-    [_reviewCell addSubview:otherLabel];
-    [otherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(2);
-        make.trailing.offset(-leftOffset);
-        make.height.mas_equalTo(16);
-    }];
-    
-    UILabel *subTitleLabel = [[UILabel alloc] init];
-    subTitleLabel.font = AvenirNextRegular(14);
-    subTitleLabel.textColor = AHYSteelGrey;
-    subTitleLabel.numberOfLines = 1;
-    subTitleLabel.backgroundColor = [UIColor clearColor];
-    [_reviewCell addSubview:subTitleLabel];
-    [subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(titleLabel.mas_bottom).offset(3);
-        make.leading.equalTo(titleLabel.mas_leading);
-        make.trailing.offset(-leftOffset);
-        make.height.mas_equalTo(19);
-    }];
-    
-    UILabel *descLabel = [[UILabel alloc] init];
-    descLabel.font = AvenirNextRegular(16);
-    descLabel.textColor = AHYBlack100;
-    descLabel.numberOfLines = 0;
-    descLabel.backgroundColor = [UIColor clearColor];
-    descLabel.lineBreakMode = NSLineBreakByWordWrapping | NSLineBreakByTruncatingTail;
-    [_reviewCell addSubview:descLabel];
-    [descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(imageView.mas_bottom).offset(10);
-        make.leading.equalTo(imageView.mas_leading);
-        make.trailing.offset(-leftOffset);
-        make.height.mas_equalTo(66);
-    }];
 
-    titleLabel.text = @"Howard Lynch";
-    subTitleLabel.text = @"Topic: Cursus Euismod";
-    starsView.rating = 5;
-    otherLabel.text = @"09/12/2015";
-    descLabel.text = @"The session with Yikai was incredible. He taught me so about design. I was totally sold on his saying that every detail worth a shit!";
-    imageView.image = [UIImage imageNamed:@"c2Topic1Thumbnail"];
+#pragma mark --UICollectionViewDelegateFlowLayout
+
+//定义每个Item 的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(DeviceScreenWidth, collectionCellHeight);
 }
 
-- (void)addViewButton
+//定义每个UICollectionView 的 margin
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    if (true) {//可以review
-        [self initReviewButton];
-        [_reviewBtn setTitle:@"Review Yikai" forState:UIControlStateNormal];
-        [_reviewBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_reviewCell.mas_bottom).offset(19);
-            make.leading.offset(leftOffset);
-            if (true) { //有更多
-                [self initMoreReviewsButton];
-                make.size.mas_equalTo(CGSizeMake((DeviceScreenWidth-2*leftOffset-25)/2, 40));
-                [_moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.leading.equalTo(_reviewBtn.mas_trailing).offset(25);
-                    make.top.equalTo(_reviewCell.mas_bottom).offset(19);
-                    make.size.mas_equalTo(CGSizeMake((DeviceScreenWidth-2*leftOffset-25)/2, 40));
-                }];
-            } else {
-                make.size.mas_equalTo(CGSizeMake(DeviceScreenWidth-2*leftOffset, 40));
-            }
-        }];
-        _totalHeight += 19 + 40;
-    } else if (true) { //有更多
-        [self initMoreReviewsButton];
-        [_moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.offset(leftOffset);
-            make.top.equalTo(_reviewCell.mas_bottom).offset(19);
-            make.size.mas_equalTo(CGSizeMake(DeviceScreenWidth-2*leftOffset, 40));
-        }];
-        _totalHeight += 19 + 40;
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"ReviewCell";
+    
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier tableViewCellStyle:ReviewCell];
     }
+    
+    if (indexPath.row%2 == 0) {
+        cell.cellImage.image = [UIImage imageNamed:@"c2Topic2Thumbnail"];
+        cell.titleLabel.text = @"Howard Lynch";
+        cell.subTitleLabel.text = @"Topic: Cursus Euismod";
+        cell.otherLabel.text = @"09/11/2015";
+        cell.starsView.rating = 2;
+        cell.valueEvaluate.text = @"Positive";
+        cell.valueEvaluate.textColor = AHYYellow;
+        cell.communicateEvaluate.text = @"Neutral";
+        cell.communicateEvaluate.textColor = AHYSteelGrey;
+        cell.friendlyEvaluate.text = @"Negative";
+        cell.friendlyEvaluate.textColor = AHYRed;
+        cell.descLabel.text = @"The session with Yikai was incredible. He taught me so about design. I was totally sold on his saying that every detail worth a shit!";
+    } else {
+        cell.cellImage.image = [UIImage imageNamed:@"c1Topic2Thumbnail"];
+        cell.titleLabel.text = @"Anonymous User";
+        cell.subTitleLabel.text = @"Topic: Inceptos Lorem Mattis";
+        cell.otherLabel.text = @"09/11/2015";
+        cell.starsView.rating = 4.5;
+        cell.valueEvaluate.text = @"Positive";
+        cell.valueEvaluate.textColor = AHYYellow;
+        cell.communicateEvaluate.text = @"Positive";
+        cell.communicateEvaluate.textColor = AHYYellow;
+        cell.friendlyEvaluate.text = @"Positive";
+        cell.friendlyEvaluate.textColor = AHYYellow;
+        cell.descLabel.text = @"The session with Yikai was incredible. He taught me so about design. I was totally sold on his saying that every detail worth a shit!";
+    }
+
+    [cell.descLabel sizeToFit];
+    
+    [cell.dividerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(cell.descLabel.mas_bottom).offset(20);
+        make.width.mas_equalTo(DeviceScreenWidth-leftOffset);
+        make.leading.mas_equalTo(leftOffset);
+        make.height.mas_equalTo(0.5);
+    }];
+    
+    return cell;
 }
 
-- (void)initReviewButton
+
+#pragma mark Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    _reviewBtn = [[UIButton alloc] init];
-    _reviewBtn.backgroundColor = [UIColor whiteColor];
-    _reviewBtn.titleLabel.font = TradeGothicLT(18);
-    [_reviewBtn setTitleColor:AHYOrange forState:UIControlStateNormal];
-    [_reviewBtn.layer setBorderWidth:1];
-    [_reviewBtn.layer setBorderColor:AHYOrange.CGColor];
-    [self addSubview:_reviewBtn];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-- (void)initMoreReviewsButton
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    _moreBtn = [[UIButton alloc] init];
-    _moreBtn.backgroundColor = [UIColor whiteColor];
-    _moreBtn.titleLabel.font = TradeGothicLT(18);
-    [_moreBtn setTitleColor:AHYBlue forState:UIControlStateNormal];
-    [_moreBtn setTitle:@"More Reviews" forState:UIControlStateNormal];
-    [_moreBtn.layer setBorderWidth:1];
-    [_moreBtn.layer setBorderColor:AHYBlue.CGColor];
-    [self addSubview:_moreBtn];
+    NSString *str = @"The session with Yikai was incredible. He taught me so about design. I was totally sold on his saying that every detail worth a shit!";
+    NSDictionary *attributes = @{NSFontAttributeName:AvenirNextRegular(16)};
+    CGRect rect = [str boundingRectWithSize:CGSizeMake(DeviceScreenWidth-2*leftOffset, MAXFLOAT)
+                                    options:NSStringDrawingUsesLineFragmentOrigin
+                                 attributes:attributes
+                                    context:nil];
+    return ceil(rect.size.height+203+21);
 }
 
-- (CGFloat)getheight
-{
-    return _totalHeight + bottomOffset;
-}
 
 @end

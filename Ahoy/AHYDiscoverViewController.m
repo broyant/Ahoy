@@ -6,17 +6,18 @@
 //  Copyright © 2015 Ahoy. All rights reserved.
 //
 
-static CGFloat const kHeaderViewHeight = 166.f;
-static CGFloat const kCategoryViewHeight = 192.f;
-static CGFloat const kAdvisorListHeaderHeight = 19.f;
-static NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
-static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
+CGFloat const kHeaderViewHeight = 166.f;
+CGFloat const kCategoryViewHeight = 192.f;
+CGFloat const kAdvisorListHeaderHeight = 19.f;
+NSString * const kAdvisorListCellIdentifier = @"advisorListCell";
+NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 
 #import "AHYDiscoverViewController.h"
 #import "AHYTopicViewController.h"
 #import "AHYAdvisorListCell.h"
 #import "AHYCategoryView.h"
 #import "AHYRecommendView.h"
+#import "AHYDiscoverDataSource.h"
 #import "AHYAdvisor.h"
 #import "AHYTopic.h"
 
@@ -30,68 +31,38 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 
 @implementation AHYDiscoverViewController
 
-- (NSArray *)recommendTopics {
-    if (!_recommendTopics) {
-        NSMutableArray *array = [NSMutableArray array];
-        for (int i = 1; i <= 3; i++) {
-            AHYTopic *topic = [[AHYTopic alloc] init];
-            topic.imgUrl = [NSString stringWithFormat:@"c1Topic%dThumbnail",i];
-            topic.name = [[NSAttributedString alloc] initWithString:@"Tellus Amet"];
-            topic.totalAdvisors = 107 + i * 21;
-            topic.totalSessions = 2345 + i * 32;
-            topic.category = i + 1;
-            topic.isRecommended = YES;
-            topic.advisors = self.recommendAdvisors;
-            [array addObject:topic];
-        }
-        _recommendTopics = [array copy];
-    }
-    return _recommendTopics;
-}
-
-- (NSArray *)topicCategorys {
-    if (!_topicCategorys) {
-        NSMutableArray *array = [NSMutableArray array];
-        for (int i = 1; i <= 5; i++) {
-            AHYTopic *topic = [[AHYTopic alloc] init];
-            topic.imgUrl = [NSString stringWithFormat:@"c2Topic%dThumbnail",i % 3 + 1];
-            topic.name = [[NSAttributedString alloc] initWithString:@"Tellus Amet"];
-            topic.totalAdvisors = 107 + i * 21;
-            topic.totalSessions = 2345 + i * 32;
-            topic.isRecommended = NO;
-            topic.advisors = self.recommendAdvisors;
-            [array addObject:topic];
-        }
-        _topicCategorys = @[@{@"Programming": array}, @{@"Design": array}, @{@"Management": array}];
-    }
-    return _topicCategorys;
-}
-
-- (NSArray *)recommendAdvisors {
-    if (!_recommendAdvisors) {
-        NSMutableArray *array = [NSMutableArray array];
-        for (int i = 1; i <= 10; i++) {
-            AHYAdvisor *advisor = [[AHYAdvisor alloc] init];
-            advisor.portraitUrl = [NSString stringWithFormat:@"c1Topic%dThumbnail",i % 3+1];
-            advisor.name = @"Howard Wolowitz";
-            advisor.title = @"User Experience Designer, Storehouse";
-            advisor.experience = @"Nullam quis risus eget urna mollis slie ornare vel eu leo. Vestibulum idlse Nullam quis risus eget urna mollis slie ornare vel eu leo. Vestibulum idlse ";
-            advisor.price = 32 + i * 4;
-            advisor.rate = 5;
-            [array addObject:advisor];
-        }
-        _recommendAdvisors = [array copy];
-    }
-    return _recommendAdvisors;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"DISCOVER";
     [self.tableView registerClass:[AHYAdvisorListCell class] forCellReuseIdentifier:kAdvisorListCellIdentifier];
-    self.tableView.tableHeaderView = [self headerView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.edgesForExtendedLayout = UIRectEdgeBottom;
+    [self configureHeaderView];
+    [AHYDiscoverDataSource downloadPopularAdvisors:^(NSArray *advisors) {
+        self.recommendAdvisors = advisors;
+        [self.tableView reloadData];
+    }];
+}
+
+- (void)configureHeaderView {
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
+    [AHYDiscoverDataSource downloadTopicCategorys:^(NSArray *categorys) {
+        self.topicCategorys = categorys;
+        dispatch_group_leave(group);
+    }];
+    dispatch_group_enter(group);
+    [AHYDiscoverDataSource downloadRecommendTopics:^(NSArray *topics) {
+        self.recommendTopics = topics;
+        dispatch_group_leave(group);
+    }];
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        if (self.topicCategorys == nil || self.recommendTopics == nil) {
+            NSLog(@"no header datasource");
+        }
+        self.tableView.tableHeaderView = [self headerView];
+    });
 }
 
 #pragma mark --UITableView datasource
@@ -121,8 +92,9 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
 #pragma mark --AHYCategoryViewDelegate
 
 - (void)topicDidSelected:(AHYTopic *)topic {
-    AHYTopicViewController *topicVC = [[AHYTopicViewController alloc] initWithTopic:topic];
+    AHYTopicViewController *topicVC = [[AHYTopicViewController alloc] initWithTopicID:topic.tid];
     topicVC.hidesBottomBarWhenPushed = YES;
+    topicVC.navigationItem.title = topic.tName;
     [self.navigationController pushViewController:topicVC animated:YES];
 }
 
@@ -153,9 +125,9 @@ static NSString * const kAdvisorListTitle = @"Our Most Popular Advisors";
     [headerView addSubview:scrollView];
     //category view
     CGFloat ty = CGRectGetMaxY(scrollView.frame);
-    for (NSDictionary *category in self.topicCategorys) {
-        NSString *title = category.allKeys[0];
-        NSArray *topics = category.allValues[0];
+    for (AHYTopicCategory *category in self.topicCategorys) {
+        NSString *title = category.cName;
+        NSArray *topics = category.topics;
         AHYCategoryView *categoryView = [[AHYCategoryView alloc] initWithFrame:CGRectMake(0, ty, screenSize.width, kCategoryViewHeight) title:title topics:topics];
         categoryView.delegate = self;
         ty += kCategoryViewHeight;
