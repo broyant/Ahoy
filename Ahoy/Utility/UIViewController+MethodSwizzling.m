@@ -32,7 +32,7 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barTintColor = AHYBlue;
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite}];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: AHYWhite,NSFontAttributeName:TradeGothicLTBold(18)}];
 
     [self ahy_viewDidLoad];
 }

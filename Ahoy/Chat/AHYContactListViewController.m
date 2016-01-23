@@ -71,7 +71,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
 }
 
 - (void)cancelSearchButtonPressed {
-    self.title = @"Chat";
+    self.navigationItem.title = @"CHATS";
     self.navigationItem.titleView = nil;
     self.navigationItem.rightBarButtonItem = _rightBarItem;
     [self.searchResultDataSource removeAllObjects];
@@ -150,7 +150,7 @@ NSString * const kContactNoResultsTips = @"You can search topics, or search advi
     _searchContainerView.hidden = YES;
     _searchContainerView.backgroundColor = [UIColor clearColor];
     [_searchContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(64, 0, 0, 0));
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
 
