@@ -46,6 +46,8 @@ extern const struct OTRMessageEdges {
 @property (nonatomic, strong) NSString *mediaItemUniqueId;
 @property (nonatomic, strong) NSString *buddyUniqueId;
 
+//add for ahoy Robot
+@property (nonatomic, getter = isFromAhoyRobot) BOOL fromAhoyRobot;
 //add For Reservation and Comment;
 @property (nonatomic, strong) NSDictionary *extraInfoAttr;
 

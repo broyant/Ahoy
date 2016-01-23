@@ -8,7 +8,7 @@
 
 #import "OTRMediaItem.h"
 
-extern NSString *const AHYCommentType;
+static NSString* const AHYCommentType = @"AHYComment";
 
 @interface AHYCommentItem : OTRMediaItem
 //rating,0 to 5;

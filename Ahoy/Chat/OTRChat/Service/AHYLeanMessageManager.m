@@ -15,6 +15,7 @@
 
 #define kApplicationId @"y50bn2y6zwrrdgd79xuwtcsavci7wa889d9398d4fjzsyq0f"
 #define kClientKey @"43ikwjhy6vkrcvym8y5wslpwksra17ro18ebsl7y6tx36wby"
+#define kAHOYRobotId @"ahoy_robot"
 
 @interface AHYLeanMessageManager()<AVIMClientDelegate>
 {
@@ -200,13 +201,43 @@
      }];
 }
 
-- (void)sendTypeMessage:(AVIMTypedMessage *)message completion:(void (^)(void))completion
+- (void)sendTypeMessage:(AVIMTypedMessage *)message completion:(void (^)(BOOL))completion
 {
     __block OTRMessage *msg = [[OTRMessage alloc] init];
+    
+    __block AHYCommentItem *commentItem = nil;
+    __block AHYReservationItem *reservationItem = nil;
     
     if ([message isKindOfClass:[AVIMTextMessage class]]) {
         AVIMTextMessage *textMessage = (AVIMTextMessage *)message;
         msg.text = textMessage.text;
+        NSDictionary *attrDict = message.attributes;
+        if (attrDict.count > 0) {
+            NSString *type = [attrDict valueForKey:@"ahy_type"];
+            if ([type isKindOfClass:[NSString class]])
+            {
+                if ([type isEqualToString:AHYReservationType])
+                {
+                    reservationItem = [[AHYReservationItem alloc] init];
+                    reservationItem.startTime = [attrDict valueForKey:@"rsv_startTime"];
+                    reservationItem.endTime = [attrDict valueForKey:@"rsv_endTime"];
+                    reservationItem.topic = [attrDict valueForKey:@"rsv_topic"];
+                    reservationItem.moneyPaid = [[attrDict valueForKey:@"rsv_moneyPaid"] integerValue];
+                    reservationItem.rsvNote = [attrDict valueForKey:@"rsv_note"];
+                    msg.mediaItemUniqueId = reservationItem.uniqueId;
+                }
+                if ([type isEqualToString:AHYCommentType])
+                {
+                    commentItem = [[AHYCommentItem alloc] init];
+                    commentItem.rating = [[attrDict valueForKey:@"cmt_rating"] integerValue];
+                    commentItem.value = [[attrDict valueForKey:@"cmt_value"] integerValue];
+                    commentItem.communication = [[attrDict valueForKey:@"cmt_communication"] integerValue];
+                    commentItem.friendliness = [[attrDict valueForKey:@"cmt_friendliness"] integerValue];
+                    commentItem.comment = [attrDict valueForKey:@"cmt_comment"];
+                    msg.mediaItemUniqueId = commentItem.uniqueId;
+                }
+            }
+        }
     }
     msg.buddyUniqueId = message.clientId;
     msg.read = YES;
@@ -221,17 +252,24 @@
      {
          if (succeeded) {
              if (completion) {
-                 completion();
+                 completion(YES);
                  [[AHYDatabaseManager sharedInstance].readWriteDatabaseConnection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
                      buddy = [msg buddyWithTransaction:transaction];
                      msg.delivered = YES;
                      msg.transporting = NO;
+                     if (commentItem) {
+                         [commentItem saveWithTransaction:transaction];
+                     }
+                     if (reservationItem) {
+                         [reservationItem saveWithTransaction:transaction];
+                     }
                      [msg saveWithTransaction:transaction];
                      buddy.lastMessageDate = msg.date;
                      [buddy saveWithTransaction:transaction];
                  }];
              }
          }else{
+             completion(NO);
              [[AHYDatabaseManager sharedInstance].readWriteDatabaseConnection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
                  buddy = [msg buddyWithTransaction:transaction];
                  [msg saveWithTransaction:transaction];
@@ -301,51 +339,85 @@
     __block AHYCommentItem *commentItem = nil;
     __block AHYReservationItem *reservationItem = nil;
     
-    msg.buddyUniqueId = message.clientId;
     if([message isKindOfClass:[AVIMTextMessage class]])
     {
         msg.text = ((AVIMTextMessage *)message).text;
-//        NSDictionary *attrDict = message.attributes;
-//        if (attrDict.count > 0) {
-//            NSString *type = [[attrDict valueForKey:@"ahy_type"] stringValue];
-//            if ([type isEqualToString:AHYReservationType])
-//            {
-//                //need reset maybe starttime and endtime or starttime and duration;
-//                reservationItem = [[AHYReservationItem alloc] init];
-//                reservationItem.rsvDate = [[attrDict valueForKey:@"rsv_date"] stringValue];
-//                reservationItem.rsvTime = [[attrDict valueForKey:@"rsv_date"] stringValue];
-//                reservationItem.rsvNote = [[attrDict valueForKey:@"rsv_note"] stringValue];
-//            }
-//            else if([type isEqualToString:AHYCommentType])
-//            {
-//                commentItem = [[AHYCommentItem alloc] init];
-//                commentItem.rate = [[attrDict valueForKey:@"comment_rate"] integerValue];
-//            }
-//        }
+        NSDictionary *attrDict = message.attributes;
+        if (attrDict.count > 0) {
+            NSString *type = [attrDict valueForKey:@"ahy_type"];
+            if ([type isKindOfClass:[NSString class]])
+            {
+                if ([type isEqualToString:AHYReservationType])
+                {
+                    reservationItem = [[AHYReservationItem alloc] init];
+                    reservationItem.startTime = [attrDict valueForKey:@"rsv_startTime"];
+                    reservationItem.endTime = [attrDict valueForKey:@"rsv_endTime"];
+                    reservationItem.topic = [attrDict valueForKey:@"rsv_topic"];
+                    reservationItem.moneyPaid = [[attrDict valueForKey:@"rsv_moneyPaid"] integerValue];
+                    reservationItem.rsvNote = [attrDict valueForKey:@"rsv_note"];
+                    msg.mediaItemUniqueId = reservationItem.uniqueId;
+                }
+                if ([type isEqualToString:AHYCommentType])
+                {
+                    commentItem = [[AHYCommentItem alloc] init];
+                    commentItem.rating = [[attrDict valueForKey:@"cmt_rating"] integerValue];
+                    commentItem.value = [[attrDict valueForKey:@"cmt_value"] integerValue];
+                    commentItem.communication = [[attrDict valueForKey:@"cmt_communication"] integerValue];
+                    commentItem.friendliness = [[attrDict valueForKey:@"cmt_friendliness"] integerValue];
+                    commentItem.comment = [attrDict valueForKey:@"cmt_comment"];
+                    msg.mediaItemUniqueId = commentItem.uniqueId;
+                }
+            }
+        }
     }
     
-    msg.read = [self.currentConversation.members containsObject:message.clientId];
+    //System Message From Ahoy Robot;
+    if ([message.clientId isEqualToString:kAHOYRobotId])
+    {
+        //still consider from the peer,so is the incoming message.
+        msg.buddyUniqueId = [self peerIdInConversation:conversation];
+        msg.fromAhoyRobot = YES;
+    }
+    else{
+        msg.buddyUniqueId = message.clientId;
+        msg.fromAhoyRobot = NO;
+    }
+    
+//    msg.read = [self.currentConversation.members containsObject:message.clientId];
+    msg.read = [self.currentConversation.members containsObject:msg.buddyUniqueId];
     msg.incoming = YES;
     msg.transportedSecurely = NO;
     msg.date  = [NSDate dateWithTimeIntervalSince1970:(message.sendTimestamp/1000)];
     __block OTRBuddy *buddy = nil;
 
-    NSString *userID = message.clientId;
+//    NSString *userID = message.clientId;
+    NSString *userID = msg.buddyUniqueId;
     __weak typeof(self)weakSelf = self;
     [[AHYDatabaseManager sharedInstance].readWriteDatabaseConnection asyncReadWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
         buddy = [OTRBuddy fetchObjectWithUniqueID:userID transaction:transaction];
         if (!buddy)
         {
-
             buddy = [[OTRBuddy alloc] initWithUniqueId:userID];
             buddy.lastMessageDate = msg.date;
             [[AHYDatabaseManager sharedInstance].readWriteDatabaseConnection asyncReadWriteWithBlock:^(YapDatabaseReadWriteTransaction *stransaction) {
+                if (commentItem) {
+                    [commentItem saveWithTransaction:stransaction];
+                }
+                if (reservationItem) {
+                    [reservationItem saveWithTransaction:stransaction];
+                }
                 [msg saveWithTransaction:stransaction];
                 [buddy saveWithTransaction:stransaction];
             }];
         }
         else
         {
+            if (commentItem) {
+                [commentItem saveWithTransaction:transaction];
+            }
+            if (reservationItem) {
+                [reservationItem saveWithTransaction:transaction];
+            }
             [msg saveWithTransaction:transaction];
             buddy.lastMessageDate = msg.date;
             [buddy saveWithTransaction:transaction];
@@ -365,12 +437,23 @@
     NSLog(@"offline error:%@", error);
 }
 
--(void)updateIconBadgeNumber
+- (void)updateIconBadgeNumber
 {
     NSInteger unread = [[UIApplication sharedApplication] applicationIconBadgeNumber];
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:unread+1];
 }
 
+- (NSString *)peerIdInConversation:(AVIMConversation *)conversation
+{
+    NSString *peerId = @"";
+    for (NSString *userId in conversation.members) {
+        if (![userId isEqualToString:[self selfClientID]]) {
+            peerId = userId;
+            return peerId;
+        }
+    }
+    return peerId;
+}
 
 @end

@@ -64,8 +64,21 @@
                         moneyPaid:(NSUInteger)moneyPaid
                           rsvNote:(NSString *)rsvNote
 {
+    NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:[startTime integerValue]];
+    NSDate *endDate = [NSDate dateWithTimeIntervalSince1970:[endTime integerValue]];
     
-
+    NSString *startTimeStr = [NSDateFormatter localizedStringFromDate:startDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+    NSString *endTimeStr = [NSDateFormatter localizedStringFromDate:endDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"EEE,ddMMM" options:0 locale:[NSLocale currentLocale]];
+    NSString *startDateStr = [dateFormatter stringFromDate:startDate];
+    
+    _timeValueLabel.text = [NSString stringWithFormat:@"%@ - %@",startTimeStr,endTimeStr];
+    _dateValueLabel.text = startDateStr;
+    _topicValueLabel.text = topic;
+    _moneyValueLabel.text = [NSString stringWithFormat:@"$ %lu",(unsigned long)moneyPaid];
+    _noteTextView.text = rsvNote;
 }
 
 - (void)setupSubviews
@@ -268,7 +281,7 @@
     _noteLabel.textAlignment = NSTextAlignmentLeft;
     _noteLabel.font = TradeGothicLTBold(14);
     _noteLabel.textColor = AHYGrey40;
-    _noteLabel.text = @"PRICE PAID";
+    _noteLabel.text = @"RESERVATION NOTE";
     [_noteLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.mas_equalTo(10);
         make.top.equalTo(_moneyBottomLine.mas_bottom).offset(10);

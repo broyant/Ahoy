@@ -8,7 +8,7 @@
 
 #import "OTRMediaItem.h"
 
-extern NSString *AHYReservationType;
+static NSString* const AHYReservationType = @"AHYReservation";
 
 @interface AHYReservationItem : OTRMediaItem
 

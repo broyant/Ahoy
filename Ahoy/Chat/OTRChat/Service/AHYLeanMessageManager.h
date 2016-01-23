@@ -93,6 +93,6 @@ typedef enum : NSInteger{
  *  @param message
  *  @param completion
  */
-- (void)sendTypeMessage:(AVIMTypedMessage *)message completion:(void (^)(void))completion;
+- (void)sendTypeMessage:(AVIMTypedMessage *)message completion:(void (^)(BOOL))completion;
 
 @end

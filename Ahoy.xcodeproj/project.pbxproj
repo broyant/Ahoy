@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC719DF1C536D8700878DE8 /* AHYCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC719DC1C536D8700878DE8 /* AHYCommentItem.m */; };
+		0CC719E01C536D8700878DE8 /* AHYReservationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC719DE1C536D8700878DE8 /* AHYReservationItem.m */; };
 		0CD091991C510F4A00AEF0FE /* AHYContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091981C510F4A00AEF0FE /* AHYContactListViewController.m */; };
 		0CD0919C1C510F5E00AEF0FE /* AHYContactListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0919B1C510F5E00AEF0FE /* AHYContactListCell.m */; };
 		0CD091A21C51120100AEF0FE /* AHYCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0919F1C51120100AEF0FE /* AHYCommentView.m */; };
@@ -21,8 +23,6 @@
 		0CD091DB1C51124500AEF0FE /* OTRPasswordGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091BE1C51124500AEF0FE /* OTRPasswordGenerator.m */; };
 		0CD091DC1C51124500AEF0FE /* OTRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C01C51124500AEF0FE /* OTRUtilities.m */; };
 		0CD091DD1C51124500AEF0FE /* AHYChatAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C31C51124500AEF0FE /* AHYChatAccount.m */; };
-		0CD091DE1C51124500AEF0FE /* AHYCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C51C51124500AEF0FE /* AHYCommentItem.m */; };
-		0CD091DF1C51124500AEF0FE /* AHYReservationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C71C51124500AEF0FE /* AHYReservationItem.m */; };
 		0CD091E01C51124500AEF0FE /* OTRBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091C91C51124500AEF0FE /* OTRBuddy.m */; };
 		0CD091E11C51124500AEF0FE /* OTRImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091CB1C51124500AEF0FE /* OTRImageItem.m */; };
 		0CD091E21C51124500AEF0FE /* OTRMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD091CD1C51124500AEF0FE /* OTRMediaItem.m */; };
@@ -124,6 +124,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CC719DB1C536D8700878DE8 /* AHYCommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYCommentItem.h; sourceTree = "<group>"; };
+		0CC719DC1C536D8700878DE8 /* AHYCommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYCommentItem.m; sourceTree = "<group>"; };
+		0CC719DD1C536D8700878DE8 /* AHYReservationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYReservationItem.h; sourceTree = "<group>"; };
+		0CC719DE1C536D8700878DE8 /* AHYReservationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYReservationItem.m; sourceTree = "<group>"; };
 		0CD091971C510F4A00AEF0FE /* AHYContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYContactListViewController.h; path = Chat/AHYContactListViewController.h; sourceTree = "<group>"; };
 		0CD091981C510F4A00AEF0FE /* AHYContactListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHYContactListViewController.m; path = Chat/AHYContactListViewController.m; sourceTree = "<group>"; };
 		0CD0919A1C510F5E00AEF0FE /* AHYContactListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHYContactListCell.h; path = Chat/AHYContactListCell.h; sourceTree = "<group>"; };
@@ -152,10 +156,6 @@
 		0CD091C01C51124500AEF0FE /* OTRUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRUtilities.m; sourceTree = "<group>"; };
 		0CD091C21C51124500AEF0FE /* AHYChatAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYChatAccount.h; sourceTree = "<group>"; };
 		0CD091C31C51124500AEF0FE /* AHYChatAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYChatAccount.m; sourceTree = "<group>"; };
-		0CD091C41C51124500AEF0FE /* AHYCommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYCommentItem.h; sourceTree = "<group>"; };
-		0CD091C51C51124500AEF0FE /* AHYCommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYCommentItem.m; sourceTree = "<group>"; };
-		0CD091C61C51124500AEF0FE /* AHYReservationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHYReservationItem.h; sourceTree = "<group>"; };
-		0CD091C71C51124500AEF0FE /* AHYReservationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHYReservationItem.m; sourceTree = "<group>"; };
 		0CD091C81C51124500AEF0FE /* OTRBuddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRBuddy.h; sourceTree = "<group>"; };
 		0CD091C91C51124500AEF0FE /* OTRBuddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRBuddy.m; sourceTree = "<group>"; };
 		0CD091CA1C51124500AEF0FE /* OTRImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRImageItem.h; sourceTree = "<group>"; };
@@ -419,10 +419,10 @@
 			children = (
 				0CD091C21C51124500AEF0FE /* AHYChatAccount.h */,
 				0CD091C31C51124500AEF0FE /* AHYChatAccount.m */,
-				0CD091C41C51124500AEF0FE /* AHYCommentItem.h */,
-				0CD091C51C51124500AEF0FE /* AHYCommentItem.m */,
-				0CD091C61C51124500AEF0FE /* AHYReservationItem.h */,
-				0CD091C71C51124500AEF0FE /* AHYReservationItem.m */,
+				0CC719DB1C536D8700878DE8 /* AHYCommentItem.h */,
+				0CC719DC1C536D8700878DE8 /* AHYCommentItem.m */,
+				0CC719DD1C536D8700878DE8 /* AHYReservationItem.h */,
+				0CC719DE1C536D8700878DE8 /* AHYReservationItem.m */,
 				0CD091C81C51124500AEF0FE /* OTRBuddy.h */,
 				0CD091C91C51124500AEF0FE /* OTRBuddy.m */,
 				0CD091CA1C51124500AEF0FE /* OTRImageItem.h */,
@@ -892,11 +892,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD091DF1C51124500AEF0FE /* AHYReservationItem.m in Sources */,
 				6FAAC5091BD939FA0085017B /* AHYRecommendView.m in Sources */,
 				FC4B2CDB1C1987E900F58103 /* UIAdvisorNormalCollectionCell.m in Sources */,
 				7EE5AF261BCB26A0002B1771 /* AHYRootViewControllerManager.m in Sources */,
 				0CD091F81C5116F600AEF0FE /* UIImage+BBlock.m in Sources */,
+				0CC719E01C536D8700878DE8 /* AHYReservationItem.m in Sources */,
 				0CD0919C1C510F5E00AEF0FE /* AHYContactListCell.m in Sources */,
 				FC54224B1C11D1BE008BC3E5 /* AHYAdVisorProfileVC.m in Sources */,
 				0CD091EC1C51137600AEF0FE /* OTRComposingImageView.m in Sources */,
@@ -904,9 +904,9 @@
 				6FAAC5291BDA8C080085017B /* AHYCategoryView.m in Sources */,
 				0CD091991C510F4A00AEF0FE /* AHYContactListViewController.m in Sources */,
 				0CD091A21C51120100AEF0FE /* AHYCommentView.m in Sources */,
+				0CC719DF1C536D8700878DE8 /* AHYCommentItem.m in Sources */,
 				0CD091D51C51124500AEF0FE /* AHYDatabaseManager.m in Sources */,
 				7E1375251BCA6EB100AB3CA9 /* AppDelegate.m in Sources */,
-				0CD091DE1C51124500AEF0FE /* AHYCommentItem.m in Sources */,
 				FC6EC1E01C29914E0081C4D7 /* AHYReservationVC.m in Sources */,
 				0CD091D81C51124500AEF0FE /* OTRConstants.m in Sources */,
 				6FAAC50E1BD9E1190085017B /* AHYAdvisorListCell.m in Sources */,

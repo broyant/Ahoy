@@ -10,8 +10,6 @@
 #import "AHYReserveView.h"
 #import "JSQMessagesMediaViewBubbleImageMasker.h"
 
-NSString *reservationType = @"AHYReservetion";
-
 #define kFixPartHeightInBubble 225.f
 
 @implementation AHYReservationItem

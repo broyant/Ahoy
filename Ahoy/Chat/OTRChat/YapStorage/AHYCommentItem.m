@@ -10,8 +10,6 @@
 #import "AHYCommentView.h"
 #import "JSQMessagesMediaViewBubbleImageMasker.h"
 
-
-NSString *const AHYCommentType = @"AHYComment";
 #define kFixHeightInBubble 100.f
 
 @implementation AHYCommentItem
