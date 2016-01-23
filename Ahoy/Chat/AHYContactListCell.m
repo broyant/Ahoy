@@ -150,7 +150,7 @@
     [_bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.mas_equalTo(15);
         make.trailing.and.bottom.equalTo(self);
-        make.height.mas_equalTo(2);
+        make.height.mas_equalTo(0.5);
     }];
 }
 

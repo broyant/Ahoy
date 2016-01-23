@@ -106,7 +106,7 @@
     [_titleBottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.and.trailing.equalTo(self);
         make.top.mas_equalTo(34.f);
-        make.height.mas_equalTo(2.f);
+        make.height.mas_equalTo(0.5);
     }];
     
 }
@@ -144,7 +144,7 @@
         make.leading.mas_equalTo(10);
         make.trailing.equalTo(self);
         make.top.mas_equalTo(74);
-        make.height.mas_equalTo(2);
+        make.height.mas_equalTo(0.5);
     }];
     
 }
@@ -181,7 +181,7 @@
         make.leading.mas_equalTo(10);
         make.trailing.equalTo(self);
         make.top.mas_equalTo(114);
-        make.height.mas_equalTo(2);
+        make.height.mas_equalTo(0.5);
     }];
     
 }
@@ -218,7 +218,7 @@
         make.leading.mas_equalTo(10);
         make.trailing.equalTo(self);
         make.top.mas_equalTo(154);
-        make.height.mas_equalTo(2);
+        make.height.mas_equalTo(0.5);
     }];
 
     
@@ -256,7 +256,7 @@
         make.leading.mas_equalTo(10);
         make.trailing.equalTo(self);
         make.top.mas_equalTo(194);
-        make.height.mas_equalTo(2);
+        make.height.mas_equalTo(0.5);
     }];
     
 }
